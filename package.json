@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0",
+  "keywords": [
+    "textlintrule"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "test": "textlint-scripts test",
+    "build": "textlint-scripts build",
+    "prepublish": "npm run --if-present build",
+    "watch": "textlint-scripts build --watch"
+  },
+  "devDependencies": {
+    "@textlint/types": "^13.3.0",
+    "@types/node": "^18.14.1",
+    "textlint-rule-prh": "^5.3.0",
+    "textlint-scripts": "^13.3.0",
+    "textlint-tester": "^13.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "name": "textlint-rule-aws-service-name",
+  "description": "Rule for AWS Product Names",
+  "directories": {
+    "test": "test"
+  },
+  "author": "bun913",
+  "license": "MIT"
+}
