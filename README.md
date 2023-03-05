@@ -2,6 +2,16 @@
 
 Rule for AWS Product Names
 
+## Product Diagram
+
+### Create prh.yml
+
+```mermaid
+classDiagram
+    RegularRule *-- AwsServices
+    RegularRule *-- RuleFile
+```
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
