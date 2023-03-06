@@ -7,9 +7,14 @@ type Option = {
 
 type RuleParam = {
   expected: string;
-  options?: Option[];
+  options?: Option;
   patterns?: string[];
 };
+
+type RuleStruct = {
+  version: 1
+  rules: RuleParam[]
+}
 
 export class RuleFile {
   readonly rules: Rules;
@@ -19,9 +24,12 @@ export class RuleFile {
   }
 
   getYaml(): string {
-    const ruleJsonObj = this.rules.get();
-    const doc = new yaml.Document(ruleJsonObj);
-    // TODO: あとは適当にymlファイルを生成するのみ
+    const rules = this.rules.get();
+    const ruleObj: RuleStruct = {
+      version: 1,
+      rules
+    }
+    const doc = new yaml.Document(ruleObj);
     return doc.toString();
   }
 }
@@ -56,7 +64,7 @@ class WordBundaryRule {
   public get(): RuleParam {
     const rule: RuleParam = {
       expected: this.service.productName,
-      options: [{ wordBoundary: true }],
+      options: { wordBoundary: true },
     };
     return rule;
   }
@@ -73,10 +81,18 @@ class WrongPrefixRule {
     const wrongPattern = this.getPettern();
     const rule: RuleParam = {
       expected: this.service.getFullProductName(),
-      patterns: [wrongPattern],
-      options: [{ wordBoundary: true }],
+      patterns: [this.escapePattern(wrongPattern)],
+      options: { wordBoundary: true },
     };
     return rule;
+  }
+
+  // prh本体でpatternの方に-が入った文字列が指定されるとエラーになる
+  // https://github.com/prh/prh/issues/34
+  // そのため-の入ったpatternの際には//で囲む必要がある
+  private escapePattern(pattern: string): string {
+    if (!pattern.match(/-/)) return pattern
+    return `/${pattern}/`
   }
 
   private getPettern(): string {
