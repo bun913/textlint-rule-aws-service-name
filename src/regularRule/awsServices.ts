@@ -1,9 +1,10 @@
 import { FetchResponse } from "./fetchResponse";
 
-const prefixAmazon = "Amazon ";
-const prefixAWS = "AWS ";
+export const prefixAmazon = "Amazon";
+export const prefixAWS = "AWS";
+export const prefixNone = "";
 
-type ProductPrefix = "" | typeof prefixAmazon | typeof prefixAWS;
+type ProductPrefix = typeof prefixNone | typeof prefixAmazon | typeof prefixAWS;
 
 export interface AwsServiceParam {
   productName: string;
@@ -44,7 +45,7 @@ export class AwsService implements AwsServiceParam {
     return "";
   }
 
-  public get(): AwsService{
+  public get(): AwsService {
     const removePrefix = this.getPrefixRemovedService();
     const removeParentheses = removePrefix.getParenthesesRemovedService();
     return new AwsService(
@@ -60,18 +61,35 @@ export class AwsService implements AwsServiceParam {
     };
   }
 
-  private getPrefixRemovedService(): AwsService{
-    if (this.prefix === "") {
+  public isPrefixNone(): boolean {
+    return this.prefix == prefixNone;
+  }
+
+  public isPrefixAWS(): boolean {
+    return this.prefix == prefixAWS;
+  }
+
+  public isPrefixAmazon(): boolean {
+    return this.prefix == prefixAmazon;
+  }
+
+  public getFullProductName(): string {
+    if (this.prefix == prefixNone) return this.productName;
+    return `${this.prefix} ${this.productName}`;
+  }
+
+  private getPrefixRemovedService(): AwsService {
+    if (this.prefix === prefixNone) {
       return new AwsService(this.productName, this.prefix);
     }
-    const removedProductName = this.productName.replace(this.prefix, "");
+    const removedProductName = this.productName.replace(this.prefix, "").trim();
     return new AwsService(removedProductName, this.prefix);
   }
 
   // remove parentheses like Supply Chain (Preview) => Supply Chain
-  private getParenthesesRemovedService(): AwsService{
+  private getParenthesesRemovedService(): AwsService {
     const regex = / \(.*\)$/;
-    const removedProductName = this.productName.replace(regex, "");
+    const removedProductName = this.productName.replace(regex, "").trim();
     return new AwsService(removedProductName, this.prefix);
   }
 }

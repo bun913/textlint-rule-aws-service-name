@@ -1,4 +1,5 @@
-import { AwsService } from "./awsServices";
+import { AwsService, prefixAWS, prefixAmazon } from "./awsServices";
+import * as yaml from "yaml";
 
 type Option = {
   wordBoundary?: true;
@@ -10,13 +11,20 @@ type RuleParam = {
   patterns?: string[];
 };
 
-// class RuleFile {
-//   readonly services: AwsService[];
+export class RuleFile {
+  readonly rules: Rules;
 
-//   constructor(services: AwsService[]) {
-//     this.services = services;
-//   }
-// }
+  constructor(rules: Rules) {
+    this.rules = rules;
+  }
+
+  getYaml(): string {
+    const ruleJsonObj = this.rules.get();
+    const doc = new yaml.Document(ruleJsonObj);
+    // TODO: あとは適当にymlファイルを生成するのみ
+    return doc.toString();
+  }
+}
 
 export class Rules {
   readonly services: AwsService[];
@@ -26,15 +34,55 @@ export class Rules {
   }
 
   public get(): RuleParam[] {
-    // TODO: もう一つprefixを間違えないようなルールを追加する
-    // 関数を2つに分けてルールを2つ返す
-    const rules: RuleParam[] = this.services.map((service) => {
-      const rule: RuleParam = {
-        expected: service.productName,
-        options: [{wordBoundary: true}]
-      };
-      return rule;
+    const rules: RuleParam[] = [];
+    this.services.forEach((service) => {
+      const wordBoundaryRule = new WordBundaryRule(service).get();
+      rules.push(wordBoundaryRule);
+      if (!service.isPrefixNone()) {
+        const wrongPrefixRule = new WrongPrefixRule(service).get();
+        rules.push(wrongPrefixRule);
+      }
     });
     return rules;
+  }
+}
+
+class WordBundaryRule {
+  readonly service: AwsService;
+
+  constructor(service: AwsService) {
+    this.service = service;
+  }
+  public get(): RuleParam {
+    const rule: RuleParam = {
+      expected: this.service.productName,
+      options: [{ wordBoundary: true }],
+    };
+    return rule;
+  }
+}
+
+class WrongPrefixRule {
+  readonly service: AwsService;
+
+  constructor(service: AwsService) {
+    this.service = service;
+  }
+
+  public get(): RuleParam {
+    const wrongPattern = this.getPettern();
+    const rule: RuleParam = {
+      expected: this.service.getFullProductName(),
+      patterns: [wrongPattern],
+      options: [{ wordBoundary: true }],
+    };
+    return rule;
+  }
+
+  private getPettern(): string {
+    if (this.service.isPrefixAmazon()) {
+      return `${prefixAWS} ${this.service.productName}`;
+    }
+    return `${prefixAmazon} ${this.service.productName}`;
   }
 }
