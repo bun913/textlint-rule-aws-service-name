@@ -1,20 +1,23 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.7",
   "keywords": [
     "textlintrule"
   ],
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "files": [
     "lib/",
-    "src/",
-    "dict/"
+    "!lib/src",
+    "!lib/regularRule",
+    "!lib/test",
+    "!lib/createRule*",
+    "dict/",
+    "build/"
   ],
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "testLint": "textlint-scripts test --exclude test/src/**/*",
-    "run": "npx node lib/index.js",
     "createRule": "npx node lib/createRule.js",
+    "prepublish": "yarn run --if-present build",
     "build": "textlint-scripts build",
     "prepare": "yarn build",
     "watch": "textlint-scripts build --watch"
