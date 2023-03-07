@@ -1,0 +1,4 @@
+version: 1
+disableImports: true
+imports:
+  - path: ./dict/auto-create-regulaer-rules.yml

@@ -1,0 +1,2576 @@
+version: 1
+disableImports: true
+rules:
+  - expected: IoT Core
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Core
+    patterns:
+      - Amazon IoT Core
+    options:
+      wordBoundary: true
+  - expected: IoT Core
+    patterns:
+      - IoTCore
+    options:
+      wordBoundary: true
+  - expected: IoT FleetWise
+    options:
+      wordBoundary: true
+  - expected: AWS IoT FleetWise
+    patterns:
+      - Amazon IoT FleetWise
+    options:
+      wordBoundary: true
+  - expected: IoT FleetWise
+    patterns:
+      - IoTFleetWise
+    options:
+      wordBoundary: true
+  - expected: IoT SiteWise
+    options:
+      wordBoundary: true
+  - expected: AWS IoT SiteWise
+    patterns:
+      - Amazon IoT SiteWise
+    options:
+      wordBoundary: true
+  - expected: IoT SiteWise
+    patterns:
+      - IoTSiteWise
+    options:
+      wordBoundary: true
+  - expected: IoT TwinMaker
+    options:
+      wordBoundary: true
+  - expected: AWS IoT TwinMaker
+    patterns:
+      - Amazon IoT TwinMaker
+    options:
+      wordBoundary: true
+  - expected: IoT TwinMaker
+    patterns:
+      - IoTTwinMaker
+    options:
+      wordBoundary: true
+  - expected: IoT Greengrass
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Greengrass
+    patterns:
+      - Amazon IoT Greengrass
+    options:
+      wordBoundary: true
+  - expected: IoT Greengrass
+    patterns:
+      - IoTGreengrass
+    options:
+      wordBoundary: true
+  - expected: Alexa for Business
+    options:
+      wordBoundary: true
+  - expected: Alexa for Business
+    patterns:
+      - AlexaforBusiness
+    options:
+      wordBoundary: true
+  - expected: API Gateway
+    options:
+      wordBoundary: true
+  - expected: Amazon API Gateway
+    patterns:
+      - AWS API Gateway
+    options:
+      wordBoundary: true
+  - expected: API Gateway
+    patterns:
+      - APIGateway
+    options:
+      wordBoundary: true
+  - expected: AppFlow
+    options:
+      wordBoundary: true
+  - expected: Amazon AppFlow
+    patterns:
+      - AWS AppFlow
+    options:
+      wordBoundary: true
+  - expected: AppStream 2.0
+    options:
+      wordBoundary: true
+  - expected: Amazon AppStream 2.0
+    patterns:
+      - AWS AppStream 2.0
+    options:
+      wordBoundary: true
+  - expected: AppStream 2.0
+    patterns:
+      - AppStream2.0
+    options:
+      wordBoundary: true
+  - expected: Athena
+    options:
+      wordBoundary: true
+  - expected: Amazon Athena
+    patterns:
+      - AWS Athena
+    options:
+      wordBoundary: true
+  - expected: Augmented AI
+    options:
+      wordBoundary: true
+  - expected: Amazon Augmented AI
+    patterns:
+      - AWS Augmented AI
+    options:
+      wordBoundary: true
+  - expected: Augmented AI
+    patterns:
+      - AugmentedAI
+    options:
+      wordBoundary: true
+  - expected: Aurora
+    options:
+      wordBoundary: true
+  - expected: Amazon Aurora
+    patterns:
+      - AWS Aurora
+    options:
+      wordBoundary: true
+  - expected: Braket
+    options:
+      wordBoundary: true
+  - expected: Amazon Braket
+    patterns:
+      - AWS Braket
+    options:
+      wordBoundary: true
+  - expected: Chime
+    options:
+      wordBoundary: true
+  - expected: Amazon Chime
+    patterns:
+      - AWS Chime
+    options:
+      wordBoundary: true
+  - expected: Chime SDK
+    options:
+      wordBoundary: true
+  - expected: Amazon Chime SDK
+    patterns:
+      - AWS Chime SDK
+    options:
+      wordBoundary: true
+  - expected: Chime SDK
+    patterns:
+      - ChimeSDK
+    options:
+      wordBoundary: true
+  - expected: CloudFront
+    options:
+      wordBoundary: true
+  - expected: Amazon CloudFront
+    patterns:
+      - AWS CloudFront
+    options:
+      wordBoundary: true
+  - expected: CloudSearch
+    options:
+      wordBoundary: true
+  - expected: Amazon CloudSearch
+    patterns:
+      - AWS CloudSearch
+    options:
+      wordBoundary: true
+  - expected: CloudWatch
+    options:
+      wordBoundary: true
+  - expected: Amazon CloudWatch
+    patterns:
+      - AWS CloudWatch
+    options:
+      wordBoundary: true
+  - expected: CodeCatalyst
+    options:
+      wordBoundary: true
+  - expected: Amazon CodeCatalyst
+    patterns:
+      - AWS CodeCatalyst
+    options:
+      wordBoundary: true
+  - expected: CodeGuru
+    options:
+      wordBoundary: true
+  - expected: Amazon CodeGuru
+    patterns:
+      - AWS CodeGuru
+    options:
+      wordBoundary: true
+  - expected: Cognito
+    options:
+      wordBoundary: true
+  - expected: Amazon Cognito
+    patterns:
+      - AWS Cognito
+    options:
+      wordBoundary: true
+  - expected: Comprehend
+    options:
+      wordBoundary: true
+  - expected: Amazon Comprehend
+    patterns:
+      - AWS Comprehend
+    options:
+      wordBoundary: true
+  - expected: Connect
+    options:
+      wordBoundary: true
+  - expected: Amazon Connect
+    patterns:
+      - AWS Connect
+    options:
+      wordBoundary: true
+  - expected: Corretto
+    options:
+      wordBoundary: true
+  - expected: Amazon Corretto
+    patterns:
+      - AWS Corretto
+    options:
+      wordBoundary: true
+  - expected: DataZone
+    options:
+      wordBoundary: true
+  - expected: Amazon DataZone
+    patterns:
+      - AWS DataZone
+    options:
+      wordBoundary: true
+  - expected: Detective
+    options:
+      wordBoundary: true
+  - expected: Amazon Detective
+    patterns:
+      - AWS Detective
+    options:
+      wordBoundary: true
+  - expected: DevOps Guru
+    options:
+      wordBoundary: true
+  - expected: Amazon DevOps Guru
+    patterns:
+      - AWS DevOps Guru
+    options:
+      wordBoundary: true
+  - expected: DevOps Guru
+    patterns:
+      - DevOpsGuru
+    options:
+      wordBoundary: true
+  - expected: DocumentDB
+    options:
+      wordBoundary: true
+  - expected: Amazon DocumentDB
+    patterns:
+      - AWS DocumentDB
+    options:
+      wordBoundary: true
+  - expected: DynamoDB
+    options:
+      wordBoundary: true
+  - expected: Amazon DynamoDB
+    patterns:
+      - AWS DynamoDB
+    options:
+      wordBoundary: true
+  - expected: EC2
+    options:
+      wordBoundary: true
+  - expected: Amazon EC2
+    patterns:
+      - AWS EC2
+    options:
+      wordBoundary: true
+  - expected: EC2 Auto Scaling
+    options:
+      wordBoundary: true
+  - expected: Amazon EC2 Auto Scaling
+    patterns:
+      - AWS EC2 Auto Scaling
+    options:
+      wordBoundary: true
+  - expected: EC2 Auto Scaling
+    patterns:
+      - EC2AutoScaling
+    options:
+      wordBoundary: true
+  - expected: EC2 Spot Instances
+    options:
+      wordBoundary: true
+  - expected: Amazon EC2 Spot Instances
+    patterns:
+      - AWS EC2 Spot Instances
+    options:
+      wordBoundary: true
+  - expected: EC2 Spot Instances
+    patterns:
+      - EC2SpotInstances
+    options:
+      wordBoundary: true
+  - expected: Elastic Block Store
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic Block Store
+    patterns:
+      - AWS Elastic Block Store
+    options:
+      wordBoundary: true
+  - expected: Elastic Block Store
+    patterns:
+      - ElasticBlockStore
+    options:
+      wordBoundary: true
+  - expected: Elastic Container Registry
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic Container Registry
+    patterns:
+      - AWS Elastic Container Registry
+    options:
+      wordBoundary: true
+  - expected: Elastic Container Registry
+    patterns:
+      - ElasticContainerRegistry
+    options:
+      wordBoundary: true
+  - expected: Elastic Container Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic Container Service
+    patterns:
+      - AWS Elastic Container Service
+    options:
+      wordBoundary: true
+  - expected: Elastic Container Service
+    patterns:
+      - ElasticContainerService
+    options:
+      wordBoundary: true
+  - expected: Elastic File System
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic File System
+    patterns:
+      - AWS Elastic File System
+    options:
+      wordBoundary: true
+  - expected: Elastic File System
+    patterns:
+      - ElasticFileSystem
+    options:
+      wordBoundary: true
+  - expected: Elastic Inference
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic Inference
+    patterns:
+      - AWS Elastic Inference
+    options:
+      wordBoundary: true
+  - expected: Elastic Inference
+    patterns:
+      - ElasticInference
+    options:
+      wordBoundary: true
+  - expected: Elastic Kubernetes Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic Kubernetes Service
+    patterns:
+      - AWS Elastic Kubernetes Service
+    options:
+      wordBoundary: true
+  - expected: Elastic Kubernetes Service
+    patterns:
+      - ElasticKubernetesService
+    options:
+      wordBoundary: true
+  - expected: Elastic Transcoder
+    options:
+      wordBoundary: true
+  - expected: Amazon Elastic Transcoder
+    patterns:
+      - AWS Elastic Transcoder
+    options:
+      wordBoundary: true
+  - expected: Elastic Transcoder
+    patterns:
+      - ElasticTranscoder
+    options:
+      wordBoundary: true
+  - expected: ElastiCache
+    options:
+      wordBoundary: true
+  - expected: Amazon ElastiCache
+    patterns:
+      - AWS ElastiCache
+    options:
+      wordBoundary: true
+  - expected: EMR
+    options:
+      wordBoundary: true
+  - expected: Amazon EMR
+    patterns:
+      - AWS EMR
+    options:
+      wordBoundary: true
+  - expected: EventBridge
+    options:
+      wordBoundary: true
+  - expected: Amazon EventBridge
+    patterns:
+      - AWS EventBridge
+    options:
+      wordBoundary: true
+  - expected: FinSpace
+    options:
+      wordBoundary: true
+  - expected: Amazon FinSpace
+    patterns:
+      - AWS FinSpace
+    options:
+      wordBoundary: true
+  - expected: Forecast
+    options:
+      wordBoundary: true
+  - expected: Amazon Forecast
+    patterns:
+      - AWS Forecast
+    options:
+      wordBoundary: true
+  - expected: Fraud Detector
+    options:
+      wordBoundary: true
+  - expected: Amazon Fraud Detector
+    patterns:
+      - AWS Fraud Detector
+    options:
+      wordBoundary: true
+  - expected: Fraud Detector
+    patterns:
+      - FraudDetector
+    options:
+      wordBoundary: true
+  - expected: FSx
+    options:
+      wordBoundary: true
+  - expected: Amazon FSx
+    patterns:
+      - AWS FSx
+    options:
+      wordBoundary: true
+  - expected: GameLift
+    options:
+      wordBoundary: true
+  - expected: Amazon GameLift
+    patterns:
+      - AWS GameLift
+    options:
+      wordBoundary: true
+  - expected: GuardDuty
+    options:
+      wordBoundary: true
+  - expected: Amazon GuardDuty
+    patterns:
+      - AWS GuardDuty
+    options:
+      wordBoundary: true
+  - expected: HealthLake
+    options:
+      wordBoundary: true
+  - expected: Amazon HealthLake
+    patterns:
+      - AWS HealthLake
+    options:
+      wordBoundary: true
+  - expected: Honeycode
+    options:
+      wordBoundary: true
+  - expected: Amazon Honeycode
+    patterns:
+      - AWS Honeycode
+    options:
+      wordBoundary: true
+  - expected: Inspector
+    options:
+      wordBoundary: true
+  - expected: Amazon Inspector
+    patterns:
+      - AWS Inspector
+    options:
+      wordBoundary: true
+  - expected: Interactive Video Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Interactive Video Service
+    patterns:
+      - AWS Interactive Video Service
+    options:
+      wordBoundary: true
+  - expected: Interactive Video Service
+    patterns:
+      - InteractiveVideoService
+    options:
+      wordBoundary: true
+  - expected: Kendra
+    options:
+      wordBoundary: true
+  - expected: Amazon Kendra
+    patterns:
+      - AWS Kendra
+    options:
+      wordBoundary: true
+  - expected: Keyspaces
+    options:
+      wordBoundary: true
+  - expected: Amazon Keyspaces
+    patterns:
+      - AWS Keyspaces
+    options:
+      wordBoundary: true
+  - expected: Kinesis
+    options:
+      wordBoundary: true
+  - expected: Amazon Kinesis
+    patterns:
+      - AWS Kinesis
+    options:
+      wordBoundary: true
+  - expected: Kinesis Video Streams
+    options:
+      wordBoundary: true
+  - expected: Amazon Kinesis Video Streams
+    patterns:
+      - AWS Kinesis Video Streams
+    options:
+      wordBoundary: true
+  - expected: Kinesis Video Streams
+    patterns:
+      - KinesisVideoStreams
+    options:
+      wordBoundary: true
+  - expected: Lex
+    options:
+      wordBoundary: true
+  - expected: Amazon Lex
+    patterns:
+      - AWS Lex
+    options:
+      wordBoundary: true
+  - expected: Lightsail
+    options:
+      wordBoundary: true
+  - expected: Amazon Lightsail
+    patterns:
+      - AWS Lightsail
+    options:
+      wordBoundary: true
+  - expected: Location Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Location Service
+    patterns:
+      - AWS Location Service
+    options:
+      wordBoundary: true
+  - expected: Location Service
+    patterns:
+      - LocationService
+    options:
+      wordBoundary: true
+  - expected: Lookout for Equipment
+    options:
+      wordBoundary: true
+  - expected: Amazon Lookout for Equipment
+    patterns:
+      - AWS Lookout for Equipment
+    options:
+      wordBoundary: true
+  - expected: Lookout for Equipment
+    patterns:
+      - LookoutforEquipment
+    options:
+      wordBoundary: true
+  - expected: Lookout for Metrics
+    options:
+      wordBoundary: true
+  - expected: Amazon Lookout for Metrics
+    patterns:
+      - AWS Lookout for Metrics
+    options:
+      wordBoundary: true
+  - expected: Lookout for Metrics
+    patterns:
+      - LookoutforMetrics
+    options:
+      wordBoundary: true
+  - expected: Lookout for Vision
+    options:
+      wordBoundary: true
+  - expected: Amazon Lookout for Vision
+    patterns:
+      - AWS Lookout for Vision
+    options:
+      wordBoundary: true
+  - expected: Lookout for Vision
+    patterns:
+      - LookoutforVision
+    options:
+      wordBoundary: true
+  - expected: Lumberyard
+    options:
+      wordBoundary: true
+  - expected: Amazon Lumberyard
+    patterns:
+      - AWS Lumberyard
+    options:
+      wordBoundary: true
+  - expected: Macie
+    options:
+      wordBoundary: true
+  - expected: Amazon Macie
+    patterns:
+      - AWS Macie
+    options:
+      wordBoundary: true
+  - expected: Managed Blockchain
+    options:
+      wordBoundary: true
+  - expected: Amazon Managed Blockchain
+    patterns:
+      - AWS Managed Blockchain
+    options:
+      wordBoundary: true
+  - expected: Managed Blockchain
+    patterns:
+      - ManagedBlockchain
+    options:
+      wordBoundary: true
+  - expected: Managed Grafana
+    options:
+      wordBoundary: true
+  - expected: Amazon Managed Grafana
+    patterns:
+      - AWS Managed Grafana
+    options:
+      wordBoundary: true
+  - expected: Managed Grafana
+    patterns:
+      - ManagedGrafana
+    options:
+      wordBoundary: true
+  - expected: Managed Service for Prometheus
+    options:
+      wordBoundary: true
+  - expected: Amazon Managed Service for Prometheus
+    patterns:
+      - AWS Managed Service for Prometheus
+    options:
+      wordBoundary: true
+  - expected: Managed Service for Prometheus
+    patterns:
+      - ManagedServiceforPrometheus
+    options:
+      wordBoundary: true
+  - expected: Managed Streaming for Apache Kafka
+    options:
+      wordBoundary: true
+  - expected: Amazon Managed Streaming for Apache Kafka
+    patterns:
+      - AWS Managed Streaming for Apache Kafka
+    options:
+      wordBoundary: true
+  - expected: Managed Streaming for Apache Kafka
+    patterns:
+      - ManagedStreamingforApacheKafka
+    options:
+      wordBoundary: true
+  - expected: Managed Workflows for Apache Airflow
+    options:
+      wordBoundary: true
+  - expected: Amazon Managed Workflows for Apache Airflow
+    patterns:
+      - AWS Managed Workflows for Apache Airflow
+    options:
+      wordBoundary: true
+  - expected: Managed Workflows for Apache Airflow
+    patterns:
+      - ManagedWorkflowsforApacheAirflow
+    options:
+      wordBoundary: true
+  - expected: MemoryDB for Redis
+    options:
+      wordBoundary: true
+  - expected: Amazon MemoryDB for Redis
+    patterns:
+      - AWS MemoryDB for Redis
+    options:
+      wordBoundary: true
+  - expected: MemoryDB for Redis
+    patterns:
+      - MemoryDBforRedis
+    options:
+      wordBoundary: true
+  - expected: Monitron
+    options:
+      wordBoundary: true
+  - expected: Amazon Monitron
+    patterns:
+      - AWS Monitron
+    options:
+      wordBoundary: true
+  - expected: MQ
+    options:
+      wordBoundary: true
+  - expected: Amazon MQ
+    patterns:
+      - AWS MQ
+    options:
+      wordBoundary: true
+  - expected: Neptune
+    options:
+      wordBoundary: true
+  - expected: Amazon Neptune
+    patterns:
+      - AWS Neptune
+    options:
+      wordBoundary: true
+  - expected: Nimble Studio
+    options:
+      wordBoundary: true
+  - expected: Amazon Nimble Studio
+    patterns:
+      - AWS Nimble Studio
+    options:
+      wordBoundary: true
+  - expected: Nimble Studio
+    patterns:
+      - NimbleStudio
+    options:
+      wordBoundary: true
+  - expected: Omics
+    options:
+      wordBoundary: true
+  - expected: Amazon Omics
+    patterns:
+      - AWS Omics
+    options:
+      wordBoundary: true
+  - expected: OpenSearch Service
+    options:
+      wordBoundary: true
+  - expected: Amazon OpenSearch Service
+    patterns:
+      - AWS OpenSearch Service
+    options:
+      wordBoundary: true
+  - expected: OpenSearch Service
+    patterns:
+      - OpenSearchService
+    options:
+      wordBoundary: true
+  - expected: Personalize
+    options:
+      wordBoundary: true
+  - expected: Amazon Personalize
+    patterns:
+      - AWS Personalize
+    options:
+      wordBoundary: true
+  - expected: Pinpoint
+    options:
+      wordBoundary: true
+  - expected: Amazon Pinpoint
+    patterns:
+      - AWS Pinpoint
+    options:
+      wordBoundary: true
+  - expected: Polly
+    options:
+      wordBoundary: true
+  - expected: Amazon Polly
+    patterns:
+      - AWS Polly
+    options:
+      wordBoundary: true
+  - expected: Quantum Ledger Database
+    options:
+      wordBoundary: true
+  - expected: Amazon Quantum Ledger Database
+    patterns:
+      - AWS Quantum Ledger Database
+    options:
+      wordBoundary: true
+  - expected: Quantum Ledger Database
+    patterns:
+      - QuantumLedgerDatabase
+    options:
+      wordBoundary: true
+  - expected: QuickSight
+    options:
+      wordBoundary: true
+  - expected: Amazon QuickSight
+    patterns:
+      - AWS QuickSight
+    options:
+      wordBoundary: true
+  - expected: RDS
+    options:
+      wordBoundary: true
+  - expected: Amazon RDS
+    patterns:
+      - AWS RDS
+    options:
+      wordBoundary: true
+  - expected: Redshift
+    options:
+      wordBoundary: true
+  - expected: Amazon Redshift
+    patterns:
+      - AWS Redshift
+    options:
+      wordBoundary: true
+  - expected: Rekognition
+    options:
+      wordBoundary: true
+  - expected: Amazon Rekognition
+    patterns:
+      - AWS Rekognition
+    options:
+      wordBoundary: true
+  - expected: Route 53
+    options:
+      wordBoundary: true
+  - expected: Amazon Route 53
+    patterns:
+      - AWS Route 53
+    options:
+      wordBoundary: true
+  - expected: Route 53
+    patterns:
+      - Route53
+    options:
+      wordBoundary: true
+  - expected: S3 Glacier
+    options:
+      wordBoundary: true
+  - expected: Amazon S3 Glacier
+    patterns:
+      - AWS S3 Glacier
+    options:
+      wordBoundary: true
+  - expected: S3 Glacier
+    patterns:
+      - S3Glacier
+    options:
+      wordBoundary: true
+  - expected: SageMaker
+    options:
+      wordBoundary: true
+  - expected: Amazon SageMaker
+    patterns:
+      - AWS SageMaker
+    options:
+      wordBoundary: true
+  - expected: SageMaker Ground Truth
+    options:
+      wordBoundary: true
+  - expected: Amazon SageMaker Ground Truth
+    patterns:
+      - AWS SageMaker Ground Truth
+    options:
+      wordBoundary: true
+  - expected: SageMaker Ground Truth
+    patterns:
+      - SageMakerGroundTruth
+    options:
+      wordBoundary: true
+  - expected: Security Lake
+    options:
+      wordBoundary: true
+  - expected: Amazon Security Lake
+    patterns:
+      - AWS Security Lake
+    options:
+      wordBoundary: true
+  - expected: Security Lake
+    patterns:
+      - SecurityLake
+    options:
+      wordBoundary: true
+  - expected: Simple Email Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Simple Email Service
+    patterns:
+      - AWS Simple Email Service
+    options:
+      wordBoundary: true
+  - expected: Simple Email Service
+    patterns:
+      - SimpleEmailService
+    options:
+      wordBoundary: true
+  - expected: Simple Notification Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Simple Notification Service
+    patterns:
+      - AWS Simple Notification Service
+    options:
+      wordBoundary: true
+  - expected: Simple Notification Service
+    patterns:
+      - SimpleNotificationService
+    options:
+      wordBoundary: true
+  - expected: Simple Queue Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Simple Queue Service
+    patterns:
+      - AWS Simple Queue Service
+    options:
+      wordBoundary: true
+  - expected: Simple Queue Service
+    patterns:
+      - SimpleQueueService
+    options:
+      wordBoundary: true
+  - expected: Simple Storage Service
+    options:
+      wordBoundary: true
+  - expected: Amazon Simple Storage Service
+    patterns:
+      - AWS Simple Storage Service
+    options:
+      wordBoundary: true
+  - expected: Simple Storage Service
+    patterns:
+      - SimpleStorageService
+    options:
+      wordBoundary: true
+  - expected: Sumerian
+    options:
+      wordBoundary: true
+  - expected: Amazon Sumerian
+    patterns:
+      - AWS Sumerian
+    options:
+      wordBoundary: true
+  - expected: Textract
+    options:
+      wordBoundary: true
+  - expected: Amazon Textract
+    patterns:
+      - AWS Textract
+    options:
+      wordBoundary: true
+  - expected: Timestream
+    options:
+      wordBoundary: true
+  - expected: Amazon Timestream
+    patterns:
+      - AWS Timestream
+    options:
+      wordBoundary: true
+  - expected: Transcribe
+    options:
+      wordBoundary: true
+  - expected: Amazon Transcribe
+    patterns:
+      - AWS Transcribe
+    options:
+      wordBoundary: true
+  - expected: Translate
+    options:
+      wordBoundary: true
+  - expected: Amazon Translate
+    patterns:
+      - AWS Translate
+    options:
+      wordBoundary: true
+  - expected: Verified Permissions
+    options:
+      wordBoundary: true
+  - expected: Amazon Verified Permissions
+    patterns:
+      - AWS Verified Permissions
+    options:
+      wordBoundary: true
+  - expected: Verified Permissions
+    patterns:
+      - VerifiedPermissions
+    options:
+      wordBoundary: true
+  - expected: VPC
+    options:
+      wordBoundary: true
+  - expected: Amazon VPC
+    patterns:
+      - AWS VPC
+    options:
+      wordBoundary: true
+  - expected: WorkDocs
+    options:
+      wordBoundary: true
+  - expected: Amazon WorkDocs
+    patterns:
+      - AWS WorkDocs
+    options:
+      wordBoundary: true
+  - expected: WorkMail
+    options:
+      wordBoundary: true
+  - expected: Amazon WorkMail
+    patterns:
+      - AWS WorkMail
+    options:
+      wordBoundary: true
+  - expected: WorkSpaces
+    options:
+      wordBoundary: true
+  - expected: Amazon WorkSpaces
+    patterns:
+      - AWS WorkSpaces
+    options:
+      wordBoundary: true
+  - expected: Apache MXNet on AWS
+    options:
+      wordBoundary: true
+  - expected: Apache MXNet on AWS
+    patterns:
+      - ApacheMXNetonAWS
+    options:
+      wordBoundary: true
+  - expected: Application Migration Service
+    options:
+      wordBoundary: true
+  - expected: AWS Application Migration Service
+    patterns:
+      - Amazon Application Migration Service
+    options:
+      wordBoundary: true
+  - expected: Application Migration Service
+    patterns:
+      - ApplicationMigrationService
+    options:
+      wordBoundary: true
+  - expected: Amplify
+    options:
+      wordBoundary: true
+  - expected: AWS Amplify
+    patterns:
+      - Amazon Amplify
+    options:
+      wordBoundary: true
+  - expected: App Mesh
+    options:
+      wordBoundary: true
+  - expected: AWS App Mesh
+    patterns:
+      - Amazon App Mesh
+    options:
+      wordBoundary: true
+  - expected: App Mesh
+    patterns:
+      - AppMesh
+    options:
+      wordBoundary: true
+  - expected: App Runner
+    options:
+      wordBoundary: true
+  - expected: AWS App Runner
+    patterns:
+      - Amazon App Runner
+    options:
+      wordBoundary: true
+  - expected: App Runner
+    patterns:
+      - AppRunner
+    options:
+      wordBoundary: true
+  - expected: App2Container
+    options:
+      wordBoundary: true
+  - expected: AWS App2Container
+    patterns:
+      - Amazon App2Container
+    options:
+      wordBoundary: true
+  - expected: Application Composer
+    options:
+      wordBoundary: true
+  - expected: AWS Application Composer
+    patterns:
+      - Amazon Application Composer
+    options:
+      wordBoundary: true
+  - expected: Application Composer
+    patterns:
+      - ApplicationComposer
+    options:
+      wordBoundary: true
+  - expected: Application Discovery Service
+    options:
+      wordBoundary: true
+  - expected: AWS Application Discovery Service
+    patterns:
+      - Amazon Application Discovery Service
+    options:
+      wordBoundary: true
+  - expected: Application Discovery Service
+    patterns:
+      - ApplicationDiscoveryService
+    options:
+      wordBoundary: true
+  - expected: AppSync
+    options:
+      wordBoundary: true
+  - expected: AWS AppSync
+    patterns:
+      - Amazon AppSync
+    options:
+      wordBoundary: true
+  - expected: Artifact
+    options:
+      wordBoundary: true
+  - expected: AWS Artifact
+    patterns:
+      - Amazon Artifact
+    options:
+      wordBoundary: true
+  - expected: Audit Manager
+    options:
+      wordBoundary: true
+  - expected: AWS Audit Manager
+    patterns:
+      - Amazon Audit Manager
+    options:
+      wordBoundary: true
+  - expected: Audit Manager
+    patterns:
+      - AuditManager
+    options:
+      wordBoundary: true
+  - expected: Auto Scaling
+    options:
+      wordBoundary: true
+  - expected: AWS Auto Scaling
+    patterns:
+      - Amazon Auto Scaling
+    options:
+      wordBoundary: true
+  - expected: Auto Scaling
+    patterns:
+      - AutoScaling
+    options:
+      wordBoundary: true
+  - expected: Backup
+    options:
+      wordBoundary: true
+  - expected: AWS Backup
+    patterns:
+      - Amazon Backup
+    options:
+      wordBoundary: true
+  - expected: Batch
+    options:
+      wordBoundary: true
+  - expected: AWS Batch
+    patterns:
+      - Amazon Batch
+    options:
+      wordBoundary: true
+  - expected: Budgets
+    options:
+      wordBoundary: true
+  - expected: AWS Budgets
+    patterns:
+      - Amazon Budgets
+    options:
+      wordBoundary: true
+  - expected: Certificate Manager
+    options:
+      wordBoundary: true
+  - expected: AWS Certificate Manager
+    patterns:
+      - Amazon Certificate Manager
+    options:
+      wordBoundary: true
+  - expected: Certificate Manager
+    patterns:
+      - CertificateManager
+    options:
+      wordBoundary: true
+  - expected: Chatbot
+    options:
+      wordBoundary: true
+  - expected: AWS Chatbot
+    patterns:
+      - Amazon Chatbot
+    options:
+      wordBoundary: true
+  - expected: Clean Rooms
+    options:
+      wordBoundary: true
+  - expected: AWS Clean Rooms
+    patterns:
+      - Amazon Clean Rooms
+    options:
+      wordBoundary: true
+  - expected: Clean Rooms
+    patterns:
+      - CleanRooms
+    options:
+      wordBoundary: true
+  - expected: Cloud Control API
+    options:
+      wordBoundary: true
+  - expected: AWS Cloud Control API
+    patterns:
+      - Amazon Cloud Control API
+    options:
+      wordBoundary: true
+  - expected: Cloud Control API
+    patterns:
+      - CloudControlAPI
+    options:
+      wordBoundary: true
+  - expected: Cloud Development Kit
+    options:
+      wordBoundary: true
+  - expected: AWS Cloud Development Kit
+    patterns:
+      - Amazon Cloud Development Kit
+    options:
+      wordBoundary: true
+  - expected: Cloud Development Kit
+    patterns:
+      - CloudDevelopmentKit
+    options:
+      wordBoundary: true
+  - expected: Cloud Map
+    options:
+      wordBoundary: true
+  - expected: AWS Cloud Map
+    patterns:
+      - Amazon Cloud Map
+    options:
+      wordBoundary: true
+  - expected: Cloud Map
+    patterns:
+      - CloudMap
+    options:
+      wordBoundary: true
+  - expected: Cloud WAN
+    options:
+      wordBoundary: true
+  - expected: AWS Cloud WAN
+    patterns:
+      - Amazon Cloud WAN
+    options:
+      wordBoundary: true
+  - expected: Cloud WAN
+    patterns:
+      - CloudWAN
+    options:
+      wordBoundary: true
+  - expected: Cloud9
+    options:
+      wordBoundary: true
+  - expected: AWS Cloud9
+    patterns:
+      - Amazon Cloud9
+    options:
+      wordBoundary: true
+  - expected: CloudFormation
+    options:
+      wordBoundary: true
+  - expected: AWS CloudFormation
+    patterns:
+      - Amazon CloudFormation
+    options:
+      wordBoundary: true
+  - expected: CloudHSM
+    options:
+      wordBoundary: true
+  - expected: AWS CloudHSM
+    patterns:
+      - Amazon CloudHSM
+    options:
+      wordBoundary: true
+  - expected: CloudShell
+    options:
+      wordBoundary: true
+  - expected: AWS CloudShell
+    patterns:
+      - Amazon CloudShell
+    options:
+      wordBoundary: true
+  - expected: CloudTrail
+    options:
+      wordBoundary: true
+  - expected: AWS CloudTrail
+    patterns:
+      - Amazon CloudTrail
+    options:
+      wordBoundary: true
+  - expected: CodeArtifact
+    options:
+      wordBoundary: true
+  - expected: AWS CodeArtifact
+    patterns:
+      - Amazon CodeArtifact
+    options:
+      wordBoundary: true
+  - expected: CodeBuild
+    options:
+      wordBoundary: true
+  - expected: AWS CodeBuild
+    patterns:
+      - Amazon CodeBuild
+    options:
+      wordBoundary: true
+  - expected: CodeCommit
+    options:
+      wordBoundary: true
+  - expected: AWS CodeCommit
+    patterns:
+      - Amazon CodeCommit
+    options:
+      wordBoundary: true
+  - expected: CodeDeploy
+    options:
+      wordBoundary: true
+  - expected: AWS CodeDeploy
+    patterns:
+      - Amazon CodeDeploy
+    options:
+      wordBoundary: true
+  - expected: CodePipeline
+    options:
+      wordBoundary: true
+  - expected: AWS CodePipeline
+    patterns:
+      - Amazon CodePipeline
+    options:
+      wordBoundary: true
+  - expected: CodeStar
+    options:
+      wordBoundary: true
+  - expected: AWS CodeStar
+    patterns:
+      - Amazon CodeStar
+    options:
+      wordBoundary: true
+  - expected: Command Line Interface
+    options:
+      wordBoundary: true
+  - expected: AWS Command Line Interface
+    patterns:
+      - Amazon Command Line Interface
+    options:
+      wordBoundary: true
+  - expected: Command Line Interface
+    patterns:
+      - CommandLineInterface
+    options:
+      wordBoundary: true
+  - expected: Compute Optimizer
+    options:
+      wordBoundary: true
+  - expected: AWS Compute Optimizer
+    patterns:
+      - Amazon Compute Optimizer
+    options:
+      wordBoundary: true
+  - expected: Compute Optimizer
+    patterns:
+      - ComputeOptimizer
+    options:
+      wordBoundary: true
+  - expected: Config
+    options:
+      wordBoundary: true
+  - expected: AWS Config
+    patterns:
+      - Amazon Config
+    options:
+      wordBoundary: true
+  - expected: Control Tower
+    options:
+      wordBoundary: true
+  - expected: AWS Control Tower
+    patterns:
+      - Amazon Control Tower
+    options:
+      wordBoundary: true
+  - expected: Control Tower
+    patterns:
+      - ControlTower
+    options:
+      wordBoundary: true
+  - expected: Copilot
+    options:
+      wordBoundary: true
+  - expected: AWS Copilot
+    patterns:
+      - Amazon Copilot
+    options:
+      wordBoundary: true
+  - expected: Cost and Usage Report
+    options:
+      wordBoundary: true
+  - expected: AWS Cost and Usage Report
+    patterns:
+      - Amazon Cost and Usage Report
+    options:
+      wordBoundary: true
+  - expected: Cost and Usage Report
+    patterns:
+      - CostandUsageReport
+    options:
+      wordBoundary: true
+  - expected: Cost Explorer
+    options:
+      wordBoundary: true
+  - expected: AWS Cost Explorer
+    patterns:
+      - Amazon Cost Explorer
+    options:
+      wordBoundary: true
+  - expected: Cost Explorer
+    patterns:
+      - CostExplorer
+    options:
+      wordBoundary: true
+  - expected: Data Exchange
+    options:
+      wordBoundary: true
+  - expected: AWS Data Exchange
+    patterns:
+      - Amazon Data Exchange
+    options:
+      wordBoundary: true
+  - expected: Data Exchange
+    patterns:
+      - DataExchange
+    options:
+      wordBoundary: true
+  - expected: Data Pipeline
+    options:
+      wordBoundary: true
+  - expected: AWS Data Pipeline
+    patterns:
+      - Amazon Data Pipeline
+    options:
+      wordBoundary: true
+  - expected: Data Pipeline
+    patterns:
+      - DataPipeline
+    options:
+      wordBoundary: true
+  - expected: Database Migration Service
+    options:
+      wordBoundary: true
+  - expected: AWS Database Migration Service
+    patterns:
+      - Amazon Database Migration Service
+    options:
+      wordBoundary: true
+  - expected: Database Migration Service
+    patterns:
+      - DatabaseMigrationService
+    options:
+      wordBoundary: true
+  - expected: DataSync
+    options:
+      wordBoundary: true
+  - expected: AWS DataSync
+    patterns:
+      - Amazon DataSync
+    options:
+      wordBoundary: true
+  - expected: Deep Learning AMIs
+    options:
+      wordBoundary: true
+  - expected: AWS Deep Learning AMIs
+    patterns:
+      - Amazon Deep Learning AMIs
+    options:
+      wordBoundary: true
+  - expected: Deep Learning AMIs
+    patterns:
+      - DeepLearningAMIs
+    options:
+      wordBoundary: true
+  - expected: Deep Learning Containers
+    options:
+      wordBoundary: true
+  - expected: AWS Deep Learning Containers
+    patterns:
+      - Amazon Deep Learning Containers
+    options:
+      wordBoundary: true
+  - expected: Deep Learning Containers
+    patterns:
+      - DeepLearningContainers
+    options:
+      wordBoundary: true
+  - expected: DeepComposer
+    options:
+      wordBoundary: true
+  - expected: AWS DeepComposer
+    patterns:
+      - Amazon DeepComposer
+    options:
+      wordBoundary: true
+  - expected: DeepLens
+    options:
+      wordBoundary: true
+  - expected: AWS DeepLens
+    patterns:
+      - Amazon DeepLens
+    options:
+      wordBoundary: true
+  - expected: DeepRacer
+    options:
+      wordBoundary: true
+  - expected: AWS DeepRacer
+    patterns:
+      - Amazon DeepRacer
+    options:
+      wordBoundary: true
+  - expected: Device Farm
+    options:
+      wordBoundary: true
+  - expected: AWS Device Farm
+    patterns:
+      - Amazon Device Farm
+    options:
+      wordBoundary: true
+  - expected: Device Farm
+    patterns:
+      - DeviceFarm
+    options:
+      wordBoundary: true
+  - expected: Direct Connect
+    options:
+      wordBoundary: true
+  - expected: AWS Direct Connect
+    patterns:
+      - Amazon Direct Connect
+    options:
+      wordBoundary: true
+  - expected: Direct Connect
+    patterns:
+      - DirectConnect
+    options:
+      wordBoundary: true
+  - expected: Directory Service
+    options:
+      wordBoundary: true
+  - expected: AWS Directory Service
+    patterns:
+      - Amazon Directory Service
+    options:
+      wordBoundary: true
+  - expected: Directory Service
+    patterns:
+      - DirectoryService
+    options:
+      wordBoundary: true
+  - expected: Distro for OpenTelemetry
+    options:
+      wordBoundary: true
+  - expected: AWS Distro for OpenTelemetry
+    patterns:
+      - Amazon Distro for OpenTelemetry
+    options:
+      wordBoundary: true
+  - expected: Distro for OpenTelemetry
+    patterns:
+      - DistroforOpenTelemetry
+    options:
+      wordBoundary: true
+  - expected: Elastic Beanstalk
+    options:
+      wordBoundary: true
+  - expected: AWS Elastic Beanstalk
+    patterns:
+      - Amazon Elastic Beanstalk
+    options:
+      wordBoundary: true
+  - expected: Elastic Beanstalk
+    patterns:
+      - ElasticBeanstalk
+    options:
+      wordBoundary: true
+  - expected: Elemental Appliances & Software
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental Appliances & Software
+    patterns:
+      - Amazon Elemental Appliances & Software
+    options:
+      wordBoundary: true
+  - expected: Elemental Appliances & Software
+    patterns:
+      - ElementalAppliances&Software
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaConnect
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental MediaConnect
+    patterns:
+      - Amazon Elemental MediaConnect
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaConnect
+    patterns:
+      - ElementalMediaConnect
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaConvert
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental MediaConvert
+    patterns:
+      - Amazon Elemental MediaConvert
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaConvert
+    patterns:
+      - ElementalMediaConvert
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaLive
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental MediaLive
+    patterns:
+      - Amazon Elemental MediaLive
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaLive
+    patterns:
+      - ElementalMediaLive
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaPackage
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental MediaPackage
+    patterns:
+      - Amazon Elemental MediaPackage
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaPackage
+    patterns:
+      - ElementalMediaPackage
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaStore
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental MediaStore
+    patterns:
+      - Amazon Elemental MediaStore
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaStore
+    patterns:
+      - ElementalMediaStore
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaTailor
+    options:
+      wordBoundary: true
+  - expected: AWS Elemental MediaTailor
+    patterns:
+      - Amazon Elemental MediaTailor
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaTailor
+    patterns:
+      - ElementalMediaTailor
+    options:
+      wordBoundary: true
+  - expected: Fargate
+    options:
+      wordBoundary: true
+  - expected: AWS Fargate
+    patterns:
+      - Amazon Fargate
+    options:
+      wordBoundary: true
+  - expected: Fault Injection Simulator
+    options:
+      wordBoundary: true
+  - expected: AWS Fault Injection Simulator
+    patterns:
+      - Amazon Fault Injection Simulator
+    options:
+      wordBoundary: true
+  - expected: Fault Injection Simulator
+    patterns:
+      - FaultInjectionSimulator
+    options:
+      wordBoundary: true
+  - expected: Firewall Manager
+    options:
+      wordBoundary: true
+  - expected: AWS Firewall Manager
+    patterns:
+      - Amazon Firewall Manager
+    options:
+      wordBoundary: true
+  - expected: Firewall Manager
+    patterns:
+      - FirewallManager
+    options:
+      wordBoundary: true
+  - expected: Global Accelerator
+    options:
+      wordBoundary: true
+  - expected: AWS Global Accelerator
+    patterns:
+      - Amazon Global Accelerator
+    options:
+      wordBoundary: true
+  - expected: Global Accelerator
+    patterns:
+      - GlobalAccelerator
+    options:
+      wordBoundary: true
+  - expected: Glue
+    options:
+      wordBoundary: true
+  - expected: AWS Glue
+    patterns:
+      - Amazon Glue
+    options:
+      wordBoundary: true
+  - expected: Ground Station
+    options:
+      wordBoundary: true
+  - expected: AWS Ground Station
+    patterns:
+      - Amazon Ground Station
+    options:
+      wordBoundary: true
+  - expected: Ground Station
+    patterns:
+      - GroundStation
+    options:
+      wordBoundary: true
+  - expected: IAM Identity Center
+    options:
+      wordBoundary: true
+  - expected: AWS IAM Identity Center
+    patterns:
+      - Amazon IAM Identity Center
+    options:
+      wordBoundary: true
+  - expected: IAM Identity Center
+    patterns:
+      - IAMIdentityCenter
+    options:
+      wordBoundary: true
+  - expected: Identity and Access Management
+    options:
+      wordBoundary: true
+  - expected: AWS Identity and Access Management
+    patterns:
+      - Amazon Identity and Access Management
+    options:
+      wordBoundary: true
+  - expected: Identity and Access Management
+    patterns:
+      - IdentityandAccessManagement
+    options:
+      wordBoundary: true
+  - expected: Inferentia
+    options:
+      wordBoundary: true
+  - expected: AWS Inferentia
+    patterns:
+      - Amazon Inferentia
+    options:
+      wordBoundary: true
+  - expected: IoT 1-Click
+    options:
+      wordBoundary: true
+  - expected: AWS IoT 1-Click
+    patterns:
+      - /Amazon IoT 1-Click/
+    options:
+      wordBoundary: true
+  - expected: IoT 1-Click
+    patterns:
+      - /IoT1-Click/
+    options:
+      wordBoundary: true
+  - expected: IoT Analytics
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Analytics
+    patterns:
+      - Amazon IoT Analytics
+    options:
+      wordBoundary: true
+  - expected: IoT Analytics
+    patterns:
+      - IoTAnalytics
+    options:
+      wordBoundary: true
+  - expected: IoT Button
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Button
+    patterns:
+      - Amazon IoT Button
+    options:
+      wordBoundary: true
+  - expected: IoT Button
+    patterns:
+      - IoTButton
+    options:
+      wordBoundary: true
+  - expected: IoT Device Defender
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Device Defender
+    patterns:
+      - Amazon IoT Device Defender
+    options:
+      wordBoundary: true
+  - expected: IoT Device Defender
+    patterns:
+      - IoTDeviceDefender
+    options:
+      wordBoundary: true
+  - expected: IoT Device Management
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Device Management
+    patterns:
+      - Amazon IoT Device Management
+    options:
+      wordBoundary: true
+  - expected: IoT Device Management
+    patterns:
+      - IoTDeviceManagement
+    options:
+      wordBoundary: true
+  - expected: IoT EduKit
+    options:
+      wordBoundary: true
+  - expected: AWS IoT EduKit
+    patterns:
+      - Amazon IoT EduKit
+    options:
+      wordBoundary: true
+  - expected: IoT EduKit
+    patterns:
+      - IoTEduKit
+    options:
+      wordBoundary: true
+  - expected: IoT Events
+    options:
+      wordBoundary: true
+  - expected: AWS IoT Events
+    patterns:
+      - Amazon IoT Events
+    options:
+      wordBoundary: true
+  - expected: IoT Events
+    patterns:
+      - IoTEvents
+    options:
+      wordBoundary: true
+  - expected: IoT RoboRunner
+    options:
+      wordBoundary: true
+  - expected: AWS IoT RoboRunner
+    patterns:
+      - Amazon IoT RoboRunner
+    options:
+      wordBoundary: true
+  - expected: IoT RoboRunner
+    patterns:
+      - IoTRoboRunner
+    options:
+      wordBoundary: true
+  - expected: Key Management Service
+    options:
+      wordBoundary: true
+  - expected: AWS Key Management Service
+    patterns:
+      - Amazon Key Management Service
+    options:
+      wordBoundary: true
+  - expected: Key Management Service
+    patterns:
+      - KeyManagementService
+    options:
+      wordBoundary: true
+  - expected: Lake Formation
+    options:
+      wordBoundary: true
+  - expected: AWS Lake Formation
+    patterns:
+      - Amazon Lake Formation
+    options:
+      wordBoundary: true
+  - expected: Lake Formation
+    patterns:
+      - LakeFormation
+    options:
+      wordBoundary: true
+  - expected: Lambda
+    options:
+      wordBoundary: true
+  - expected: AWS Lambda
+    patterns:
+      - Amazon Lambda
+    options:
+      wordBoundary: true
+  - expected: Launch Wizard
+    options:
+      wordBoundary: true
+  - expected: AWS Launch Wizard
+    patterns:
+      - Amazon Launch Wizard
+    options:
+      wordBoundary: true
+  - expected: Launch Wizard
+    patterns:
+      - LaunchWizard
+    options:
+      wordBoundary: true
+  - expected: License Manager
+    options:
+      wordBoundary: true
+  - expected: AWS License Manager
+    patterns:
+      - Amazon License Manager
+    options:
+      wordBoundary: true
+  - expected: License Manager
+    patterns:
+      - LicenseManager
+    options:
+      wordBoundary: true
+  - expected: Local Zones
+    options:
+      wordBoundary: true
+  - expected: AWS Local Zones
+    patterns:
+      - Amazon Local Zones
+    options:
+      wordBoundary: true
+  - expected: Local Zones
+    patterns:
+      - LocalZones
+    options:
+      wordBoundary: true
+  - expected: Mainframe Modernization
+    options:
+      wordBoundary: true
+  - expected: AWS Mainframe Modernization
+    patterns:
+      - Amazon Mainframe Modernization
+    options:
+      wordBoundary: true
+  - expected: Mainframe Modernization
+    patterns:
+      - MainframeModernization
+    options:
+      wordBoundary: true
+  - expected: Managed Services
+    options:
+      wordBoundary: true
+  - expected: AWS Managed Services
+    patterns:
+      - Amazon Managed Services
+    options:
+      wordBoundary: true
+  - expected: Managed Services
+    patterns:
+      - ManagedServices
+    options:
+      wordBoundary: true
+  - expected: Management Console
+    options:
+      wordBoundary: true
+  - expected: AWS Management Console
+    patterns:
+      - Amazon Management Console
+    options:
+      wordBoundary: true
+  - expected: Management Console
+    patterns:
+      - ManagementConsole
+    options:
+      wordBoundary: true
+  - expected: Management Console Mobile Application
+    options:
+      wordBoundary: true
+  - expected: AWS Management Console Mobile Application
+    patterns:
+      - Amazon Management Console Mobile Application
+    options:
+      wordBoundary: true
+  - expected: Management Console Mobile Application
+    patterns:
+      - ManagementConsoleMobileApplication
+    options:
+      wordBoundary: true
+  - expected: Migration Hub
+    options:
+      wordBoundary: true
+  - expected: AWS Migration Hub
+    patterns:
+      - Amazon Migration Hub
+    options:
+      wordBoundary: true
+  - expected: Migration Hub
+    patterns:
+      - MigrationHub
+    options:
+      wordBoundary: true
+  - expected: Network Firewall
+    options:
+      wordBoundary: true
+  - expected: AWS Network Firewall
+    patterns:
+      - Amazon Network Firewall
+    options:
+      wordBoundary: true
+  - expected: Network Firewall
+    patterns:
+      - NetworkFirewall
+    options:
+      wordBoundary: true
+  - expected: OpsWorks
+    options:
+      wordBoundary: true
+  - expected: AWS OpsWorks
+    patterns:
+      - Amazon OpsWorks
+    options:
+      wordBoundary: true
+  - expected: Organizations
+    options:
+      wordBoundary: true
+  - expected: AWS Organizations
+    patterns:
+      - Amazon Organizations
+    options:
+      wordBoundary: true
+  - expected: Outposts
+    options:
+      wordBoundary: true
+  - expected: AWS Outposts
+    patterns:
+      - Amazon Outposts
+    options:
+      wordBoundary: true
+  - expected: Panorama
+    options:
+      wordBoundary: true
+  - expected: AWS Panorama
+    patterns:
+      - Amazon Panorama
+    options:
+      wordBoundary: true
+  - expected: Partner Device Catalog
+    options:
+      wordBoundary: true
+  - expected: AWS Partner Device Catalog
+    patterns:
+      - Amazon Partner Device Catalog
+    options:
+      wordBoundary: true
+  - expected: Partner Device Catalog
+    patterns:
+      - PartnerDeviceCatalog
+    options:
+      wordBoundary: true
+  - expected: Personal Health Dashboard
+    options:
+      wordBoundary: true
+  - expected: AWS Personal Health Dashboard
+    patterns:
+      - Amazon Personal Health Dashboard
+    options:
+      wordBoundary: true
+  - expected: Personal Health Dashboard
+    patterns:
+      - PersonalHealthDashboard
+    options:
+      wordBoundary: true
+  - expected: Private 5G
+    options:
+      wordBoundary: true
+  - expected: AWS Private 5G
+    patterns:
+      - Amazon Private 5G
+    options:
+      wordBoundary: true
+  - expected: Private 5G
+    patterns:
+      - Private5G
+    options:
+      wordBoundary: true
+  - expected: PrivateLink
+    options:
+      wordBoundary: true
+  - expected: AWS PrivateLink
+    patterns:
+      - Amazon PrivateLink
+    options:
+      wordBoundary: true
+  - expected: Proton
+    options:
+      wordBoundary: true
+  - expected: AWS Proton
+    patterns:
+      - Amazon Proton
+    options:
+      wordBoundary: true
+  - expected: Resilience Hub
+    options:
+      wordBoundary: true
+  - expected: AWS Resilience Hub
+    patterns:
+      - Amazon Resilience Hub
+    options:
+      wordBoundary: true
+  - expected: Resilience Hub
+    patterns:
+      - ResilienceHub
+    options:
+      wordBoundary: true
+  - expected: Resource Access Manager
+    options:
+      wordBoundary: true
+  - expected: AWS Resource Access Manager
+    patterns:
+      - Amazon Resource Access Manager
+    options:
+      wordBoundary: true
+  - expected: Resource Access Manager
+    patterns:
+      - ResourceAccessManager
+    options:
+      wordBoundary: true
+  - expected: RoboMaker
+    options:
+      wordBoundary: true
+  - expected: AWS RoboMaker
+    patterns:
+      - Amazon RoboMaker
+    options:
+      wordBoundary: true
+  - expected: Secrets Manager
+    options:
+      wordBoundary: true
+  - expected: AWS Secrets Manager
+    patterns:
+      - Amazon Secrets Manager
+    options:
+      wordBoundary: true
+  - expected: Secrets Manager
+    patterns:
+      - SecretsManager
+    options:
+      wordBoundary: true
+  - expected: Security Hub
+    options:
+      wordBoundary: true
+  - expected: AWS Security Hub
+    patterns:
+      - Amazon Security Hub
+    options:
+      wordBoundary: true
+  - expected: Security Hub
+    patterns:
+      - SecurityHub
+    options:
+      wordBoundary: true
+  - expected: Server Migration Service
+    options:
+      wordBoundary: true
+  - expected: AWS Server Migration Service
+    patterns:
+      - Amazon Server Migration Service
+    options:
+      wordBoundary: true
+  - expected: Server Migration Service
+    patterns:
+      - ServerMigrationService
+    options:
+      wordBoundary: true
+  - expected: Serverless Application Repository
+    options:
+      wordBoundary: true
+  - expected: AWS Serverless Application Repository
+    patterns:
+      - Amazon Serverless Application Repository
+    options:
+      wordBoundary: true
+  - expected: Serverless Application Repository
+    patterns:
+      - ServerlessApplicationRepository
+    options:
+      wordBoundary: true
+  - expected: Service Catalog
+    options:
+      wordBoundary: true
+  - expected: AWS Service Catalog
+    patterns:
+      - Amazon Service Catalog
+    options:
+      wordBoundary: true
+  - expected: Service Catalog
+    patterns:
+      - ServiceCatalog
+    options:
+      wordBoundary: true
+  - expected: Service Management Connector
+    options:
+      wordBoundary: true
+  - expected: AWS Service Management Connector
+    patterns:
+      - Amazon Service Management Connector
+    options:
+      wordBoundary: true
+  - expected: Service Management Connector
+    patterns:
+      - ServiceManagementConnector
+    options:
+      wordBoundary: true
+  - expected: Shield
+    options:
+      wordBoundary: true
+  - expected: AWS Shield
+    patterns:
+      - Amazon Shield
+    options:
+      wordBoundary: true
+  - expected: SimSpace Weaver
+    options:
+      wordBoundary: true
+  - expected: AWS SimSpace Weaver
+    patterns:
+      - Amazon SimSpace Weaver
+    options:
+      wordBoundary: true
+  - expected: SimSpace Weaver
+    patterns:
+      - SimSpaceWeaver
+    options:
+      wordBoundary: true
+  - expected: Snow Family
+    options:
+      wordBoundary: true
+  - expected: AWS Snow Family
+    patterns:
+      - Amazon Snow Family
+    options:
+      wordBoundary: true
+  - expected: Snow Family
+    patterns:
+      - SnowFamily
+    options:
+      wordBoundary: true
+  - expected: Snow Family
+    options:
+      wordBoundary: true
+  - expected: AWS Snow Family
+    patterns:
+      - Amazon Snow Family
+    options:
+      wordBoundary: true
+  - expected: Snow Family
+    patterns:
+      - SnowFamily
+    options:
+      wordBoundary: true
+  - expected: Snow Family
+    options:
+      wordBoundary: true
+  - expected: AWS Snow Family
+    patterns:
+      - Amazon Snow Family
+    options:
+      wordBoundary: true
+  - expected: Snow Family
+    patterns:
+      - SnowFamily
+    options:
+      wordBoundary: true
+  - expected: Step Functions
+    options:
+      wordBoundary: true
+  - expected: AWS Step Functions
+    patterns:
+      - Amazon Step Functions
+    options:
+      wordBoundary: true
+  - expected: Step Functions
+    patterns:
+      - StepFunctions
+    options:
+      wordBoundary: true
+  - expected: Storage Gateway
+    options:
+      wordBoundary: true
+  - expected: AWS Storage Gateway
+    patterns:
+      - Amazon Storage Gateway
+    options:
+      wordBoundary: true
+  - expected: Storage Gateway
+    patterns:
+      - StorageGateway
+    options:
+      wordBoundary: true
+  - expected: Supply Chain
+    options:
+      wordBoundary: true
+  - expected: AWS Supply Chain
+    patterns:
+      - Amazon Supply Chain
+    options:
+      wordBoundary: true
+  - expected: Supply Chain
+    patterns:
+      - SupplyChain
+    options:
+      wordBoundary: true
+  - expected: Systems Manager
+    options:
+      wordBoundary: true
+  - expected: AWS Systems Manager
+    patterns:
+      - Amazon Systems Manager
+    options:
+      wordBoundary: true
+  - expected: Systems Manager
+    patterns:
+      - SystemsManager
+    options:
+      wordBoundary: true
+  - expected: Tools and SDKs
+    options:
+      wordBoundary: true
+  - expected: AWS Tools and SDKs
+    patterns:
+      - Amazon Tools and SDKs
+    options:
+      wordBoundary: true
+  - expected: Tools and SDKs
+    patterns:
+      - ToolsandSDKs
+    options:
+      wordBoundary: true
+  - expected: Transfer Family
+    options:
+      wordBoundary: true
+  - expected: AWS Transfer Family
+    patterns:
+      - Amazon Transfer Family
+    options:
+      wordBoundary: true
+  - expected: Transfer Family
+    patterns:
+      - TransferFamily
+    options:
+      wordBoundary: true
+  - expected: Transit Gateway
+    options:
+      wordBoundary: true
+  - expected: AWS Transit Gateway
+    patterns:
+      - Amazon Transit Gateway
+    options:
+      wordBoundary: true
+  - expected: Transit Gateway
+    patterns:
+      - TransitGateway
+    options:
+      wordBoundary: true
+  - expected: Trusted Advisor
+    options:
+      wordBoundary: true
+  - expected: AWS Trusted Advisor
+    patterns:
+      - Amazon Trusted Advisor
+    options:
+      wordBoundary: true
+  - expected: Trusted Advisor
+    patterns:
+      - TrustedAdvisor
+    options:
+      wordBoundary: true
+  - expected: Verified Access
+    options:
+      wordBoundary: true
+  - expected: AWS Verified Access
+    patterns:
+      - Amazon Verified Access
+    options:
+      wordBoundary: true
+  - expected: Verified Access
+    patterns:
+      - VerifiedAccess
+    options:
+      wordBoundary: true
+  - expected: VPN
+    options:
+      wordBoundary: true
+  - expected: AWS VPN
+    patterns:
+      - Amazon VPN
+    options:
+      wordBoundary: true
+  - expected: WAF
+    options:
+      wordBoundary: true
+  - expected: AWS WAF
+    patterns:
+      - Amazon WAF
+    options:
+      wordBoundary: true
+  - expected: Wavelength
+    options:
+      wordBoundary: true
+  - expected: AWS Wavelength
+    patterns:
+      - Amazon Wavelength
+    options:
+      wordBoundary: true
+  - expected: Well-Architected Tool
+    options:
+      wordBoundary: true
+  - expected: AWS Well-Architected Tool
+    patterns:
+      - /Amazon Well-Architected Tool/
+    options:
+      wordBoundary: true
+  - expected: Well-Architected Tool
+    patterns:
+      - /Well-ArchitectedTool/
+    options:
+      wordBoundary: true
+  - expected: Wickr
+    options:
+      wordBoundary: true
+  - expected: AWS Wickr
+    patterns:
+      - Amazon Wickr
+    options:
+      wordBoundary: true
+  - expected: X-Ray
+    options:
+      wordBoundary: true
+  - expected: AWS X-Ray
+    patterns:
+      - /Amazon X-Ray/
+    options:
+      wordBoundary: true
+  - expected: Elastic Disaster Recovery
+    options:
+      wordBoundary: true
+  - expected: AWS Elastic Disaster Recovery
+    patterns:
+      - Amazon Elastic Disaster Recovery
+    options:
+      wordBoundary: true
+  - expected: Elastic Disaster Recovery
+    patterns:
+      - ElasticDisasterRecovery
+    options:
+      wordBoundary: true
+  - expected: Elastic Load Balancing
+    options:
+      wordBoundary: true
+  - expected: Elastic Load Balancing
+    patterns:
+      - ElasticLoadBalancing
+    options:
+      wordBoundary: true
+  - expected: FreeRTOS
+    options:
+      wordBoundary: true
+  - expected: Migration Evaluator
+    options:
+      wordBoundary: true
+  - expected: Migration Evaluator
+    patterns:
+      - MigrationEvaluator
+    options:
+      wordBoundary: true
+  - expected: PyTorch on AWS
+    options:
+      wordBoundary: true
+  - expected: PyTorch on AWS
+    patterns:
+      - PyTorchonAWS
+    options:
+      wordBoundary: true
+  - expected: Red Hat OpenShift Service on AWS
+    options:
+      wordBoundary: true
+  - expected: Red Hat OpenShift Service on AWS
+    patterns:
+      - RedHatOpenShiftServiceonAWS
+    options:
+      wordBoundary: true
+  - expected: Reserved Instance (RI) Reporting
+    options:
+      wordBoundary: true
+  - expected: Reserved Instance (RI) Reporting
+    patterns:
+      - ReservedInstance(RI)Reporting
+    options:
+      wordBoundary: true
+  - expected: Savings Plans
+    options:
+      wordBoundary: true
+  - expected: Savings Plans
+    patterns:
+      - SavingsPlans
+    options:
+      wordBoundary: true
+  - expected: TensorFlow on AWS
+    options:
+      wordBoundary: true
+  - expected: TensorFlow on AWS
+    patterns:
+      - TensorFlowonAWS
+    options:
+      wordBoundary: true
+  - expected: VMware Cloud on AWS
+    options:
+      wordBoundary: true
+  - expected: VMware Cloud on AWS
+    patterns:
+      - VMwareCloudonAWS
+    options:
+      wordBoundary: true

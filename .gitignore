@@ -34,3 +34,4 @@ npm-debug.log
 # Publish src/ instead lib/
 /lib
 *.js
+!jest.config.js

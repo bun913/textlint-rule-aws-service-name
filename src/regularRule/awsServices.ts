@@ -1,42 +1,99 @@
-type AwsService = {
+import { FetchResponse } from "./fetchResponse";
+
+export const prefixAmazon = "Amazon";
+export const prefixAWS = "AWS";
+export const prefixNone = "";
+
+type ProductPrefix = typeof prefixNone | typeof prefixAmazon | typeof prefixAWS;
+
+export interface AwsServiceParam {
   productName: string;
-  productNameLowercase: string;
-};
-
-export class AwsServices {
-  BASE_URL = "https://aws.amazon.com/api/dirs/items/search";
-  readonly option: OptionParam;
-
-  constructor(option?: OptionParam) {
-    if (option) this.option = option;
-    else this.option = FetchOption.createDefault();
-  }
-
-  // TODO: ここにGET処理を記載する
-  public fetch() {}
+  prefix: ProductPrefix;
 }
 
-type OptionParam = {
-  "item.directoryId": string;
-  sort_by: string;
-  sort_order: string;
-  size: number;
-  "item.locale"?: string;
-  "tags.id": string;
-  page: number;
-};
+export class AwsServices {
+  readonly fetchResponse: FetchResponse;
 
-class FetchOption {
-  public static createDefault(): OptionParam {
-    const defaultOption: OptionParam = {
-      "item.directoryId": "aws-products",
-      sort_by: "item.additionalFields.productNameLowercase",
-      sort_order: "asc",
-      size: 100,
-      "item.locale": "ja_JP",
-      "tags.id": "aws-products#type#service",
-      page: 1,
+  constructor(fetchResponse: FetchResponse) {
+    this.fetchResponse = fetchResponse;
+  }
+
+  public async get(): Promise<AwsService[]> {
+    const items = await this.fetchResponse.result();
+    const awsServices: AwsService[] = items.map((item) => {
+      const productName = item.additionalFields.productName;
+      const prefix = AwsService.getPrefix(productName);
+      const awsService = new AwsService(productName, prefix);
+      return awsService.get();
+    });
+    return awsServices;
+  }
+}
+
+export class AwsService implements AwsServiceParam {
+  readonly productName: string;
+  readonly prefix: ProductPrefix;
+
+  constructor(productName: string, prefix: ProductPrefix) {
+    this.productName = productName;
+    this.prefix = prefix;
+  }
+
+  public static getPrefix(product: string): ProductPrefix {
+    if (product.startsWith(prefixAmazon)) return prefixAmazon;
+    if (product.startsWith(prefixAWS)) return prefixAWS;
+    return "";
+  }
+
+  public get(): AwsService {
+    const removePrefix = this.getPrefixRemovedService();
+    const removeParentheses = removePrefix.getParenthesesRemovedService();
+    return new AwsService(
+      removeParentheses.productName,
+      removeParentheses.prefix
+    );
+  }
+
+  public getParam(): AwsServiceParam {
+    return {
+      productName: this.productName,
+      prefix: this.prefix,
     };
-    return defaultOption;
+  }
+
+  public isPrefixNone(): boolean {
+    return this.prefix == prefixNone;
+  }
+
+  public isPrefixAWS(): boolean {
+    return this.prefix == prefixAWS;
+  }
+
+  public isPrefixAmazon(): boolean {
+    return this.prefix == prefixAmazon;
+  }
+
+  public isIncludeBlank(): boolean {
+    return this.productName.includes(' ')
+  }
+
+  public getFullProductName(): string {
+    if (this.prefix == prefixNone) return this.productName;
+    return `${this.prefix} ${this.productName}`;
+  }
+
+  private getPrefixRemovedService(): AwsService {
+    if (this.prefix === prefixNone) {
+      return new AwsService(this.productName, this.prefix);
+    }
+    const removedProductName = this.productName.replace(this.prefix, "").trim();
+    return new AwsService(removedProductName, this.prefix);
+  }
+
+  // remove parentheses like Supply Chain (Preview) => Supply Chain
+  private getParenthesesRemovedService(): AwsService {
+    const regex = / \(.*\)$/;
+    const removedProductName = this.productName.replace(regex, "").trim();
+    return new AwsService(removedProductName, this.prefix);
   }
 }

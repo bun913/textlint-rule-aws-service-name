@@ -1,14 +1,13 @@
-const readFileSync = require('fs').readFileSync
-import { join } from "path";
+const readFileSync = require("fs").readFileSync;
+const prh = require("textlint-rule-prh");
 import type { TextlintRuleModule } from "@textlint/types";
-import * as prh from "textlint-rule-prh";
 
 export interface Options {
   allows?: string[];
 }
 
 export const report: TextlintRuleModule<Options> = (context) => {
-  const ruleFilePath = join("dict", "aws_service.yml");
+  const ruleFilePath = "prh.yml";
   const ruleContent = readFileSync(ruleFilePath, "utf-8");
   return prh.fixer(context, {
     ruleContents: [ruleContent],
