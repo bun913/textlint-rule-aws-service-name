@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "textlintrule"
   ],
@@ -7,7 +7,9 @@
   "types": "lib/index.d.ts",
   "files": [
     "lib/",
-    "src/"
+    "src/",
+    "dict/",
+    "prh.yml"
   ],
   "scripts": {
     "test": "jest",
