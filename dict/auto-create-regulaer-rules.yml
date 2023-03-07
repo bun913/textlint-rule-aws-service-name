@@ -1273,6 +1273,19 @@ rules:
       - CloudMap
     options:
       wordBoundary: true
+  - expected: Cloud WAN
+    options:
+      wordBoundary: true
+  - expected: AWS Cloud WAN
+    patterns:
+      - Amazon Cloud WAN
+    options:
+      wordBoundary: true
+  - expected: Cloud WAN
+    patterns:
+      - CloudWAN
+    options:
+      wordBoundary: true
   - expected: Cloud9
     options:
       wordBoundary: true
