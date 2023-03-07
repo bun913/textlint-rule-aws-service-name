@@ -1,8 +1,0 @@
-# AWSのAPIを使って自動生成する予定のファイル
-# curl -s 'https://aws.amazon.com/api/dirs/items/search?item.directoryId=aws-products&sort_by=item.additionalFields.productNameLowercase&sort_order=asc&size=15&item.locale=ja_JP&tags.id=aws-products%23type%23service&tags.id=!aws-products%23type%23variant&page=2'  | jq '.items[].item.additionalFields.productName'
-version: 1
-rules:
-  - expected: EC2
-    patterns:
-      - ec2
-      - Ec2
