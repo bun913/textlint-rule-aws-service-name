@@ -73,6 +73,10 @@ export class AwsService implements AwsServiceParam {
     return this.prefix == prefixAmazon;
   }
 
+  public isIncludeBlank(): boolean {
+    return this.productName.includes(' ')
+  }
+
   public getFullProductName(): string {
     if (this.prefix == prefixNone) return this.productName;
     return `${this.prefix} ${this.productName}`;
