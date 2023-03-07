@@ -1,6 +1,7 @@
 import TextLintTester from "textlint-tester";
-import { report } from "../src/index";
+import * as lint from "../src/index";
 
+const report = lint.default.fixer
 const tester = new TextLintTester();
 tester.run("EC2", report, {
   valid: ["EC2", "Amazon EC2"],
