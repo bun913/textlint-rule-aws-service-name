@@ -1,5 +1,4 @@
 import { URLSearchParams } from "url";
-import fetch from "node-fetch";
 import { Item, ResoponseBody } from "./types";
 
 interface OptionParam {

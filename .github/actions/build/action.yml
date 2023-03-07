@@ -5,12 +5,12 @@ runs:
   steps:
     - uses: actions/setup-node@v2
       with:
-        node-version: "18"
+        node-version: "18.14.0"
 
     - name: Install dependencies
       run: yarn install
       shell: bash
 
     - name: build
-      run: nyarn build
+      run: yarn build
       shell: bash
