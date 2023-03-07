@@ -9,8 +9,8 @@
     "src/"
   ],
   "scripts": {
-    "test-lint": "textlint-scripts test --exclude test/src/**/*",
     "test": "jest",
+    "test-lint": "textlint-scripts test --exclude test/src/**/*",
     "run": "npx node lib/index.js",
     "createRule": "npx node lib/createRule.js",
     "build": "textlint-scripts build",
