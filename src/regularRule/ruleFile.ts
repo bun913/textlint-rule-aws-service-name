@@ -5,7 +5,6 @@ const writeFileSync = require("fs").writeFileSync;
 
 type RuleStruct = {
   version: 1;
-  disableImports: true;
   rules: RuleParam[];
 };
 
@@ -21,7 +20,6 @@ export class RuleFile {
     const rules = this.rules.get();
     const ruleObj: RuleStruct = {
       version: 1,
-      disableImports: true,
       rules,
     };
     const doc = new yaml.Document(ruleObj);

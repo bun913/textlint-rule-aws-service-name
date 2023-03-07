@@ -1,5 +1,5 @@
 {
-  "version": "0.1.1",
+  "version": "0.1.4",
   "keywords": [
     "textlintrule"
   ],
@@ -8,8 +8,7 @@
   "files": [
     "lib/",
     "src/",
-    "dict/",
-    "prh.yml"
+    "dict/"
   ],
   "scripts": {
     "test": "jest",
@@ -17,22 +16,16 @@
     "run": "npx node lib/index.js",
     "createRule": "npx node lib/createRule.js",
     "build": "textlint-scripts build",
-    "prepublish": "yarn build",
     "prepare": "yarn build",
     "watch": "textlint-scripts build --watch"
   },
   "devDependencies": {
-    "@textlint/types": "^13.3.0",
     "@types/jest": "^29.4.0",
-    "@types/node": "^18.14.1",
     "jest": "^29.5.0",
-    "textlint-rule-prh": "^5.3.0",
-    "textlint-scripts": "^13.3.0",
     "textlint-tester": "^13.3.0",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.4",
-    "yaml": "^2.2.1"
+    "typescript": "^4.9.4"
   },
   "name": "textlint-rule-aws-service-name",
   "description": "Rule for AWS Product Names",
@@ -41,5 +34,11 @@
   },
   "author": "bun913",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "textlint-scripts": "^13.3.0",
+    "textlint-rule-prh": "^5.3.0",
+    "yaml": "^2.2.1",
+    "@textlint/types": "^13.3.0",
+    "@types/node": "^18.14.1"
+  }
 }
