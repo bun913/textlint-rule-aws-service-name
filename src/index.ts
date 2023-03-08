@@ -12,7 +12,7 @@ const report: TextlintRuleModule<Options> = (context) => {
     __dirname,
     "..",
     "dict",
-    "auto-create-regulaer-rules.yml"
+    "auto-create-regular-rules.yml"
   );
   const ruleContent = readFileSync(ruleFilePath, "utf-8");
   return prh.fixer(context, {

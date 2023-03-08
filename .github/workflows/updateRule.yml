@@ -19,7 +19,7 @@ jobs:
         id: check-diff
         with:
           FILES: |
-            dict/auto-create-regulaer-rules.yml
+            dict/auto-create-regular-rules.yml
       # 差分があればPR作成
       - name: Create PR
         run: gh pr create --fill -B ${{ env.BASE_BRANCH }} -r ${{ env.REVIEWER }}
