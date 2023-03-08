@@ -16,7 +16,7 @@ AWSのサービス名やプロダクト名の表記揺れをチェックする�
 
 ### Check text with prh.yml
 
-`src/index.js`  を実行することにより、[prh.yml](./prh.yml)に記載するルールに照らし合わせてチェックします。
+`src/index.js`  を実行することにより、[auto-create-regulaer-rules.yml](dict/auto-create-regulaer-rules.yml)に記載するルールに照らし合わせてチェックします。
 
 チェックの仕組みは以下モジュールの仕組みを利用しており、実際に以下モジュールに提供するためのprh用のymlファイルを動的に作成することです。
 
@@ -25,6 +25,8 @@ https://github.com/textlint-rule/textlint-rule-prh
 ymlを作成するためのクラス構成などについては以下をご確認下さい。
 
 ### Create prh.yml
+
+[auto-create-regulaer-rules.yml](dict/auto-create-regulaer-rules.yml)は `src/*.ts` に記載するスクリプトで更新されます。
 
 全体の処理概要は以下のようなフローとなっています。
 
