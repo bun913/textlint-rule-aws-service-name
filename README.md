@@ -1,10 +1,12 @@
 # textlint-rule-aws-service-name
 
+重要: **AWS公式のサービスではありません。1ユーザーの活動です。**
+
+Important: **This Project is UnOffical.**
+
 textlint rule for AWS product Names.
 
 AWSのサービス名やプロダクト名の表記揺れをチェックするためのtexlintのルールです。
-
-※ 重要: **AWS公式のサービスではありません。1ユーザーの活動です。**
 
 以下のように表記揺れを検出します。（画像はVSCodeの拡張機能を利用）
 
@@ -59,7 +61,9 @@ Install with [npm](https://www.npmjs.com/):
 
 ## Usage
 
-Via `.textlintrc.json`(Recommended)
+### textlintrcを利用する場合
+
+Installの後に`.textlintrc.json`に以下のように記述します。
 
 ```json
 {
@@ -69,10 +73,43 @@ Via `.textlintrc.json`(Recommended)
 }
 ```
 
-Via CLI
+.textlinrc.ymlのようにyml（yaml）の場合は以下のように記載します。
+
+```yml
+rules:
+  aws-service-name: true
+```
+
+### CLIで使う場合
+
+Installの後に以下のようにCLIでも実行できます。
 
 ```
 textlint --rule aws-service-name README.md
+```
+
+### VSCodeで利用する場合
+
+textlintrcを設定の上、以下記事を参考に[拡張機能](https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint)を導入してください。
+
+https://qiita.com/takasp/items/22f7f72b691fda30aea2
+
+### 注意事項
+
+以下textlint公式のGitHubにも記載がありますが、textlintのインストール場所とルールのインストール場所が異なる場合はエラーがでます。
+
+https://github.com/textlint/textlint/blob/master/docs/faq/failed-to-load-textlints-module.md
+
+```bash
+# NG
+npm i -g textlint
+npm i textlint-rule-aws-service-name --save-dev
+```
+
+```bash
+# OK
+npm i -g textlint
+npm i -g textlint-rule-aws-service-name
 ```
 
 ### Build
