@@ -10,7 +10,7 @@ type RuleStruct = {
 
 export class RuleFile {
   readonly rules: Rules;
-  readonly RegularFilePath = join("dict", "auto-create-regulaer-rules.yml");
+  readonly RegularFilePath = join("dict", "auto-create-regular-rules.yml");
 
   constructor(rules: Rules) {
     this.rules = rules;
