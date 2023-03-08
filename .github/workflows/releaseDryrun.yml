@@ -1,0 +1,20 @@
+name: ReleaseDryrun
+on:
+  push:
+    branches:
+      - '!main'
+jobs:
+  release:
+    name: ReleaseDryRun
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Build
+        uses: ./.github/actions/build
+      - name: Release
+        env:
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: npx semantic-release --dry-run
