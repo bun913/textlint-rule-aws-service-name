@@ -1,6 +1,10 @@
 name: Test
 
-on: push
+on:
+  push:
+    branches:
+      - "**"
+      - "!main"
 
 jobs:
   canCreateRuleFile:
@@ -22,7 +26,6 @@ jobs:
       - name: Build
         uses: ./.github/actions/build
       - run: yarn testLint
-
 
   jest:
     runs-on: ubuntu-latest
