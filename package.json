@@ -1,6 +1,10 @@
 {
   "version": "0.8.3",
   "release": {
+    "branches": [
+      "main",
+      "next"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
