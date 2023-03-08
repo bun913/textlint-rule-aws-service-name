@@ -4,7 +4,7 @@ on:
     branches:
       - '!main'
 jobs:
-  release:
+  releaseDryrun:
     name: ReleaseDryRun
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
       - name: Build
         uses: ./.github/actions/build
-      - name: Release
+      - name: ReleaseDryrun
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npx semantic-release --dry-run
