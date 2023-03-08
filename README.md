@@ -12,6 +12,12 @@ AWSのサービス名やプロダクト名の表記揺れをチェックする�
 
 ![lintImage](docs/images/ruleImage.png)
 
+このプロジェクトは以下のリポジトリの影響をモロに受けています。
+
+2019年という早い段階から仕組みづくりをされている　@37108氏に強いリスペクトを表明いたします！
+
+https://github.com/37108/textlint-rule-aws-spellcheck
+
 ## Product Architecture
 
 ### Check text with prh.yml
