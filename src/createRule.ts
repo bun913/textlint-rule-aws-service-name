@@ -9,6 +9,6 @@ const createRule = async () => {
   const services = await awsServices.get();
   const rules = new Rules(services);
   const rulefiles = new RuleFile(rules);
-  console.log(rulefiles.createRegularRuleFile());
+  rulefiles.createRegularRuleFile();
 };
 createRule();
