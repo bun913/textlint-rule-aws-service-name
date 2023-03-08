@@ -10,7 +10,7 @@ AWSのサービス名やプロダクト名の表記揺れをチェックする�
 
 以下のように表記揺れを検出します。（画像はVSCodeの拡張機能を利用）
 
-![lintImage](docs/images/ruleImage.png)
+![lintImage](https://user-images.githubusercontent.com/73948280/223648022-c5f1b015-3c1c-4456-8792-3f2c03c9bd67.png)
 
 このプロジェクトは以下のリポジトリの影響をモロに受けています。
 

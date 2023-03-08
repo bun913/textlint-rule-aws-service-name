@@ -1,11 +1,10 @@
 {
-  "version": "0.8.2",
+  "version": "0.8.3",
   "keywords": [
     "textlintrule"
   ],
   "files": [
     "lib/",
-    "docs/",
     "!lib/src",
     "!lib/regularRule",
     "!lib/test",
