@@ -1,7 +1,4 @@
 name: Release
-permissions:
-  contents: write
-  pull-requests: write
 on:
   push:
     branches:
@@ -20,4 +17,5 @@ jobs:
       - name: Release
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npx semantic-release
