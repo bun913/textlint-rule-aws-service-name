@@ -76,6 +76,11 @@
   },
   "author": "bun913",
   "license": "MIT",
+  "homepage": "https://github.com/bun913/textlint-rule-aws-service-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bun913/textlint-rule-aws-service-name.git"
+  },
   "dependencies": {
     "textlint-rule-prh": "^5.3.0",
     "textlint-scripts": "^13.3.0",
