@@ -28,14 +28,10 @@ export class Rules {
         rules.push(wrongPrefixRule);
       }
       // Security HubをSecurityHubと書くような誤り防止ルール
-      if (service.isIncludeBlank()) {
-        const blankCheckRule = new BlankCheckRule(service).get();
-        rules.push(blankCheckRule);
-      }
       // CloudFront を Cloud Front などと PascalCase をスペース区切りで書くような誤り防止ルール
-      if (service.hasPascalCase()) {
-        const spaceDelimiterRule = new SpaceDelimiterRule(service).get();
-        rules.push(spaceDelimiterRule);
+      if (service.isIncludeBlank() || service.hasPascalCase()) {
+        const blankCheckRule = new SpacingRule(service).get();
+        rules.push(blankCheckRule);
       }
     });
     return rules;
@@ -95,53 +91,51 @@ class WrongPrefixRule {
   }
 }
 
-class BlankCheckRule {
+class SpacingRule {
   readonly service: AwsService;
+
+
+  private static readonly pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
 
   constructor(service: AwsService) {
     this.service = service;
   }
 
   public get(): RuleParam {
-    const wrongPattern = this.getPettern();
+    const noSpacePattern = this.noSpacePattern();
+    const spaceDelimitedPattern = this.spaceDelimitedPattern();
+
+    const patterns: string[] = [];
+    if (noSpacePattern) {
+      patterns.push(noSpacePattern);
+    }
+    if (spaceDelimitedPattern) {
+      patterns.push(spaceDelimitedPattern);
+    }
+
     const ruleUtil = new RuleUtil();
     const rule: RuleParam = {
       expected: this.service.productName,
-      patterns: [ruleUtil.escapePattern(wrongPattern)],
+      patterns: patterns.map(ruleUtil.escapePattern),
       options: { wordBoundary: true },
     };
     return rule;
   }
 
-  private getPettern(): string {
-    const arryaServiceName = this.service.productName.split(" ");
-    const deleteBlankServiceName = arryaServiceName.join("");
+  private noSpacePattern(): string | null {
+    const arrayServiceName = this.service.productName.split(" ");
+    if (arrayServiceName.length === 1) {
+      return null;
+    }
+    const deleteBlankServiceName = arrayServiceName.join("");
     return deleteBlankServiceName;
   }
-}
 
-class SpaceDelimiterRule {
-  readonly service: AwsService;
-
-  static readonly pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
-
-  constructor(service: AwsService) {
-    this.service = service;
-  }
-
-  public get(): RuleParam {
-    const wrongPattern = this.getPattern();
-    const ruleUtil = new RuleUtil();
-    const rule: RuleParam = {
-      expected: this.service.productName,
-      patterns: [ruleUtil.escapePattern(wrongPattern)],
-      options: { wordBoundary: true },
-    };
-    return rule;
-  }
-
-  private getPattern(): string {
-    const spaceDelimitedName = this.service.productName.replace(SpaceDelimiterRule.pascalCasePattern, "$1 $2");
+  private spaceDelimitedPattern(): string | null {
+    const spaceDelimitedName = this.service.productName.replace(SpacingRule.pascalCasePattern, "$1 $2");
+    if (this.service.productName === spaceDelimitedName) {
+      return null;
+    }
     return spaceDelimitedName;
   }
 }

@@ -69,7 +69,6 @@ tester.run("CloudFront", report, {
           message: "Cloud Front => CloudFront",
         },
       ],
-      description: "Not Allowed delete blank",
     },
     {
       text: "Cloud Front",
@@ -78,7 +77,6 @@ tester.run("CloudFront", report, {
           message: "Cloud Front => CloudFront",
         },
       ],
-      description: "Not Allowed delete blank",
     },
   ],
 });

@@ -24,10 +24,6 @@ rules:
   - expected: IoT FleetWise
     patterns:
       - IoTFleetWise
-    options:
-      wordBoundary: true
-  - expected: IoT FleetWise
-    patterns:
       - IoT Fleet Wise
     options:
       wordBoundary: true
@@ -42,10 +38,6 @@ rules:
   - expected: IoT SiteWise
     patterns:
       - IoTSiteWise
-    options:
-      wordBoundary: true
-  - expected: IoT SiteWise
-    patterns:
       - IoT Site Wise
     options:
       wordBoundary: true
@@ -60,10 +52,6 @@ rules:
   - expected: IoT TwinMaker
     patterns:
       - IoTTwinMaker
-    options:
-      wordBoundary: true
-  - expected: IoT TwinMaker
-    patterns:
       - IoT Twin Maker
     options:
       wordBoundary: true
@@ -125,10 +113,6 @@ rules:
   - expected: AppStream 2.0
     patterns:
       - AppStream2.0
-    options:
-      wordBoundary: true
-  - expected: AppStream 2.0
-    patterns:
       - App Stream 2.0
     options:
       wordBoundary: true
@@ -319,10 +303,6 @@ rules:
   - expected: DevOps Guru
     patterns:
       - DevOpsGuru
-    options:
-      wordBoundary: true
-  - expected: DevOps Guru
-    patterns:
       - Dev Ops Guru
     options:
       wordBoundary: true
@@ -866,10 +846,6 @@ rules:
   - expected: OpenSearch Service
     patterns:
       - OpenSearchService
-    options:
-      wordBoundary: true
-  - expected: OpenSearch Service
-    patterns:
       - Open Search Service
     options:
       wordBoundary: true
@@ -997,10 +973,6 @@ rules:
   - expected: SageMaker Ground Truth
     patterns:
       - SageMakerGroundTruth
-    options:
-      wordBoundary: true
-  - expected: SageMaker Ground Truth
-    patterns:
       - Sage Maker Ground Truth
     options:
       wordBoundary: true
@@ -1796,10 +1768,6 @@ rules:
   - expected: Distro for OpenTelemetry
     patterns:
       - DistroforOpenTelemetry
-    options:
-      wordBoundary: true
-  - expected: Distro for OpenTelemetry
-    patterns:
       - Distro for Open Telemetry
     options:
       wordBoundary: true
@@ -1840,10 +1808,6 @@ rules:
   - expected: Elemental MediaConnect
     patterns:
       - ElementalMediaConnect
-    options:
-      wordBoundary: true
-  - expected: Elemental MediaConnect
-    patterns:
       - Elemental Media Connect
     options:
       wordBoundary: true
@@ -1858,10 +1822,6 @@ rules:
   - expected: Elemental MediaConvert
     patterns:
       - ElementalMediaConvert
-    options:
-      wordBoundary: true
-  - expected: Elemental MediaConvert
-    patterns:
       - Elemental Media Convert
     options:
       wordBoundary: true
@@ -1876,10 +1836,6 @@ rules:
   - expected: Elemental MediaLive
     patterns:
       - ElementalMediaLive
-    options:
-      wordBoundary: true
-  - expected: Elemental MediaLive
-    patterns:
       - Elemental Media Live
     options:
       wordBoundary: true
@@ -1894,10 +1850,6 @@ rules:
   - expected: Elemental MediaPackage
     patterns:
       - ElementalMediaPackage
-    options:
-      wordBoundary: true
-  - expected: Elemental MediaPackage
-    patterns:
       - Elemental Media Package
     options:
       wordBoundary: true
@@ -1912,10 +1864,6 @@ rules:
   - expected: Elemental MediaStore
     patterns:
       - ElementalMediaStore
-    options:
-      wordBoundary: true
-  - expected: Elemental MediaStore
-    patterns:
       - Elemental Media Store
     options:
       wordBoundary: true
@@ -1930,10 +1878,6 @@ rules:
   - expected: Elemental MediaTailor
     patterns:
       - ElementalMediaTailor
-    options:
-      wordBoundary: true
-  - expected: Elemental MediaTailor
-    patterns:
       - Elemental Media Tailor
     options:
       wordBoundary: true
@@ -2115,10 +2059,6 @@ rules:
   - expected: IoT EduKit
     patterns:
       - IoTEduKit
-    options:
-      wordBoundary: true
-  - expected: IoT EduKit
-    patterns:
       - IoT Edu Kit
     options:
       wordBoundary: true
@@ -2146,10 +2086,6 @@ rules:
   - expected: IoT RoboRunner
     patterns:
       - IoTRoboRunner
-    options:
-      wordBoundary: true
-  - expected: IoT RoboRunner
-    patterns:
       - IoT Robo Runner
     options:
       wordBoundary: true
@@ -2537,10 +2473,6 @@ rules:
   - expected: SimSpace Weaver
     patterns:
       - SimSpaceWeaver
-    options:
-      wordBoundary: true
-  - expected: SimSpace Weaver
-    patterns:
       - Sim Space Weaver
     options:
       wordBoundary: true
@@ -2791,10 +2723,6 @@ rules:
   - expected: PyTorch on AWS
     patterns:
       - PyTorchonAWS
-    options:
-      wordBoundary: true
-  - expected: PyTorch on AWS
-    patterns:
       - Py Torch on AWS
     options:
       wordBoundary: true
@@ -2804,10 +2732,6 @@ rules:
   - expected: Red Hat OpenShift Service on AWS
     patterns:
       - RedHatOpenShiftServiceonAWS
-    options:
-      wordBoundary: true
-  - expected: Red Hat OpenShift Service on AWS
-    patterns:
       - Red Hat Open Shift Service on AWS
     options:
       wordBoundary: true
@@ -2833,10 +2757,6 @@ rules:
   - expected: TensorFlow on AWS
     patterns:
       - TensorFlowonAWS
-    options:
-      wordBoundary: true
-  - expected: TensorFlow on AWS
-    patterns:
       - Tensor Flow on AWS
     options:
       wordBoundary: true
