@@ -1,25 +1,25 @@
-name: Release
-permissions:
-  contents: write
-  issues: write
-  pull-requests: write
-on:
-  push:
-    branches:
-      - main
-jobs:
-  release:
-    name: Release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Build
-        uses: ./.github/actions/build
-      - name: Release
-        env:
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+# name: Release
+# permissions:
+#   contents: write
+#   issues: write
+#   pull-requests: write
+# on:
+#   push:
+#     branches:
+#       - main
+# jobs:
+#   release:
+#     name: Release
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#         with:
+#           fetch-depth: 0
+#       - name: Build
+#         uses: ./.github/actions/build
+#       - name: Release
+#         env:
+#           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+#           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#         run: npx semantic-release
