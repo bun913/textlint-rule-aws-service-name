@@ -132,11 +132,6 @@ npm i -g textlint-rule-aws-service-name
     - `AWS EC2` -> `Amazon EC2`
     - `Amazon Security Hub` -> `AWS Security Hub`
 
-### できないこと
-
-- スペースが不要なサービスにスペースが入っていることを検出
-    - `CloudFront` が正しいが `Cloud Front` は検出できない
-
 ### Build
 
 Builds source codes for publish to the `lib` folder.

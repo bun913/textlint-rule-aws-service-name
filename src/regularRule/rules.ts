@@ -27,10 +27,9 @@ export class Rules {
         const wrongPrefixRule = new WrongPrefixRule(service).get();
         rules.push(wrongPrefixRule);
       }
-      // Security HubをSecurityHubと書くような誤り防止ルール
-      if (service.isIncludeBlank()) {
-        const blankCheckRule = new BlankCheckRule(service).get();
-        rules.push(blankCheckRule);
+      const maybeSpacingRule = new SpacingRule(service).getMaybe();
+      if (maybeSpacingRule) {
+        rules.push(maybeSpacingRule);
       }
     });
     return rules;
@@ -90,27 +89,48 @@ class WrongPrefixRule {
   }
 }
 
-class BlankCheckRule {
+/**
+ * このルールはスペースの不足、またはスペースの過剰による誤りを検出する。
+ * - 不足：Security Hub を SecurityHub と書く
+ * - 過剰: CloudFront を Cloud Front と書く
+ */
+class SpacingRule {
   readonly service: AwsService;
+
+  private static readonly pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
 
   constructor(service: AwsService) {
     this.service = service;
   }
 
-  public get(): RuleParam {
-    const wrongPattern = this.getPettern();
+  public getMaybe(): RuleParam | null {
+    const patterns: string[] = [];
+    if (this.service.isIncludeBlank()) {
+      patterns.push(this.noSpacePattern());
+    }
+    if (this.service.hasPascalCase()) {
+      patterns.push(this.spaceDelimitedPattern());
+    }
+    if (patterns.length === 0) {
+      return null;
+    }
+
     const ruleUtil = new RuleUtil();
     const rule: RuleParam = {
       expected: this.service.productName,
-      patterns: [ruleUtil.escapePattern(wrongPattern)],
+      patterns: patterns.map(ruleUtil.escapePattern),
       options: { wordBoundary: true },
     };
     return rule;
   }
 
-  private getPettern(): string {
-    const arryaServiceName = this.service.productName.split(" ");
-    const deleteBlankServiceName = arryaServiceName.join("");
+  private noSpacePattern(): string {
+    const arrayServiceName = this.service.productName.split(" ");
+    const deleteBlankServiceName = arrayServiceName.join("");
     return deleteBlankServiceName;
+  }
+
+  private spaceDelimitedPattern(): string {
+    return this.service.productName.replace(SpacingRule.pascalCasePattern, "$1 $2");
   }
 }

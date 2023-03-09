@@ -58,3 +58,25 @@ tester.run("Security Hub", report, {
     },
   ],
 });
+
+tester.run("CloudFront", report, {
+  valid: ["Amazon CloudFront", "CloudFront"],
+  invalid: [
+    {
+      text: "Amazon Cloud Front",
+      errors: [
+        {
+          message: "Cloud Front => CloudFront",
+        },
+      ],
+    },
+    {
+      text: "Cloud Front",
+      errors: [
+        {
+          message: "Cloud Front => CloudFront",
+        },
+      ],
+    },
+  ],
+});
