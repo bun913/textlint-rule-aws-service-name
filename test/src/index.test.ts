@@ -1,5 +1,5 @@
 import TextLintTester from "textlint-tester";
-import * as lint from "../src/index";
+import * as lint from "../../src/index";
 
 const report = lint.default.fixer
 const tester = new TextLintTester();
