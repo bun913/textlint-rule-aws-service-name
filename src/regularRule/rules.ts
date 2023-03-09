@@ -32,6 +32,11 @@ export class Rules {
         const blankCheckRule = new BlankCheckRule(service).get();
         rules.push(blankCheckRule);
       }
+      // CloudFront を Cloud Front などと PascalCase をスペース区切りで書くような誤り防止ルール
+      if (service.hasPascalCase()) {
+        const spaceDelimiterRule = new SpaceDelimiterRule(service).get();
+        rules.push(spaceDelimiterRule);
+      }
     });
     return rules;
   }
@@ -112,5 +117,31 @@ class BlankCheckRule {
     const arryaServiceName = this.service.productName.split(" ");
     const deleteBlankServiceName = arryaServiceName.join("");
     return deleteBlankServiceName;
+  }
+}
+
+class SpaceDelimiterRule {
+  readonly service: AwsService;
+
+  static readonly pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
+
+  constructor(service: AwsService) {
+    this.service = service;
+  }
+
+  public get(): RuleParam {
+    const wrongPattern = this.getPattern();
+    const ruleUtil = new RuleUtil();
+    const rule: RuleParam = {
+      expected: this.service.productName,
+      patterns: [ruleUtil.escapePattern(wrongPattern)],
+      options: { wordBoundary: true },
+    };
+    return rule;
+  }
+
+  private getPattern(): string {
+    const spaceDelimitedName = this.service.productName.replace(SpaceDelimiterRule.pascalCasePattern, "$1 $2");
+    return spaceDelimitedName;
   }
 }

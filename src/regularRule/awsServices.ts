@@ -11,6 +11,8 @@ export interface AwsServiceParam {
   prefix: ProductPrefix;
 }
 
+const pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
+
 export class AwsServices {
   readonly fetchResponse: FetchResponse;
 
@@ -75,6 +77,10 @@ export class AwsService implements AwsServiceParam {
 
   public isIncludeBlank(): boolean {
     return this.productName.includes(' ')
+  }
+
+  public hasPascalCase(): boolean {
+    return this.productName.search(pascalCasePattern) !== -1;
   }
 
   public getFullProductName(): string {

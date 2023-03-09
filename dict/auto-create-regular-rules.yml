@@ -1,5 +1,4 @@
 version: 1
-disableImports: true
 rules:
   - expected: IoT Core
     options:
@@ -27,6 +26,11 @@ rules:
       - IoTFleetWise
     options:
       wordBoundary: true
+  - expected: IoT FleetWise
+    patterns:
+      - IoT Fleet Wise
+    options:
+      wordBoundary: true
   - expected: IoT SiteWise
     options:
       wordBoundary: true
@@ -40,6 +44,11 @@ rules:
       - IoTSiteWise
     options:
       wordBoundary: true
+  - expected: IoT SiteWise
+    patterns:
+      - IoT Site Wise
+    options:
+      wordBoundary: true
   - expected: IoT TwinMaker
     options:
       wordBoundary: true
@@ -51,6 +60,11 @@ rules:
   - expected: IoT TwinMaker
     patterns:
       - IoTTwinMaker
+    options:
+      wordBoundary: true
+  - expected: IoT TwinMaker
+    patterns:
+      - IoT Twin Maker
     options:
       wordBoundary: true
   - expected: IoT Greengrass
@@ -95,6 +109,11 @@ rules:
       - AWS AppFlow
     options:
       wordBoundary: true
+  - expected: AppFlow
+    patterns:
+      - App Flow
+    options:
+      wordBoundary: true
   - expected: AppStream 2.0
     options:
       wordBoundary: true
@@ -106,6 +125,11 @@ rules:
   - expected: AppStream 2.0
     patterns:
       - AppStream2.0
+    options:
+      wordBoundary: true
+  - expected: AppStream 2.0
+    patterns:
+      - App Stream 2.0
     options:
       wordBoundary: true
   - expected: Athena
@@ -174,12 +198,22 @@ rules:
       - AWS CloudFront
     options:
       wordBoundary: true
+  - expected: CloudFront
+    patterns:
+      - Cloud Front
+    options:
+      wordBoundary: true
   - expected: CloudSearch
     options:
       wordBoundary: true
   - expected: Amazon CloudSearch
     patterns:
       - AWS CloudSearch
+    options:
+      wordBoundary: true
+  - expected: CloudSearch
+    patterns:
+      - Cloud Search
     options:
       wordBoundary: true
   - expected: CloudWatch
@@ -190,6 +224,11 @@ rules:
       - AWS CloudWatch
     options:
       wordBoundary: true
+  - expected: CloudWatch
+    patterns:
+      - Cloud Watch
+    options:
+      wordBoundary: true
   - expected: CodeCatalyst
     options:
       wordBoundary: true
@@ -198,12 +237,22 @@ rules:
       - AWS CodeCatalyst
     options:
       wordBoundary: true
+  - expected: CodeCatalyst
+    patterns:
+      - Code Catalyst
+    options:
+      wordBoundary: true
   - expected: CodeGuru
     options:
       wordBoundary: true
   - expected: Amazon CodeGuru
     patterns:
       - AWS CodeGuru
+    options:
+      wordBoundary: true
+  - expected: CodeGuru
+    patterns:
+      - Code Guru
     options:
       wordBoundary: true
   - expected: Cognito
@@ -246,6 +295,11 @@ rules:
       - AWS DataZone
     options:
       wordBoundary: true
+  - expected: DataZone
+    patterns:
+      - Data Zone
+    options:
+      wordBoundary: true
   - expected: Detective
     options:
       wordBoundary: true
@@ -265,6 +319,11 @@ rules:
   - expected: DevOps Guru
     patterns:
       - DevOpsGuru
+    options:
+      wordBoundary: true
+  - expected: DevOps Guru
+    patterns:
+      - Dev Ops Guru
     options:
       wordBoundary: true
   - expected: DocumentDB
@@ -416,6 +475,11 @@ rules:
       - AWS ElastiCache
     options:
       wordBoundary: true
+  - expected: ElastiCache
+    patterns:
+      - Elasti Cache
+    options:
+      wordBoundary: true
   - expected: EMR
     options:
       wordBoundary: true
@@ -432,12 +496,22 @@ rules:
       - AWS EventBridge
     options:
       wordBoundary: true
+  - expected: EventBridge
+    patterns:
+      - Event Bridge
+    options:
+      wordBoundary: true
   - expected: FinSpace
     options:
       wordBoundary: true
   - expected: Amazon FinSpace
     patterns:
       - AWS FinSpace
+    options:
+      wordBoundary: true
+  - expected: FinSpace
+    patterns:
+      - Fin Space
     options:
       wordBoundary: true
   - expected: Forecast
@@ -477,6 +551,11 @@ rules:
       - AWS GameLift
     options:
       wordBoundary: true
+  - expected: GameLift
+    patterns:
+      - Game Lift
+    options:
+      wordBoundary: true
   - expected: GuardDuty
     options:
       wordBoundary: true
@@ -485,12 +564,22 @@ rules:
       - AWS GuardDuty
     options:
       wordBoundary: true
+  - expected: GuardDuty
+    patterns:
+      - Guard Duty
+    options:
+      wordBoundary: true
   - expected: HealthLake
     options:
       wordBoundary: true
   - expected: Amazon HealthLake
     patterns:
       - AWS HealthLake
+    options:
+      wordBoundary: true
+  - expected: HealthLake
+    patterns:
+      - Health Lake
     options:
       wordBoundary: true
   - expected: Honeycode
@@ -779,6 +868,11 @@ rules:
       - OpenSearchService
     options:
       wordBoundary: true
+  - expected: OpenSearch Service
+    patterns:
+      - Open Search Service
+    options:
+      wordBoundary: true
   - expected: Personalize
     options:
       wordBoundary: true
@@ -822,6 +916,11 @@ rules:
   - expected: Amazon QuickSight
     patterns:
       - AWS QuickSight
+    options:
+      wordBoundary: true
+  - expected: QuickSight
+    patterns:
+      - Quick Sight
     options:
       wordBoundary: true
   - expected: RDS
@@ -882,6 +981,11 @@ rules:
       - AWS SageMaker
     options:
       wordBoundary: true
+  - expected: SageMaker
+    patterns:
+      - Sage Maker
+    options:
+      wordBoundary: true
   - expected: SageMaker Ground Truth
     options:
       wordBoundary: true
@@ -893,6 +997,11 @@ rules:
   - expected: SageMaker Ground Truth
     patterns:
       - SageMakerGroundTruth
+    options:
+      wordBoundary: true
+  - expected: SageMaker Ground Truth
+    patterns:
+      - Sage Maker Ground Truth
     options:
       wordBoundary: true
   - expected: Security Lake
@@ -1029,6 +1138,11 @@ rules:
       - AWS WorkDocs
     options:
       wordBoundary: true
+  - expected: WorkDocs
+    patterns:
+      - Work Docs
+    options:
+      wordBoundary: true
   - expected: WorkMail
     options:
       wordBoundary: true
@@ -1037,12 +1151,22 @@ rules:
       - AWS WorkMail
     options:
       wordBoundary: true
+  - expected: WorkMail
+    patterns:
+      - Work Mail
+    options:
+      wordBoundary: true
   - expected: WorkSpaces
     options:
       wordBoundary: true
   - expected: Amazon WorkSpaces
     patterns:
       - AWS WorkSpaces
+    options:
+      wordBoundary: true
+  - expected: WorkSpaces
+    patterns:
+      - Work Spaces
     options:
       wordBoundary: true
   - expected: Apache MXNet on AWS
@@ -1140,6 +1264,11 @@ rules:
   - expected: AWS AppSync
     patterns:
       - Amazon AppSync
+    options:
+      wordBoundary: true
+  - expected: AppSync
+    patterns:
+      - App Sync
     options:
       wordBoundary: true
   - expected: Artifact
@@ -1302,6 +1431,11 @@ rules:
       - Amazon CloudFormation
     options:
       wordBoundary: true
+  - expected: CloudFormation
+    patterns:
+      - Cloud Formation
+    options:
+      wordBoundary: true
   - expected: CloudHSM
     options:
       wordBoundary: true
@@ -1318,12 +1452,22 @@ rules:
       - Amazon CloudShell
     options:
       wordBoundary: true
+  - expected: CloudShell
+    patterns:
+      - Cloud Shell
+    options:
+      wordBoundary: true
   - expected: CloudTrail
     options:
       wordBoundary: true
   - expected: AWS CloudTrail
     patterns:
       - Amazon CloudTrail
+    options:
+      wordBoundary: true
+  - expected: CloudTrail
+    patterns:
+      - Cloud Trail
     options:
       wordBoundary: true
   - expected: CodeArtifact
@@ -1334,12 +1478,22 @@ rules:
       - Amazon CodeArtifact
     options:
       wordBoundary: true
+  - expected: CodeArtifact
+    patterns:
+      - Code Artifact
+    options:
+      wordBoundary: true
   - expected: CodeBuild
     options:
       wordBoundary: true
   - expected: AWS CodeBuild
     patterns:
       - Amazon CodeBuild
+    options:
+      wordBoundary: true
+  - expected: CodeBuild
+    patterns:
+      - Code Build
     options:
       wordBoundary: true
   - expected: CodeCommit
@@ -1350,12 +1504,22 @@ rules:
       - Amazon CodeCommit
     options:
       wordBoundary: true
+  - expected: CodeCommit
+    patterns:
+      - Code Commit
+    options:
+      wordBoundary: true
   - expected: CodeDeploy
     options:
       wordBoundary: true
   - expected: AWS CodeDeploy
     patterns:
       - Amazon CodeDeploy
+    options:
+      wordBoundary: true
+  - expected: CodeDeploy
+    patterns:
+      - Code Deploy
     options:
       wordBoundary: true
   - expected: CodePipeline
@@ -1366,12 +1530,22 @@ rules:
       - Amazon CodePipeline
     options:
       wordBoundary: true
+  - expected: CodePipeline
+    patterns:
+      - Code Pipeline
+    options:
+      wordBoundary: true
   - expected: CodeStar
     options:
       wordBoundary: true
   - expected: AWS CodeStar
     patterns:
       - Amazon CodeStar
+    options:
+      wordBoundary: true
+  - expected: CodeStar
+    patterns:
+      - Code Star
     options:
       wordBoundary: true
   - expected: Command Line Interface
@@ -1502,6 +1676,11 @@ rules:
       - Amazon DataSync
     options:
       wordBoundary: true
+  - expected: DataSync
+    patterns:
+      - Data Sync
+    options:
+      wordBoundary: true
   - expected: Deep Learning AMIs
     options:
       wordBoundary: true
@@ -1536,6 +1715,11 @@ rules:
       - Amazon DeepComposer
     options:
       wordBoundary: true
+  - expected: DeepComposer
+    patterns:
+      - Deep Composer
+    options:
+      wordBoundary: true
   - expected: DeepLens
     options:
       wordBoundary: true
@@ -1544,12 +1728,22 @@ rules:
       - Amazon DeepLens
     options:
       wordBoundary: true
+  - expected: DeepLens
+    patterns:
+      - Deep Lens
+    options:
+      wordBoundary: true
   - expected: DeepRacer
     options:
       wordBoundary: true
   - expected: AWS DeepRacer
     patterns:
       - Amazon DeepRacer
+    options:
+      wordBoundary: true
+  - expected: DeepRacer
+    patterns:
+      - Deep Racer
     options:
       wordBoundary: true
   - expected: Device Farm
@@ -1604,6 +1798,11 @@ rules:
       - DistroforOpenTelemetry
     options:
       wordBoundary: true
+  - expected: Distro for OpenTelemetry
+    patterns:
+      - Distro for Open Telemetry
+    options:
+      wordBoundary: true
   - expected: Elastic Beanstalk
     options:
       wordBoundary: true
@@ -1643,6 +1842,11 @@ rules:
       - ElementalMediaConnect
     options:
       wordBoundary: true
+  - expected: Elemental MediaConnect
+    patterns:
+      - Elemental Media Connect
+    options:
+      wordBoundary: true
   - expected: Elemental MediaConvert
     options:
       wordBoundary: true
@@ -1654,6 +1858,11 @@ rules:
   - expected: Elemental MediaConvert
     patterns:
       - ElementalMediaConvert
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaConvert
+    patterns:
+      - Elemental Media Convert
     options:
       wordBoundary: true
   - expected: Elemental MediaLive
@@ -1669,6 +1878,11 @@ rules:
       - ElementalMediaLive
     options:
       wordBoundary: true
+  - expected: Elemental MediaLive
+    patterns:
+      - Elemental Media Live
+    options:
+      wordBoundary: true
   - expected: Elemental MediaPackage
     options:
       wordBoundary: true
@@ -1680,6 +1894,11 @@ rules:
   - expected: Elemental MediaPackage
     patterns:
       - ElementalMediaPackage
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaPackage
+    patterns:
+      - Elemental Media Package
     options:
       wordBoundary: true
   - expected: Elemental MediaStore
@@ -1695,6 +1914,11 @@ rules:
       - ElementalMediaStore
     options:
       wordBoundary: true
+  - expected: Elemental MediaStore
+    patterns:
+      - Elemental Media Store
+    options:
+      wordBoundary: true
   - expected: Elemental MediaTailor
     options:
       wordBoundary: true
@@ -1706,6 +1930,11 @@ rules:
   - expected: Elemental MediaTailor
     patterns:
       - ElementalMediaTailor
+    options:
+      wordBoundary: true
+  - expected: Elemental MediaTailor
+    patterns:
+      - Elemental Media Tailor
     options:
       wordBoundary: true
   - expected: Fargate
@@ -1888,6 +2117,11 @@ rules:
       - IoTEduKit
     options:
       wordBoundary: true
+  - expected: IoT EduKit
+    patterns:
+      - IoT Edu Kit
+    options:
+      wordBoundary: true
   - expected: IoT Events
     options:
       wordBoundary: true
@@ -1912,6 +2146,11 @@ rules:
   - expected: IoT RoboRunner
     patterns:
       - IoTRoboRunner
+    options:
+      wordBoundary: true
+  - expected: IoT RoboRunner
+    patterns:
+      - IoT Robo Runner
     options:
       wordBoundary: true
   - expected: Key Management Service
@@ -2073,6 +2312,11 @@ rules:
       - Amazon OpsWorks
     options:
       wordBoundary: true
+  - expected: OpsWorks
+    patterns:
+      - Ops Works
+    options:
+      wordBoundary: true
   - expected: Organizations
     options:
       wordBoundary: true
@@ -2144,6 +2388,11 @@ rules:
       - Amazon PrivateLink
     options:
       wordBoundary: true
+  - expected: PrivateLink
+    patterns:
+      - Private Link
+    options:
+      wordBoundary: true
   - expected: Proton
     options:
       wordBoundary: true
@@ -2184,6 +2433,11 @@ rules:
   - expected: AWS RoboMaker
     patterns:
       - Amazon RoboMaker
+    options:
+      wordBoundary: true
+  - expected: RoboMaker
+    patterns:
+      - Robo Maker
     options:
       wordBoundary: true
   - expected: Secrets Manager
@@ -2283,6 +2537,11 @@ rules:
   - expected: SimSpace Weaver
     patterns:
       - SimSpaceWeaver
+    options:
+      wordBoundary: true
+  - expected: SimSpace Weaver
+    patterns:
+      - Sim Space Weaver
     options:
       wordBoundary: true
   - expected: Snow Family
@@ -2534,12 +2793,22 @@ rules:
       - PyTorchonAWS
     options:
       wordBoundary: true
+  - expected: PyTorch on AWS
+    patterns:
+      - Py Torch on AWS
+    options:
+      wordBoundary: true
   - expected: Red Hat OpenShift Service on AWS
     options:
       wordBoundary: true
   - expected: Red Hat OpenShift Service on AWS
     patterns:
       - RedHatOpenShiftServiceonAWS
+    options:
+      wordBoundary: true
+  - expected: Red Hat OpenShift Service on AWS
+    patterns:
+      - Red Hat Open Shift Service on AWS
     options:
       wordBoundary: true
   - expected: Reserved Instance (RI) Reporting
@@ -2564,6 +2833,11 @@ rules:
   - expected: TensorFlow on AWS
     patterns:
       - TensorFlowonAWS
+    options:
+      wordBoundary: true
+  - expected: TensorFlow on AWS
+    patterns:
+      - Tensor Flow on AWS
     options:
       wordBoundary: true
   - expected: VMware Cloud on AWS

@@ -58,3 +58,27 @@ tester.run("Security Hub", report, {
     },
   ],
 });
+
+tester.run("CloudFront", report, {
+  valid: ["Amazon CloudFront", "CloudFront"],
+  invalid: [
+    {
+      text: "Amazon Cloud Front",
+      errors: [
+        {
+          message: "Cloud Front => CloudFront",
+        },
+      ],
+      description: "Not Allowed delete blank",
+    },
+    {
+      text: "Cloud Front",
+      errors: [
+        {
+          message: "Cloud Front => CloudFront",
+        },
+      ],
+      description: "Not Allowed delete blank",
+    },
+  ],
+});
