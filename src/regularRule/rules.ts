@@ -27,11 +27,9 @@ export class Rules {
         const wrongPrefixRule = new WrongPrefixRule(service).get();
         rules.push(wrongPrefixRule);
       }
-      // Security HubをSecurityHubと書くような誤り防止ルール
-      // CloudFront を Cloud Front などと PascalCase をスペース区切りで書くような誤り防止ルール
-      if (service.isIncludeBlank() || service.hasPascalCase()) {
-        const blankCheckRule = new SpacingRule(service).get();
-        rules.push(blankCheckRule);
+      const maybeSpacingRule = new SpacingRule(service).getMaybe();
+      if (maybeSpacingRule) {
+        rules.push(maybeSpacingRule);
       }
     });
     return rules;
@@ -91,9 +89,13 @@ class WrongPrefixRule {
   }
 }
 
+/**
+ * このルールはスペースの不足、またはスペースの過剰による誤りを検出する。
+ * - 不足：Security Hub を SecurityHub と書く
+ * - 過剰: CloudFront を Cloud Front と書く
+ */
 class SpacingRule {
   readonly service: AwsService;
-
 
   private static readonly pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
 
@@ -101,16 +103,16 @@ class SpacingRule {
     this.service = service;
   }
 
-  public get(): RuleParam {
-    const noSpacePattern = this.noSpacePattern();
-    const spaceDelimitedPattern = this.spaceDelimitedPattern();
-
+  public getMaybe(): RuleParam | null {
     const patterns: string[] = [];
-    if (noSpacePattern) {
-      patterns.push(noSpacePattern);
+    if (this.service.isIncludeBlank()) {
+      patterns.push(this.noSpacePattern());
     }
-    if (spaceDelimitedPattern) {
-      patterns.push(spaceDelimitedPattern);
+    if (this.service.hasPascalCase()) {
+      patterns.push(this.spaceDelimitedPattern());
+    }
+    if (patterns.length === 0) {
+      return null;
     }
 
     const ruleUtil = new RuleUtil();
@@ -122,20 +124,13 @@ class SpacingRule {
     return rule;
   }
 
-  private noSpacePattern(): string | null {
+  private noSpacePattern(): string {
     const arrayServiceName = this.service.productName.split(" ");
-    if (arrayServiceName.length === 1) {
-      return null;
-    }
     const deleteBlankServiceName = arrayServiceName.join("");
     return deleteBlankServiceName;
   }
 
-  private spaceDelimitedPattern(): string | null {
-    const spaceDelimitedName = this.service.productName.replace(SpacingRule.pascalCasePattern, "$1 $2");
-    if (this.service.productName === spaceDelimitedName) {
-      return null;
-    }
-    return spaceDelimitedName;
+  private spaceDelimitedPattern(): string {
+    return this.service.productName.replace(SpacingRule.pascalCasePattern, "$1 $2");
   }
 }
