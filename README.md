@@ -127,7 +127,9 @@ npm i -g textlint-rule-aws-service-name
 - 大文字・小文字の表記揺れの検出
     - `Ec2` -> `EC2`
 - 本来スペースが必要なサービスにスペースがないことを検出
-    - `SecurityHub` -> `Security Hub` と指摘
+    - `SecurityHub` -> `Security Hub`
+- 本来スペースが不要なサービスにスペースがあることを検出
+    - `Cloud Front` -> `CloudFront`
 - `Amazon` と `AWS` の接頭辞の間違い検出
     - `AWS EC2` -> `Amazon EC2`
     - `Amazon Security Hub` -> `AWS Security Hub`
