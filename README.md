@@ -18,48 +18,25 @@ AWSのサービス名やプロダクト名の表記揺れをチェックする�
 
 https://github.com/37108/textlint-rule-aws-spellcheck
 
-## Product Architecture
+## できること・できないこと
 
-### Check text with prh.yml
+### できること
 
-`src/index.js`  を実行することにより、[auto-create-regular-rules.yml](dict/auto-create-regular-rules.yml)に記載するルールに照らし合わせてチェックします。
+- 大文字・小文字の表記揺れの検出
+    - `Ec2` -> `EC2`
+- 本来スペースが必要なサービスにスペースがないことを検出
+    - `SecurityHub` -> `Security Hub`
+- 本来スペースが不要なサービスにスペースがあることを検出
+    - `Cloud Front` -> `CloudFront`
+- `Amazon` と `AWS` の接頭辞の間違い検出
+    - `AWS EC2` -> `Amazon EC2`
+    - `Amazon Security Hub` -> `AWS Security Hub`
 
-チェックの仕組みは以下モジュールの仕組みを利用しており、実際に以下モジュールに提供するためのprh用のymlファイルを動的に作成することです。
+## 開発者・コントリビュータの皆様へ
 
-https://github.com/textlint-rule/textlint-rule-prh
+こちらのファイルをご参照ください。
 
-ymlを作成するためのクラス構成などについては以下をご確認下さい。
-
-### Create prh.yml
-
-[auto-create-regular-rules.yml](dict/auto-create-regular-rules.yml)は `src/*.ts` に記載するスクリプトで更新されます。
-
-全体の処理概要は以下のようなフローとなっています。
-
-```mermaid
-flowchart TD
-  FetchResponse("AWSの公開APIからサービス名の一覧を取得")
-    --> AwsServices("必要な情報のみ抽出")
-    --> Rule("prh用の個々のルールを作成")
-    --> Rules("個々のルールをつなぎ合わせる")
-    --> RuleFile("ymlファイルとして出力")
-```
-
-以下のように関心ごとにクラスを分けて、基本的に継承を使わずに実装しています。
-
-厳密に言えば、[createRule.ts](./src/createRule.ts)内でそれぞれのクラスインスタンスを作成して、処理を呼び出しています。
-
-```mermaid
-classDiagram
-    RuleFile *-- Rules
-    Rules *-- Rule
-    Rule *-- AwsServices
-    AwsServices *-- FetchResponse
-```
-
-APIはこちらのJSONフィードを利用しています。
-
-https://aws.amazon.com/api/dirs/items/search?item.directoryId=whats-new
+[CONTRIBUTING.md](https://github.com/bun913/textlint-rule-aws-service-name/blob/main/CONTRIBUTING.md)
 
 ## Install
 
@@ -119,34 +96,19 @@ npm i textlint-rule-aws-service-name --save-dev
 npm i -g textlint
 npm i -g textlint-rule-aws-service-name
 ```
-
-## できること・できないこと
-
-### できること
-
-- 大文字・小文字の表記揺れの検出
-    - `Ec2` -> `EC2`
-- 本来スペースが必要なサービスにスペースがないことを検出
-    - `SecurityHub` -> `Security Hub`
-- 本来スペースが不要なサービスにスペースがあることを検出
-    - `Cloud Front` -> `CloudFront`
-- `Amazon` と `AWS` の接頭辞の間違い検出
-    - `AWS EC2` -> `Amazon EC2`
-    - `Amazon Security Hub` -> `AWS Security Hub`
-
 ### Build
 
 Builds source codes for publish to the `lib` folder.
 You can write ES2015+ source codes in `src/` folder.
 
-    npm run build
+    yarn build
 
 ### Tests
 
 Run test code in `test` folder.
 Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tester).
 
-    npm test
+    yarn test
 
 ## License
 
