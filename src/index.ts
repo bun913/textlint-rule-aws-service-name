@@ -1,6 +1,6 @@
-const readFileSync = require("fs").readFileSync;
+const fs = require("fs");
+const path = require("path");
 const prh = require("textlint-rule-prh");
-import { join } from "path";
 import type { TextlintRuleModule } from "@textlint/types";
 
 export interface Options {
@@ -8,13 +8,10 @@ export interface Options {
 }
 
 const report: TextlintRuleModule<Options> = (context) => {
-  const ruleFilePath = join(
-    __dirname,
-    "..",
-    "dict",
-    "auto-create-regular-rules.yml"
+  const ruleContent = fs.readFileSync(
+    path.join(__dirname, "..", "dict", "auto-create-regular-rules.yml"),
+    "utf-8"
   );
-  const ruleContent = readFileSync(ruleFilePath, "utf-8");
   return prh.fixer(context, {
     ruleContents: [ruleContent],
   });
@@ -22,5 +19,5 @@ const report: TextlintRuleModule<Options> = (context) => {
 
 export default {
   linter: report,
-  fixer: report
-}
+  fixer: report,
+};
