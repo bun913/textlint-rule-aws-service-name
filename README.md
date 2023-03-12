@@ -36,7 +36,7 @@ https://github.com/37108/textlint-rule-aws-spellcheck
 
 こちらのファイルをご参照ください。
 
-[CONTRIBUTING.md](./CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/bun913/textlint-rule-aws-service-name/blob/main/CONTRIBUTING.md)
 
 ## Install
 
