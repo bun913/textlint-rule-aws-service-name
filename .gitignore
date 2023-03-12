@@ -35,3 +35,4 @@ npm-debug.log
 /lib
 *.js
 !jest.config.js
+!commitlint.config.js
