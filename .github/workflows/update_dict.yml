@@ -1,0 +1,42 @@
+name: Auto-create regular rules
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: '0 21 * * *' # 日本時間の午前6時に実行する
+  push:
+    paths:
+      - dict/auto-create-regular-rules.yml
+  workflow_dispatch:
+
+jobs:
+  auto-create-rules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        uses: ./.github/actions/build
+
+      - name: Run createRule.js
+        run: yarn run createRule
+
+      - name: Check for changes in auto-create-regular-rules.yml
+        id: check-diff
+        run: echo "::set-output name=has_changes::$(git diff --name-only)"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        if: steps.check-diff.outputs.has_changes == 'dict/auto-create-regular-rules.yml'
+        with:
+          title: 'Update auto-create-regular-rules.yml'
+          commit-message: 'feat: update auto-create-regular-rules.yml'
+          branch: auto-update-regular-rules
+          base: main
+          delete-branch: true
+          token: ${{ secrets.GITHUB_TOKEN }}
