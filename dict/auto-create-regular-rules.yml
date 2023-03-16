@@ -1128,17 +1128,18 @@ rules:
       - Work Mail
     options:
       wordBoundary: true
-  - expected: WorkSpaces
+  - expected: WorkSpaces Family
     options:
       wordBoundary: true
-  - expected: Amazon WorkSpaces
+  - expected: Amazon WorkSpaces Family
     patterns:
-      - AWS WorkSpaces
+      - AWS WorkSpaces Family
     options:
       wordBoundary: true
-  - expected: WorkSpaces
+  - expected: WorkSpaces Family
     patterns:
-      - Work Spaces
+      - WorkSpacesFamily
+      - Work Spaces Family
     options:
       wordBoundary: true
   - expected: Apache MXNet on AWS
