@@ -20,8 +20,6 @@ jobs:
           fetch-depth: 0
           ref: release
           create-branch: true
-      - name: Create Release Branch
-        run: git checkout -b release-${{ github.sha }}
       - name: Build
         uses: ./.github/actions/build
       - name: Release
