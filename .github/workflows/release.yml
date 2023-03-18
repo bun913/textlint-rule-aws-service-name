@@ -31,10 +31,12 @@ jobs:
           GIT_COMMITTER_NAME: ${{secrets.GIT_COMMITTER_NAME}}
           GIT_COMMITTER_EMAIL: ${{secrets.GIT_COMMITTER_EMAIL}}
         run: npx semantic-release
-      - name: Merge Release Branch
-        if: always()
-        run: |
-          git fetch origin main
-          git checkout main
-          git merge --no-ff release-${{ github.sha }} -m "Merge release branch '${{ github.sha }}'"
-          git push origin main
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'Update Changelog by release operation'
+          commit-message: 'chore: update changelog'
+          branch: release-changelog
+          base: main
+          delete-branch: true
+          token: ${{ secrets.GH_TOKEN }}
