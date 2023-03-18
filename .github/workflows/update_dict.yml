@@ -6,9 +6,6 @@ permissions:
 on:
   schedule:
     - cron: '0 21 * * *' # 日本時間の午前6時に実行する
-  push:
-    paths:
-      - dict/auto-create-regular-rules.yml
   workflow_dispatch:
 
 jobs:
