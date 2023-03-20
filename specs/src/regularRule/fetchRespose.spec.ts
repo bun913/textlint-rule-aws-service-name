@@ -73,13 +73,13 @@ describe("FetchResponse", () => {
       jest.resetAllMocks();
     });
 
-    test("should return an array of items", async () => {
+    it("should return an array of items", async () => {
       const fetchResponse = new FetchResponse();
       const items = await fetchResponse.result();
       expect(items).toEqual(mockData.items.map((i) => i.item));
     });
 
-    test("should throw an error when the request is failed", async () => {
+    it("should throw an error when the request is failed", async () => {
       (global.fetch as jest.Mock).mockImplementationOnce(() =>
         Promise.reject(new Error("Request Fail"))
       );

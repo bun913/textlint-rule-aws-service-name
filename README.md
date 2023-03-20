@@ -105,10 +105,32 @@ You can write ES2015+ source codes in `src/` folder.
 
 ### Tests
 
-Run test code in `test` folder.
-Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tester).
+The following is a list of test files to be placed in their respective directories.
 
-    yarn test
+- The test/ directory places the files for testing the texlint rules in src/index.ts. (*index.ts)
+    - Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tester).
+- specs/ directory places the tests for the processing group to generate the yml files for textlint rules under src/. (*spec.ts)
+
+To test them, run the following command
+
+```bash
+yarn test
+# or npm run test
+```
+
+You can also test each test file by running the following.
+
+```bash
+# Run only the test files under specs/.
+yarn jest
+# or npm run jest
+```
+
+```bash
+# run only test files under test/.
+yarn testLint
+# or npm run testLint
+```
 
 ## License
 
