@@ -54,7 +54,7 @@ export class FetchResponse {
     const option = { ...this.option };
     const pageChangedOption = { ...option, page: page.toString() };
     const query = new URLSearchParams({ ...pageChangedOption });
-    query.append("tags.id", "!aws-products");
+    query.append("tags.id", "!aws-products#type#variant");
     const requestUrl = `${this.BASE_URL}?${query}`;
     const res = await fetch(requestUrl);
     if (!res.ok) throw new Error(`Request Fail: ${requestUrl}`);
