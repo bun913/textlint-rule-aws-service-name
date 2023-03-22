@@ -48,7 +48,7 @@ export class RuleUtil {
   }
 }
 
-class WordBundaryRule {
+export class WordBundaryRule {
   readonly service: AwsService;
 
   constructor(service: AwsService) {
