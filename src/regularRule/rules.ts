@@ -63,7 +63,7 @@ export class WordBundaryRule {
   }
 }
 
-class WrongPrefixRule {
+export class WrongPrefixRule {
   readonly service: AwsService;
 
   constructor(service: AwsService) {
