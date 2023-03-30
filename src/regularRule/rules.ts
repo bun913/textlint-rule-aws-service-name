@@ -94,7 +94,7 @@ export class WrongPrefixRule {
  * - 不足：Security Hub を SecurityHub と書く
  * - 過剰: CloudFront を Cloud Front と書く
  */
-class SpacingRule {
+export class SpacingRule {
   readonly service: AwsService;
 
   private static readonly pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
