@@ -2769,10 +2769,6 @@ rules:
       - VMwareCloudonAWS
     options:
       wordBoundary: true
-  - expected: expected
-    options:
-      wordBoundary: true
-    pattern: patterns
   - expected: App Mesh
     options:
       wordBoundary: true
