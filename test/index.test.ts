@@ -51,9 +51,7 @@ tester.run("Security Hub", report, {
       text: "SecurityHub",
       errors: [
         {
-          message: "SecurityHub => Security Hub",
-        },
-      ],
+          message: "SecurityHub => Security Hub", }, ],
       description: "Not Allowed delete blank",
     },
   ],
@@ -78,5 +76,19 @@ tester.run("CloudFront", report, {
         },
       ],
     },
+  ],
+});
+
+tester.run("Glue DataBrew", report, {
+  valid: ["Glue DataBrew"],
+  invalid: [
+    {
+      text: "Glue databrew",
+      errors: [
+        {
+          message: "Glue databrew => Glue DataBrew",
+        },
+      ],
+    }
   ],
 });

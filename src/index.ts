@@ -9,7 +9,7 @@ export interface Options {
 
 const report: TextlintRuleModule<Options> = (context) => {
   const ruleContent = fs.readFileSync(
-    path.join(__dirname, "..", "dict", "auto-create-regular-rules.yml"),
+    path.join(__dirname, "..", "prh.yml"),
     "utf-8"
   );
   return prh.fixer(context, {

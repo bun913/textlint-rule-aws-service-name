@@ -1,0 +1,494 @@
+version: 1
+rules:
+  - expected: App Mesh
+    options:
+      wordBoundary: true
+    pattern: Appmesh
+  - expected: App Runner
+    options:
+      wordBoundary: true
+    pattern: Apprunner
+  - expected: Application Composer
+    options:
+      wordBoundary: true
+    pattern: Applicationcomposer
+  - expected: Audit Manager
+    options:
+      wordBoundary: true
+    pattern: Auditmanager
+  - expected: Auto Scaling
+    options:
+      wordBoundary: true
+    pattern: Autoscaling
+  - expected: Backint Agent
+    options:
+      wordBoundary: true
+    pattern: Backintagent
+  - expected: Blockchain Templates
+    options:
+      wordBoundary: true
+    pattern: Blockchaintemplates
+  - expected: Certificate Manager
+    options:
+      wordBoundary: true
+    pattern: Certificatemanager
+  - expected: Clean Rooms
+    options:
+      wordBoundary: true
+    pattern: Cleanrooms
+  - expected: Cloud Directory
+    options:
+      wordBoundary: true
+    pattern: Clouddirectory
+  - expected: Cloud Map
+    options:
+      wordBoundary: true
+    pattern: Cloudmap
+  - expected: Comprehend Medical
+    options:
+      wordBoundary: true
+    pattern: Comprehendmedical
+  - expected: Compute Optimizer
+    options:
+      wordBoundary: true
+    pattern: Computeoptimizer
+  - expected: Control Tower
+    options:
+      wordBoundary: true
+    pattern: Controltower
+  - expected: Data Exchange
+    options:
+      wordBoundary: true
+    pattern: Dataexchange
+  - expected: Data Pipeline
+    options:
+      wordBoundary: true
+    pattern: Datapipeline
+  - expected: Device Farm
+    options:
+      wordBoundary: true
+    pattern: Devicefarm
+  - expected: Direct Connect
+    options:
+      wordBoundary: true
+    pattern: Directconnect
+  - expected: Directory Service
+    options:
+      wordBoundary: true
+    pattern: Directoryservice
+  - expected: Elastic Beanstalk
+    options:
+      wordBoundary: true
+    pattern: Elasticbeanstalk
+  - expected: Elastic Inference
+    options:
+      wordBoundary: true
+    pattern: Elasticinference
+  - expected: Elastic Transcoder
+    options:
+      wordBoundary: true
+    pattern: Elastictranscoder
+  - expected: Firewall Manager
+    options:
+      wordBoundary: true
+    pattern: Firewallmanager
+  - expected: Fraud Detector
+    options:
+      wordBoundary: true
+    pattern: Frauddetector
+  - expected: Global Accelerator
+    options:
+      wordBoundary: true
+    pattern: Globalaccelerator
+  - expected: Glue DataBrew
+    options:
+      wordBoundary: true
+    pattern: Gluedatabrew
+  - expected: Ground Station
+    options:
+      wordBoundary: true
+    pattern: Groundstation
+  - expected: Health Dashboard
+    options:
+      wordBoundary: true
+    pattern: Healthdashboard
+  - expected: Inspector Classic
+    options:
+      wordBoundary: true
+    pattern: Inspectorclassic
+  - expected: Lake Formation
+    options:
+      wordBoundary: true
+    pattern: Lakeformation
+  - expected: Launch Wizard
+    options:
+      wordBoundary: true
+    pattern: Launchwizard
+  - expected: License Manager
+    options:
+      wordBoundary: true
+    pattern: Licensemanager
+  - expected: Local Zones
+    options:
+      wordBoundary: true
+    pattern: Localzones
+  - expected: Location Service
+    options:
+      wordBoundary: true
+    pattern: Locationservice
+  - expected: Machine Learning
+    options:
+      wordBoundary: true
+    pattern: Machinelearning
+  - expected: Macie Classic
+    options:
+      wordBoundary: true
+    pattern: Macieclassic
+  - expected: Mainframe Modernization
+    options:
+      wordBoundary: true
+    pattern: Mainframemodernization
+  - expected: Managed Blockchain
+    options:
+      wordBoundary: true
+    pattern: Managedblockchain
+  - expected: Managed Grafana
+    options:
+      wordBoundary: true
+    pattern: Managedgrafana
+  - expected: Managed Services
+    options:
+      wordBoundary: true
+    pattern: Managedservices
+  - expected: Management Console
+    options:
+      wordBoundary: true
+    pattern: Managementconsole
+  - expected: Mechanical Turk
+    options:
+      wordBoundary: true
+    pattern: Mechanicalturk
+  - expected: Migration Hub
+    options:
+      wordBoundary: true
+    pattern: Migrationhub
+  - expected: Mobile Analytics
+    options:
+      wordBoundary: true
+    pattern: Mobileanalytics
+  - expected: Mobile Hub
+    options:
+      wordBoundary: true
+    pattern: Mobilehub
+  - expected: Network Firewall
+    options:
+      wordBoundary: true
+    pattern: Networkfirewall
+  - expected: Nimble Studio
+    options:
+      wordBoundary: true
+    pattern: Nimblestudio
+  - expected: Open Distro
+    options:
+      wordBoundary: true
+    pattern: Opendistro
+  - expected: Reachability Analyzer
+    options:
+      wordBoundary: true
+    pattern: Reachabilityanalyzer
+  - expected: Remote Configuration
+    options:
+      wordBoundary: true
+    pattern: Remoteconfiguration
+  - expected: Resilience Hub
+    options:
+      wordBoundary: true
+    pattern: Resiliencehub
+  - expected: Resource Explorer
+    options:
+      wordBoundary: true
+    pattern: Resourceexplorer
+  - expected: Resource Groups
+    options:
+      wordBoundary: true
+    pattern: Resourcegroups
+  - expected: S3 Glacier
+    options:
+      wordBoundary: true
+    pattern: S3glacier
+  - expected: Secrets Manager
+    options:
+      wordBoundary: true
+    pattern: Secretsmanager
+  - expected: Security Hub
+    options:
+      wordBoundary: true
+    pattern: Securityhub
+  - expected: Security Lake
+    options:
+      wordBoundary: true
+    pattern: Securitylake
+  - expected: Service Catalog
+    options:
+      wordBoundary: true
+    pattern: Servicecatalog
+  - expected: Service Quotas
+    options:
+      wordBoundary: true
+    pattern: Servicequotas
+  - expected: Shield Advanced
+    options:
+      wordBoundary: true
+    pattern: Shieldadvanced
+  - expected: Shield Standard
+    options:
+      wordBoundary: true
+    pattern: Shieldstandard
+  - expected: Snow Family
+    options:
+      wordBoundary: true
+    pattern: Snowfamily
+  - expected: Step Functions
+    options:
+      wordBoundary: true
+    pattern: Stepfunctions
+  - expected: Storage Gateway
+    options:
+      wordBoundary: true
+    pattern: Storagegateway
+  - expected: Supply Chain
+    options:
+      wordBoundary: true
+    pattern: Supplychain
+  - expected: Systems Manager
+    options:
+      wordBoundary: true
+    pattern: Systemsmanager
+  - expected: Transfer Family
+    options:
+      wordBoundary: true
+    pattern: Transferfamily
+  - expected: Transit Gateway
+    options:
+      wordBoundary: true
+    pattern: Transitgateway
+  - expected: Trusted Advisor
+    options:
+      wordBoundary: true
+    pattern: Trustedadvisor
+  - expected: Verified Access
+    options:
+      wordBoundary: true
+    pattern: Verifiedaccess
+  - expected: Well-Architected Tool
+    options:
+      wordBoundary: true
+    pattern: /Well-Architectedtool/
+  - expected: Blockchain Templates
+    options:
+      wordBoundary: true
+    pattern: Blockchain Template
+  - expected: Clean Rooms
+    options:
+      wordBoundary: true
+    pattern: Clean Room
+  - expected: CloudWatch Application Insights
+    options:
+      wordBoundary: true
+    pattern: CloudWatch Application Insight
+  - expected: CloudWatch Events
+    options:
+      wordBoundary: true
+    pattern: CloudWatch Event
+  - expected: CloudWatch Logs
+    options:
+      wordBoundary: true
+    pattern: CloudWatch Log
+  - expected: Deep Learning Containers
+    options:
+      wordBoundary: true
+    pattern: Deep Learning Container
+  - expected: DynamoDB Streams
+    options:
+      wordBoundary: true
+    pattern: DynamoDB Stream
+  - expected: GameSparks
+    options:
+      wordBoundary: true
+    pattern: GameSpark
+  - expected: IoT Analytics
+    options:
+      wordBoundary: true
+    pattern: IoT Analytic
+  - expected: IoT Events
+    options:
+      wordBoundary: true
+    pattern: IoT Event
+  - expected: Kinesis Data Analytics
+    options:
+      wordBoundary: true
+    pattern: Kinesis Data Analytic
+  - expected: Kinesis Data Streams
+    options:
+      wordBoundary: true
+    pattern: Kinesis Data Stream
+  - expected: Kinesis Video Streams
+    options:
+      wordBoundary: true
+    pattern: Kinesis Video Stream
+  - expected: Local Zones
+    options:
+      wordBoundary: true
+    pattern: Local Zone
+  - expected: Managed Services
+    options:
+      wordBoundary: true
+    pattern: Managed Service
+  - expected: OpsWorks
+    options:
+      wordBoundary: true
+    pattern: OpsWork
+  - expected: OpsWorks Stacks
+    options:
+      wordBoundary: true
+    pattern: OpsWorks Stack
+  - expected: Organizations
+    options:
+      wordBoundary: true
+    pattern: Organization
+  - expected: Outposts
+    options:
+      wordBoundary: true
+    pattern: Outpost
+  - expected: Resource Groups
+    options:
+      wordBoundary: true
+    pattern: Resource Group
+  - expected: Service Quotas
+    options:
+      wordBoundary: true
+    pattern: Service Quota
+  - expected: Step Functions
+    options:
+      wordBoundary: true
+    pattern: Step Function
+  - expected: Toolkit for JetBrains
+    options:
+      wordBoundary: true
+    pattern: Toolkit for JetBrain
+  - expected: WorkDocs
+    options:
+      wordBoundary: true
+    pattern: WorkDoc
+  - expected: WorkSpaces
+    options:
+      wordBoundary: true
+    pattern: WorkSpace
+  - expected: IoT Things Graph
+    options:
+      wordBoundary: true
+    pattern: IoT Thing Graph
+  - expected: Keyspaces
+    options:
+      wordBoundary: true
+    pattern: Keyspace
+  - expected: Systems Manager
+    options:
+      wordBoundary: true
+    pattern: System Manager
+  - expected: Snowball
+    options:
+      wordBoundary: true
+    pattern: Snow ball
+  - expected: Snowcone
+    options:
+      wordBoundary: true
+    pattern: Snow cone
+  - expected: Snowmobile
+    options:
+      wordBoundary: true
+    pattern: Snow mobile
+  - expected: ElastiCache
+    options:
+      wordBoundary: true
+    pattern: ElasticCache
+  - expected: CloudEndure Disaster Recovery
+    options:
+      wordBoundary: true
+    pattern: CloudEndure disaster recovery
+  - expected: CloudEndure Migration
+    options:
+      wordBoundary: true
+    pattern: CloudEndure migration
+  - expected: CloudWatch Application Insights
+    options:
+      wordBoundary: true
+    pattern: CloudWatch application insights
+  - expected: CloudWatch Events
+    options:
+      wordBoundary: true
+    pattern: CloudWatch events
+  - expected: CloudWatch Evidently
+    options:
+      wordBoundary: true
+    pattern: CloudWatch evidently
+  - expected: CloudWatch Internet Monitor
+    options:
+      wordBoundary: true
+    pattern: CloudWatch internet monitor
+  - expected: CloudWatch Logs
+    options:
+      wordBoundary: true
+    pattern: CloudWatch logs
+  - expected: CodeGuru Profiler
+    options:
+      wordBoundary: true
+    pattern: CodeGuru profiler
+  - expected: CodeGuru Reviewer
+    options:
+      wordBoundary: true
+    pattern: CodeGuru reviewer
+  - expected: DynamoDB Streams
+    options:
+      wordBoundary: true
+    pattern: DynamoDB streams
+  - expected: EC2 Image Builder
+    options:
+      wordBoundary: true
+    pattern: EC2 image builder
+  - expected: EMR Serverless
+    options:
+      wordBoundary: true
+    pattern: EMR serverless
+  - expected: FSx for Lustre
+    options:
+      wordBoundary: true
+    pattern: FSx for lustre
+  - expected: FSx for NetApp ONTAP
+    options:
+      wordBoundary: true
+    pattern: FSx for netapp ontap
+  - expected: FSx for OpenZFS
+    options:
+      wordBoundary: true
+    pattern: FSx for openzfs
+  - expected: FSx for Windows File Server
+    options:
+      wordBoundary: true
+    pattern: FSx for windows file server
+  - expected: Glue DataBrew
+    options:
+      wordBoundary: true
+    pattern: Glue databrew
+  - expected: IoT Things Graph
+    options:
+      wordBoundary: true
+    pattern: IoT things graph
+  - expected: OpenSearch Serverless
+    options:
+      wordBoundary: true
+    pattern: OpenSearch serverless
+  - expected: Red Hat OpenShift Service
+    options:
+      wordBoundary: true
+    pattern: Red hat openshift service
