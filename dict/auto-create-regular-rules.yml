@@ -3052,7 +3052,7 @@ rules:
   - expected: Well-Architected Tool
     options:
       wordBoundary: true
-    pattern: Well-Architectedtool
+    pattern: /Well-Architectedtool/
   - expected: Blockchain Templates
     options:
       wordBoundary: true
