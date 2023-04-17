@@ -3,7 +3,7 @@
 
 ### Bug Fixes
 
-* add slach to - included pattern ([6eb4912](https://github.com/bun913/textlint-rule-aws-service-name/commit/6eb4912c62f26bba3392d21d7c026f5f45ac8799))
+* add slash to - included pattern ([6eb4912](https://github.com/bun913/textlint-rule-aws-service-name/commit/6eb4912c62f26bba3392d21d7c026f5f45ac8799))
 
 
 ### Features
@@ -18,3 +18,8 @@
 ### Features
 
 * update auto-create-regular-rules.yml ([f88b2aa](https://github.com/bun913/textlint-rule-aws-service-name/commit/f88b2aa0a1829ba1c1914f00e9ba92618845c427))
+
+
+### Contributors
+
+@riita10069 @bun913
