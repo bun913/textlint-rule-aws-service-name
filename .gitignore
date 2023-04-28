@@ -33,6 +33,7 @@ npm-debug.log
 
 # Publish src/ instead lib/
 /lib
+/src/**/*.d.ts
 *.js
 !jest.config.js
 !commitlint.config.js
