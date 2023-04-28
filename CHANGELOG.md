@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.3.1...v1.3.2) (2023-04-28)
+
+
+### Bug Fixes
+
+* add index.d.ts into npm package ([9cec0fe](https://github.com/bun913/textlint-rule-aws-service-name/commit/9cec0fed8586e0f3c3e032025a8e4168662a68a6))
+
 ## [1.3.1](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.3.0...v1.3.1) (2023-04-28)
 
 
