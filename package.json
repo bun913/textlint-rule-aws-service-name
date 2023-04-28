@@ -18,6 +18,7 @@
   ],
   "files": [
     "lib/",
+    "src/index.ts",
     "!lib/src",
     "!lib/regularRule",
     "!lib/test",
