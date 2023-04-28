@@ -19,6 +19,7 @@
   "files": [
     "lib/",
     "src/index.ts",
+    "src/index.d.ts",
     "!lib/src",
     "!lib/regularRule",
     "!lib/test",
@@ -58,6 +59,7 @@
     "typescript": "^4.9.4"
   },
   "name": "textlint-rule-aws-service-name",
+  "types": "src/index.d.ts",
   "description": "Rule for AWS Product Names",
   "directories": {
     "test": "test"
