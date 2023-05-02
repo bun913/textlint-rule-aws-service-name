@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.3.2...v1.4.0) (2023-05-02)
+
+
+### Features
+
+* updae auto create rule ([b333f9a](https://github.com/bun913/textlint-rule-aws-service-name/commit/b333f9a4d7945760a225c4b6ff6784be65286836))
+
 ## [1.3.2](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.3.1...v1.3.2) (2023-04-28)
 
 
