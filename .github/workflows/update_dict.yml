@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 21 * * *' # 日本時間の午前6時に実行する
+    - cron: '0 21 1 * *' # 毎月1日の日本時間の午前6時に実行する
   workflow_dispatch:
 
 jobs:
