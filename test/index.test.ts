@@ -1,7 +1,7 @@
 import TextLintTester from "textlint-tester";
 import * as lint from "../src/index";
 
-const report = lint.default.fixer
+const report = lint.default.fixer;
 const tester = new TextLintTester();
 tester.run("EC2", report, {
   valid: ["EC2", "Amazon EC2"],
@@ -51,7 +51,9 @@ tester.run("Security Hub", report, {
       text: "SecurityHub",
       errors: [
         {
-          message: "SecurityHub => Security Hub", }, ],
+          message: "SecurityHub => Security Hub",
+        },
+      ],
       description: "Not Allowed delete blank",
     },
   ],
@@ -89,6 +91,42 @@ tester.run("Glue DataBrew", report, {
           message: "Glue databrew => Glue DataBrew",
         },
       ],
-    }
+    },
+  ],
+});
+
+tester.run("Bedrock", report, {
+  valid: ["Amazon Bedrock"],
+  invalid: [
+    {
+      text: "AWS Bedrock",
+      errors: [
+        {
+          message: "AWS Bedrock => Amazon Bedrock",
+        },
+      ],
+    },
+  ],
+});
+
+tester.run("CodeWhisperer", report, {
+  valid: ["Amazon CodeWhisperer"],
+  invalid: [
+    {
+      text: "AWS CodeWhisperer",
+      errors: [
+        {
+          message: "AWS CodeWhisperer => Amazon CodeWhisperer",
+        },
+      ],
+    },
+    {
+      text: "Code Whisperer",
+      errors: [
+        {
+          message: "Code Whisperer => CodeWhisperer",
+        },
+      ],
+    },
   ],
 });
