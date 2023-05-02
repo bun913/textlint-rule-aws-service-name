@@ -145,6 +145,14 @@ rules:
       - AWS Aurora
     options:
       wordBoundary: true
+  - expected: Bedrock
+    options:
+      wordBoundary: true
+  - expected: Amazon Bedrock
+    patterns:
+      - AWS Bedrock
+    options:
+      wordBoundary: true
   - expected: Braket
     options:
       wordBoundary: true
@@ -1375,19 +1383,6 @@ rules:
       - CloudMap
     options:
       wordBoundary: true
-  - expected: Cloud WAN
-    options:
-      wordBoundary: true
-  - expected: AWS Cloud WAN
-    patterns:
-      - Amazon Cloud WAN
-    options:
-      wordBoundary: true
-  - expected: Cloud WAN
-    patterns:
-      - CloudWAN
-    options:
-      wordBoundary: true
   - expected: Cloud9
     options:
       wordBoundary: true
@@ -2403,19 +2398,6 @@ rules:
       - SecurityHub
     options:
       wordBoundary: true
-  - expected: Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: AWS Server Migration Service
-    patterns:
-      - Amazon Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: Server Migration Service
-    patterns:
-      - ServerMigrationService
-    options:
-      wordBoundary: true
   - expected: Serverless Application Repository
     options:
       wordBoundary: true
@@ -2475,32 +2457,6 @@ rules:
     patterns:
       - SimSpaceWeaver
       - Sim Space Weaver
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
     options:
       wordBoundary: true
   - expected: Snow Family
@@ -2767,5 +2723,18 @@ rules:
   - expected: VMware Cloud on AWS
     patterns:
       - VMwareCloudonAWS
+    options:
+      wordBoundary: true
+  - expected: CodeWhisperer
+    options:
+      wordBoundary: true
+  - expected: Amazon CodeWhisperer
+    patterns:
+      - AWS CodeWhisperer
+    options:
+      wordBoundary: true
+  - expected: CodeWhisperer
+    patterns:
+      - Code Whisperer
     options:
       wordBoundary: true
