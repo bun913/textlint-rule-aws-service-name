@@ -11,7 +11,7 @@ interface OptionParam {
   page: string;
 }
 
-export class FetchResponse {
+export class AwsApi {
   BASE_URL = "https://aws.amazon.com/api/dirs/items/search";
   readonly option: OptionParam;
 

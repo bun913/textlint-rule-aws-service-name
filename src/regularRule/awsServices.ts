@@ -1,4 +1,4 @@
-import { FetchResponse } from "./fetchResponse";
+import { AwsApi } from "./awsApi";
 
 export const prefixAmazon = "Amazon";
 export const prefixAWS = "AWS";
@@ -14,14 +14,14 @@ export interface AwsServiceParam {
 const pascalCasePattern = /([A-Z][a-z]+)([A-Z][a-z]+)/g;
 
 export class AwsServices {
-  readonly fetchResponse: FetchResponse;
+  readonly awsApi: AwsApi;
 
-  constructor(fetchResponse: FetchResponse) {
-    this.fetchResponse = fetchResponse;
+  constructor(awsApi: AwsApi) {
+    this.awsApi = awsApi;
   }
 
   public async get(): Promise<AwsService[]> {
-    const items = await this.fetchResponse.result();
+    const items = await this.awsApi.result();
     const awsServices: AwsService[] = items.map((item) => {
       const productName = item.additionalFields.productName;
       const prefix = AwsService.getPrefix(productName);

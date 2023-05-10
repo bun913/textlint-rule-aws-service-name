@@ -1,7 +1,7 @@
-import { FetchResponse } from "../../../src/regularRule/fetchResponse";
+import { AwsApi } from "../../../src/regularRule/awsApi";
 import { ResoponseBody } from "../../../src/regularRule/types";
 
-describe("FetchResponse", () => {
+describe("AwsApi", () => {
   describe("result()", () => {
     const mockData: ResoponseBody = {
       items: [
@@ -74,8 +74,8 @@ describe("FetchResponse", () => {
     });
 
     it("should return an array of items", async () => {
-      const fetchResponse = new FetchResponse();
-      const items = await fetchResponse.result();
+      const awsApi = new AwsApi();
+      const items = await awsApi.result();
       expect(items).toEqual(mockData.items.map((i) => i.item));
     });
 
@@ -83,8 +83,8 @@ describe("FetchResponse", () => {
       (global.fetch as jest.Mock).mockImplementationOnce(() =>
         Promise.reject(new Error("Request Fail"))
       );
-      const fetchResponse = new FetchResponse();
-      await expect(fetchResponse.result()).rejects.toThrow("Request Fail");
+      const awsApi = new AwsApi();
+      await expect(awsApi.result()).rejects.toThrow("Request Fail");
     });
   });
 });
