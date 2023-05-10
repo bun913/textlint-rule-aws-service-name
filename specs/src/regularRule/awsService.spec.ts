@@ -109,18 +109,18 @@ describe("AwsService", () => {
     });
   });
 
-  describe("isIncludeBlank()", () => {
-    test("isIncludeBlank() should return true if the product name contains any blank spaces", () => {
+  describe("hasIntermediateBlank()", () => {
+    test("hasIntermediateBlank() should return true if the product name contains any blank spaces", () => {
       const awsService = new AwsService(
         "Amazon Elastic Compute Cloud",
         prefixAmazon
       );
-      expect(awsService.isIncludeBlank()).toBe(true);
+      expect(awsService.hasIntermediateBlank()).toBe(true);
     });
 
-    test("isIncludeBlank() should return false if the product name does not contain any blank spaces", () => {
+    test("hasIntermediateBlank() should return false if the product name does not contain any blank spaces", () => {
       const awsService = new AwsService("AmazonS3", prefixAmazon);
-      expect(awsService.isIncludeBlank()).toBe(false);
+      expect(awsService.hasIntermediateBlank()).toBe(false);
     });
   });
 });
