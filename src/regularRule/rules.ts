@@ -105,7 +105,7 @@ export class SpacingRule {
 
   public getMaybe(): RuleParam | null {
     const patterns: string[] = [];
-    if (this.service.isIncludeBlank()) {
+    if (this.service.hasIntermediateBlank()) {
       patterns.push(this.noSpacePattern());
     }
     if (this.service.hasPascalCase()) {

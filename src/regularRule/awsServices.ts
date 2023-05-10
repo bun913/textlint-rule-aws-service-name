@@ -75,7 +75,7 @@ export class AwsService implements AwsServiceParam {
     return this.prefix == prefixAmazon;
   }
 
-  public isIncludeBlank(): boolean {
+  public hasIntermediateBlank(): boolean {
     return this.productName.includes(' ')
   }
 
