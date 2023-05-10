@@ -68,7 +68,7 @@ ymlを作成するためのクラス構成などについては以下をご確�
 
 ```mermaid
 flowchart TD
-  FetchResponse("AWSの公開APIからサービス名の一覧を取得")
+  AwsApi("AWSの公開APIからサービス名の一覧を取得")
     --> AwsServices("必要な情報のみ抽出")
     --> Rule("prh用の個々のルールを作成")
     --> Rules("個々のルールをつなぎ合わせる")
@@ -84,7 +84,7 @@ classDiagram
     RuleFile *-- Rules
     Rules *-- Rule
     Rule *-- AwsServices
-    AwsServices *-- FetchResponse
+    AwsServices *-- AwsApi
 ```
 
 APIはこちらのJSONフィードを利用しています。

@@ -1,11 +1,11 @@
 import { AwsServices } from "./regularRule/awsServices";
-import { FetchResponse } from "./regularRule/fetchResponse";
+import { AwsApi } from "./regularRule/awsApi";
 import { RuleFile } from "./regularRule/ruleFile";
 import { Rules } from "./regularRule/rules";
 
 const createRule = async () => {
-  const fetchResponse = new FetchResponse();
-  const awsServices = new AwsServices(fetchResponse);
+  const awsApi = new AwsApi();
+  const awsServices = new AwsServices(awsApi);
   const services = await awsServices.get();
   const rules = new Rules(services);
   const rulefiles = new RuleFile(rules);
