@@ -37,13 +37,17 @@ export class Rules {
 }
 
 export class PatternEscaper {
-  constructor() {}
+  readonly pattern: string;
+
+  constructor(pattern: string) {
+    this.pattern = pattern;
+  }
   // prh本体でpatternの方に-が入った文字列が指定されるとエラーになる
   // https://github.com/prh/prh/issues/34
   // そのため-の入ったpatternの際には//で囲む必要がある
-  public escapePattern(pattern: string): string {
-    if (!pattern.match(/-/)) return pattern;
-    return `/${pattern}/`;
+  public escapePattern(): string {
+    if (!this.pattern.match(/-/)) return this.pattern;
+    return `/${this.pattern}/`;
   }
 }
 
@@ -76,10 +80,10 @@ export class WrongPrefixRule {
 
   public get(): RuleParam {
     const wrongPattern = this.getPettern();
-    const patternEscaper = new PatternEscaper();
+    const patternEscaper = new PatternEscaper(wrongPattern);
     const rule: RuleParam = {
       expected: this.service.getFullProductName(),
-      patterns: [patternEscaper.escapePattern(wrongPattern)],
+      patterns: [patternEscaper.escapePattern()],
       options: { wordBoundary: true },
     };
     return rule;
@@ -119,10 +123,9 @@ export class SpacingRule {
       return null;
     }
 
-    const patternEscaper = new PatternEscaper();
     const rule: RuleParam = {
       expected: this.service.productName,
-      patterns: patterns.map(patternEscaper.escapePattern),
+      patterns: patterns.map((pattern) => new PatternEscaper(pattern).escapePattern()),
       options: { wordBoundary: true },
     };
     return rule;

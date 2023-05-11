@@ -13,12 +13,12 @@ import {
 
 describe("PatternEscaper", () => {
   it("escapePattern() return /pattern/ if including -", () => {
-    const patternEscaper = new PatternEscaper();
-    expect(patternEscaper.escapePattern("Sample-Service")).toBe("/Sample-Service/");
+    const patternEscaper = new PatternEscaper("Sample-Service");
+    expect(patternEscaper.escapePattern()).toBe("/Sample-Service/");
   });
   it("escapePattern() return pattern if not including -", () => {
-    const patternEscaper = new PatternEscaper();
-    expect(patternEscaper.escapePattern("Sample Service")).toBe("Sample Service");
+    const patternEscaper = new PatternEscaper("Sample Service");
+    expect(patternEscaper.escapePattern()).toBe("Sample Service");
   });
 });
 
