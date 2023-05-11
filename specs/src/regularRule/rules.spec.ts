@@ -1,5 +1,5 @@
 import {
-  RuleUtil,
+  PatternEscaper,
   WordBundaryRule,
   WrongPrefixRule,
   SpacingRule,
@@ -11,14 +11,14 @@ import {
   prefixAWS,
 } from "../../../src/regularRule/awsServices";
 
-describe("RuleUtil", () => {
+describe("PatternEscaper", () => {
   it("escapePattern() return /pattern/ if including -", () => {
-    const ruleUtil = new RuleUtil();
-    expect(ruleUtil.escapePattern("Sample-Service")).toBe("/Sample-Service/");
+    const patternEscaper = new PatternEscaper("Sample-Service");
+    expect(patternEscaper.escapePattern()).toBe("/Sample-Service/");
   });
   it("escapePattern() return pattern if not including -", () => {
-    const ruleUtil = new RuleUtil();
-    expect(ruleUtil.escapePattern("Sample Service")).toBe("Sample Service");
+    const patternEscaper = new PatternEscaper("Sample Service");
+    expect(patternEscaper.escapePattern()).toBe("Sample Service");
   });
 });
 

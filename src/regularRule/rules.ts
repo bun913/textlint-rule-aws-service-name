@@ -36,15 +36,18 @@ export class Rules {
   }
 }
 
-export class RuleUtil {
-  constructor() {
+export class PatternEscaper {
+  readonly pattern: string;
+
+  constructor(pattern: string) {
+    this.pattern = pattern;
   }
   // prh本体でpatternの方に-が入った文字列が指定されるとエラーになる
   // https://github.com/prh/prh/issues/34
   // そのため-の入ったpatternの際には//で囲む必要がある
-  public escapePattern(pattern: string): string {
-    if (!pattern.match(/-/)) return pattern;
-    return `/${pattern}/`;
+  public escapePattern(): string {
+    if (!this.pattern.match(/-/)) return this.pattern;
+    return `/${this.pattern}/`;
   }
 }
 
@@ -63,6 +66,11 @@ export class WordBundaryRule {
   }
 }
 
+/**
+ * このルールはAWSサービス名の接頭辞の誤りを検出する。
+ * - 正しい: AWS Security Hub
+ * - 誤り: Amazon Security Hub
+ */
 export class WrongPrefixRule {
   readonly service: AwsService;
 
@@ -72,10 +80,10 @@ export class WrongPrefixRule {
 
   public get(): RuleParam {
     const wrongPattern = this.getPettern();
-    const ruleUtil = new RuleUtil();
+    const patternEscaper = new PatternEscaper(wrongPattern);
     const rule: RuleParam = {
       expected: this.service.getFullProductName(),
-      patterns: [ruleUtil.escapePattern(wrongPattern)],
+      patterns: [patternEscaper.escapePattern()],
       options: { wordBoundary: true },
     };
     return rule;
@@ -115,10 +123,9 @@ export class SpacingRule {
       return null;
     }
 
-    const ruleUtil = new RuleUtil();
     const rule: RuleParam = {
       expected: this.service.productName,
-      patterns: patterns.map(ruleUtil.escapePattern),
+      patterns: patterns.map((pattern) => new PatternEscaper(pattern).escapePattern()),
       options: { wordBoundary: true },
     };
     return rule;
@@ -131,6 +138,9 @@ export class SpacingRule {
   }
 
   private spaceDelimitedPattern(): string {
-    return this.service.productName.replace(SpacingRule.pascalCasePattern, "$1 $2");
+    return this.service.productName.replace(
+      SpacingRule.pascalCasePattern,
+      "$1 $2"
+    );
   }
 }
