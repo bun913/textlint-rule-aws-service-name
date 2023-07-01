@@ -1049,14 +1049,6 @@ rules:
       - SimpleStorageService
     options:
       wordBoundary: true
-  - expected: Sumerian
-    options:
-      wordBoundary: true
-  - expected: Amazon Sumerian
-    patterns:
-      - AWS Sumerian
-    options:
-      wordBoundary: true
   - expected: Textract
     options:
       wordBoundary: true
@@ -2411,19 +2403,6 @@ rules:
       - SecurityHub
     options:
       wordBoundary: true
-  - expected: Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: AWS Server Migration Service
-    patterns:
-      - Amazon Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: Server Migration Service
-    patterns:
-      - ServerMigrationService
-    options:
-      wordBoundary: true
   - expected: Serverless Application Repository
     options:
       wordBoundary: true
@@ -2483,32 +2462,6 @@ rules:
     patterns:
       - SimSpaceWeaver
       - Sim Space Weaver
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
     options:
       wordBoundary: true
   - expected: Snow Family
