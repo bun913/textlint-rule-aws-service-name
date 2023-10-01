@@ -279,6 +279,19 @@ rules:
       - AWS Corretto
     options:
       wordBoundary: true
+  - expected: Dash Cart
+    options:
+      wordBoundary: true
+  - expected: Amazon Dash Cart
+    patterns:
+      - AWS Dash Cart
+    options:
+      wordBoundary: true
+  - expected: Dash Cart
+    patterns:
+      - DashCart
+    options:
+      wordBoundary: true
   - expected: DataZone
     options:
       wordBoundary: true
@@ -1049,14 +1062,6 @@ rules:
       - SimpleStorageService
     options:
       wordBoundary: true
-  - expected: Sumerian
-    options:
-      wordBoundary: true
-  - expected: Amazon Sumerian
-    patterns:
-      - AWS Sumerian
-    options:
-      wordBoundary: true
   - expected: Textract
     options:
       wordBoundary: true
@@ -1381,19 +1386,6 @@ rules:
   - expected: Cloud Map
     patterns:
       - CloudMap
-    options:
-      wordBoundary: true
-  - expected: Cloud WAN
-    options:
-      wordBoundary: true
-  - expected: AWS Cloud WAN
-    patterns:
-      - Amazon Cloud WAN
-    options:
-      wordBoundary: true
-  - expected: Cloud WAN
-    patterns:
-      - CloudWAN
     options:
       wordBoundary: true
   - expected: Cloud9
@@ -2411,19 +2403,6 @@ rules:
       - SecurityHub
     options:
       wordBoundary: true
-  - expected: Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: AWS Server Migration Service
-    patterns:
-      - Amazon Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: Server Migration Service
-    patterns:
-      - ServerMigrationService
-    options:
-      wordBoundary: true
   - expected: Serverless Application Repository
     options:
       wordBoundary: true
@@ -2483,32 +2462,6 @@ rules:
     patterns:
       - SimSpaceWeaver
       - Sim Space Weaver
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
     options:
       wordBoundary: true
   - expected: Snow Family
@@ -2775,6 +2728,14 @@ rules:
   - expected: VMware Cloud on AWS
     patterns:
       - VMwareCloudonAWS
+    options:
+      wordBoundary: true
+  - expected: EC2 Image Builder
+    options:
+      wordBoundary: true
+  - expected: EC2 Image Builder
+    patterns:
+      - EC2ImageBuilder
     options:
       wordBoundary: true
   - expected: CodeWhisperer
