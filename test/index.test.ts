@@ -130,3 +130,39 @@ tester.run("CodeWhisperer", report, {
     },
   ],
 });
+
+tester.run("Dash Cart", report, {
+  valid: ["Amazon Dash Cart", "Dash Cart"],
+  invalid: [
+    {
+      text: "AWS Dash Cart",
+      errors: [
+        {
+          message: "AWS Dash Cart => Amazon Dash Cart",
+        },
+      ],
+    },
+    {
+      text: "DashCart",
+      errors: [
+        {
+          message: "DashCart => Dash Cart",
+        },
+      ],
+    },
+  ],
+})
+
+tester.run("EC2 Image Builder", report, {
+  valid: ["EC2 Image Builder"],
+  invalid: [
+    {
+      text: "EC2 ImageBuilder",
+      errors: [
+        {
+          message: "EC2 ImageBuilder => EC2 Image Builder",
+        },
+      ],
+    },
+  ],
+})
