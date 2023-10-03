@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.4.0...v1.5.0) (2023-10-03)
+
+
+### Features
+
+* add image builder and dash cart ([c655d28](https://github.com/bun913/textlint-rule-aws-service-name/commit/c655d28bf37dbd4eb668b15013d473698922f3fc))
+
 # [1.4.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.3.2...v1.4.0) (2023-05-02)
 
 
