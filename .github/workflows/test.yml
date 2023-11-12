@@ -22,7 +22,7 @@ jobs:
       - name: Build
         uses: ./.github/actions/build
       - name: Jest testing
-        run: yarn jest -- --coverage
+        run:  yarn jest --coverage --coverageReporters text cobertura
       - name: TextLint testing
         run: yarn testLint
       - name: Upload coverage reports to Codecov
@@ -30,5 +30,4 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          file: ./coverage/lcov.info
           fail_ci_if_error: true
