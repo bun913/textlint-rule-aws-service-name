@@ -21,10 +21,14 @@ jobs:
         uses: actions/checkout@v3
       - name: Build
         uses: ./.github/actions/build
-      - run: yarn test
-      - name: Create coverage reports
-        run: yarn jest -- --coverage
+      - name: Jest testing
+        run:  yarn jest
+      - name: TextLint testing
+        run: yarn testLint
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          fail_ci_if_error: true
+          directory: ./coverage
