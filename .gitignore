@@ -37,3 +37,6 @@ npm-debug.log
 *.js
 !jest.config.js
 !commitlint.config.js
+
+# Editor Serring
+.idea
