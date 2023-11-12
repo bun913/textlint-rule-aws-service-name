@@ -1,6 +1,6 @@
 name: Test
 
-on: pull_request
+on: [push, pull_request]
 
 jobs:
   canCreateRuleFile:
@@ -23,10 +23,8 @@ jobs:
         uses: ./.github/actions/build
       - run: yarn test
       - name: Create coverage reports
-        run: yarn jest --coverage
+        run: yarn jest -- --coverage
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        with:
-          directory: ./coverage
