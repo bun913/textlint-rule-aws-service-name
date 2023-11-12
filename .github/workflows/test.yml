@@ -22,3 +22,7 @@ jobs:
       - name: Build
         uses: ./.github/actions/build
       - run: yarn test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
