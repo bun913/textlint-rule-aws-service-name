@@ -4,17 +4,17 @@ module.exports = {
     testEnvironment: 'node',
     collectCoverage: true,
     collectCoverageFrom: [
-        '**/*.{ts,tsx}',
+        'src/**/*.{ts,tsx}',
         '!**/node_modules/**',
         '!**/*.d.ts',
     ],
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx', 'node'],
     coverageReporters: [
-        "text",
-        "cobertura",
-        "html"
+        "json",
+        "text"
     ],
-    transform: {
-        "\\.(ts|tsx)$": "ts-jest"
-    },
-    testMatch: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+    testMatch: [
+        "**/__tests__/**/*.ts?(x)",
+        "**/?(*.)+(spec|test).ts?(x)"
+    ],
 }
