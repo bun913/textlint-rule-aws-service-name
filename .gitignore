@@ -40,3 +40,7 @@ npm-debug.log
 
 # Editor Serring
 .idea
+
+# Test coverage
+coverage
+```
