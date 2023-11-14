@@ -43,4 +43,6 @@ npm-debug.log
 
 # Test coverage
 coverage
-```
+# Transpiled files
+*.js.map
+*.min.js
