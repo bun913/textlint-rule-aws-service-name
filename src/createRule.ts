@@ -3,7 +3,7 @@ import { AwsApi } from "./regularRule/awsApi";
 import { RuleFile } from "./regularRule/ruleFile";
 import { Rules } from "./regularRule/rules";
 
-const createRule = async () => {
+export const createRule = async () => {
   const awsApi = new AwsApi();
   const awsServices = new AwsServices(awsApi);
   const services = await awsServices.get();
@@ -11,4 +11,5 @@ const createRule = async () => {
   const rulefiles = new RuleFile(rules);
   rulefiles.createRegularRuleFile();
 };
-createRule();
+
+if (require.main === module) createRule();

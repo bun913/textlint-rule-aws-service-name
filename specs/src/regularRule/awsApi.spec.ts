@@ -1,5 +1,5 @@
 import { AwsApi } from "../../../src/regularRule/awsApi";
-import { ResoponseBody } from "../../../src/regularRule/types";
+import {dummyFetchData} from "../dummy";
 
 describe("AwsApi", () => {
   describe("result()", () => {
@@ -20,12 +20,6 @@ describe("AwsApi", () => {
       });
 
       it("should throw an error when the request is failed", async () => {
-        (global.fetch as jest.Mock).mockImplementationOnce(() =>
-            Promise.resolve({
-              status: 500,
-              json: () => Promise.resolve({message: "Server Error"})
-            })
-        );
         const awsApi = new AwsApi();
         await expect(awsApi.result()).rejects.toThrowError("Request Fail: ")
       });
@@ -35,40 +29,7 @@ describe("AwsApi", () => {
 
     describe("can get aws services data", () => {
 
-      const mockData: ResoponseBody = {
-        items: [
-          {
-            item: {
-              id: "1",
-              locale: "en_US",
-              directoryId: "aws-products",
-              name: "test1",
-              author: "author1",
-              createdBy: "creator1",
-              lastUpdatedBy: "updater1",
-              dateCreated: "2022-03-15T05:23:24.208Z",
-              dateUpdated: "2022-03-15T05:23:24.208Z",
-              additionalFields: {
-                pricingUrl: "https://aws.amazon.com",
-                freeTierAvailability: "unavailable",
-                productSummary: "test1 summary",
-                launchDate: "2022-03-15T05:23:24.208Z",
-                productUrl: "https://aws.amazon.com/test1",
-                productName: "Test Product 1",
-                productNameLowercase: "test product 1",
-                productCategory: "service",
-              },
-            },
-            tags: [],
-          },
-        ],
-        metadata: {
-          count: 1,
-          // It has next pages
-          totalHits: 2,
-        },
-      };
-
+      const mockData = dummyFetchData
 
       beforeEach(() => {
         global.fetch = jest.fn(() =>
