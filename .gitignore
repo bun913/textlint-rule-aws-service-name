@@ -46,3 +46,4 @@ coverage
 # Transpiled files
 *.js.map
 *.min.js
+/specs/**/*.d.ts
