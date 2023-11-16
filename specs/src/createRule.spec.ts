@@ -55,7 +55,7 @@ describe("createRule()", () => {
         }
     })
 
-    it("calls createRegularFile()", async () => {
+    it("calls write file with expected format", async () => {
         // arrange
         const doc = new yaml.Document(expectedYmlObject);
         const ymlString = doc.toString();
