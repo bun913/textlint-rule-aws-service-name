@@ -1,5 +1,7 @@
 # textlint-rule-aws-service-name
 
+[![codecov](https://codecov.io/gh/bun913/textlint-rule-aws-service-name/graph/badge.svg?token=DHEBLPSP4O)](https://codecov.io/gh/bun913/textlint-rule-aws-service-name)
+
 重要: **AWS公式のサービスではありません。1ユーザーの活動です。**
 
 Important: **This Project is UnOffical.**
