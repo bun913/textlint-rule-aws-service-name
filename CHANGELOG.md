@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.5.0...v1.6.0) (2023-12-03)
+
+
+### Bug Fixes
+
+* add Amazon Q test ([a98c2bc](https://github.com/bun913/textlint-rule-aws-service-name/commit/a98c2bc60a065dad77cdfda18faae444861a8107))
+
+
+### Features
+
+* update auto-create-regular-rules.yml ([fb5a43d](https://github.com/bun913/textlint-rule-aws-service-name/commit/fb5a43dd158d5592f283326c021d9ead8e3ed59d))
+
 # [1.5.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.4.0...v1.5.0) (2023-10-03)
 
 
