@@ -166,3 +166,17 @@ tester.run("EC2 Image Builder", report, {
     },
   ],
 })
+
+tester.run("Amazon Q", report, {
+  valid: ["Amazon Q"],
+  invalid: [
+    {
+      text: "AWS Q",
+      errors: [
+        {
+          message: "AWS Q => Amazon Q",
+        },
+      ],
+    },
+  ],
+})

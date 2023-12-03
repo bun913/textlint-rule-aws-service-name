@@ -894,6 +894,11 @@ rules:
       - AWS Polly
     options:
       wordBoundary: true
+  - expected: Amazon Q
+    patterns:
+      - AWS Q
+    options:
+      wordBoundary: true
   - expected: Quantum Ledger Database
     options:
       wordBoundary: true
@@ -1161,6 +1166,20 @@ rules:
     patterns:
       - WorkSpacesFamily
       - Work Spaces Family
+    options:
+      wordBoundary: true
+  - expected: WorkSpaces Thin Client
+    options:
+      wordBoundary: true
+  - expected: Amazon WorkSpaces Thin Client
+    patterns:
+      - AWS WorkSpaces Thin Client
+    options:
+      wordBoundary: true
+  - expected: WorkSpaces Thin Client
+    patterns:
+      - WorkSpacesThinClient
+      - Work Spaces Thin Client
     options:
       wordBoundary: true
   - expected: Apache MXNet on AWS
@@ -2705,6 +2724,22 @@ rules:
   - expected: AWS X-Ray
     patterns:
       - /Amazon X-Ray/
+    options:
+      wordBoundary: true
+  - expected: B2B Data Interchange
+    options:
+      wordBoundary: true
+  - expected: B2B Data Interchange
+    patterns:
+      - B2BDataInterchange
+    options:
+      wordBoundary: true
+  - expected: B2B Data Interchange
+    options:
+      wordBoundary: true
+  - expected: B2B Data Interchange
+    patterns:
+      - B2BDataInterchange
     options:
       wordBoundary: true
   - expected: Elastic Disaster Recovery
