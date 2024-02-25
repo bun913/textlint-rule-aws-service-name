@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.6.0...v1.7.0) (2024-02-25)
+
+
+### Features
+
+* add fabric rule ([2d8c464](https://github.com/bun913/textlint-rule-aws-service-name/commit/2d8c4645e9cd4b44c005a7d23e9a1b9b4afc511e))
+* add fabric test ([f2fe7c3](https://github.com/bun913/textlint-rule-aws-service-name/commit/f2fe7c371008a6413bd80cd5a366b58760742585))
+
 # [1.6.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.5.0...v1.6.0) (2023-12-03)
 
 ### Features
