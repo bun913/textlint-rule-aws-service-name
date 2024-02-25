@@ -180,3 +180,17 @@ tester.run("Amazon Q", report, {
     },
   ],
 })
+
+tester.run("App Fabric is wrong", report, {
+  valid: ["AppFabric"],
+  invalid: [
+    {
+      text: "App Fabric",
+      errors: [
+        {
+          message: "App Fabric => AppFabric",
+        },
+      ],
+    },
+  ],
+})
