@@ -1245,6 +1245,19 @@ rules:
       - Amazon App2Container
     options:
       wordBoundary: true
+  - expected: AppFabric
+    options:
+      wordBoundary: true
+  - expected: AWS AppFabric
+    patterns:
+      - Amazon AppFabric
+    options:
+      wordBoundary: true
+  - expected: AppFabric
+    patterns:
+      - App Fabric
+    options:
+      wordBoundary: true
   - expected: Application Composer
     options:
       wordBoundary: true
