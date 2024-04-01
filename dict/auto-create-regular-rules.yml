@@ -894,6 +894,9 @@ rules:
       - AWS Polly
     options:
       wordBoundary: true
+  - expected: Q
+    options:
+      wordBoundary: true
   - expected: Amazon Q
     patterns:
       - AWS Q
@@ -1065,14 +1068,6 @@ rules:
   - expected: Simple Storage Service
     patterns:
       - SimpleStorageService
-    options:
-      wordBoundary: true
-  - expected: Sumerian
-    options:
-      wordBoundary: true
-  - expected: Amazon Sumerian
-    patterns:
-      - AWS Sumerian
     options:
       wordBoundary: true
   - expected: Textract
@@ -1943,17 +1938,17 @@ rules:
       - Amazon Fargate
     options:
       wordBoundary: true
-  - expected: Fault Injection Simulator
+  - expected: Fault Injection Service
     options:
       wordBoundary: true
-  - expected: AWS Fault Injection Simulator
+  - expected: AWS Fault Injection Service
     patterns:
-      - Amazon Fault Injection Simulator
+      - Amazon Fault Injection Service
     options:
       wordBoundary: true
-  - expected: Fault Injection Simulator
+  - expected: Fault Injection Service
     patterns:
-      - FaultInjectionSimulator
+      - FaultInjectionService
     options:
       wordBoundary: true
   - expected: Firewall Manager
@@ -2456,19 +2451,6 @@ rules:
       - SecurityHub
     options:
       wordBoundary: true
-  - expected: Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: AWS Server Migration Service
-    patterns:
-      - Amazon Server Migration Service
-    options:
-      wordBoundary: true
-  - expected: Server Migration Service
-    patterns:
-      - ServerMigrationService
-    options:
-      wordBoundary: true
   - expected: Serverless Application Repository
     options:
       wordBoundary: true
@@ -2528,32 +2510,6 @@ rules:
     patterns:
       - SimSpaceWeaver
       - Sim Space Weaver
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    options:
-      wordBoundary: true
-  - expected: AWS Snow Family
-    patterns:
-      - Amazon Snow Family
-    options:
-      wordBoundary: true
-  - expected: Snow Family
-    patterns:
-      - SnowFamily
     options:
       wordBoundary: true
   - expected: Snow Family
@@ -2747,14 +2703,6 @@ rules:
       - B2BDataInterchange
     options:
       wordBoundary: true
-  - expected: B2B Data Interchange
-    options:
-      wordBoundary: true
-  - expected: B2B Data Interchange
-    patterns:
-      - B2BDataInterchange
-    options:
-      wordBoundary: true
   - expected: Elastic Disaster Recovery
     options:
       wordBoundary: true
@@ -2844,11 +2792,6 @@ rules:
   - expected: EC2 Image Builder
     patterns:
       - EC2ImageBuilder
-    options:
-      wordBoundary: true
-  - expected: EC2 Image Builder
-    patterns:
-      - EC2 ImageBuilder
     options:
       wordBoundary: true
   - expected: CodeWhisperer
