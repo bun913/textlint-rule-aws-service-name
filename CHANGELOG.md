@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.7.0...v1.8.0) (2024-04-08)
+
+
+### Features
+
+* add redshit pattern ([74fc4b1](https://github.com/bun913/textlint-rule-aws-service-name/commit/74fc4b15dcad97bd2c5e2cf9509332cc7e26ad79))
+
 # [1.7.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.6.0...v1.7.0) (2024-02-25)
 
 
