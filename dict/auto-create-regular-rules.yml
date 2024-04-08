@@ -941,6 +941,10 @@ rules:
       - AWS Redshift
     options:
       wordBoundary: true
+  - expected: Redshift
+    patterns:
+      - Redshit
+      - RedShit
   - expected: Rekognition
     options:
       wordBoundary: true

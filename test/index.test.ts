@@ -151,7 +151,7 @@ tester.run("Dash Cart", report, {
       ],
     },
   ],
-})
+});
 
 tester.run("EC2 Image Builder", report, {
   valid: ["EC2 Image Builder"],
@@ -165,7 +165,7 @@ tester.run("EC2 Image Builder", report, {
       ],
     },
   ],
-})
+});
 
 tester.run("Amazon Q", report, {
   valid: ["Amazon Q"],
@@ -179,7 +179,7 @@ tester.run("Amazon Q", report, {
       ],
     },
   ],
-})
+});
 
 tester.run("App Fabric is wrong", report, {
   valid: ["AppFabric"],
@@ -193,4 +193,25 @@ tester.run("App Fabric is wrong", report, {
       ],
     },
   ],
-})
+});
+tester.run("Redshit is wrong", report, {
+  valid: ["Redshift"],
+  invalid: [
+    {
+      text: "Redshit",
+      errors: [
+        {
+          message: "Redshit => Redshift",
+        },
+      ],
+    },
+    {
+      text: "RedShit",
+      errors: [
+        {
+          message: "RedShit => Redshift",
+        },
+      ],
+    },
+  ],
+});
