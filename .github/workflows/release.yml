@@ -37,3 +37,4 @@ jobs:
           branch: release-changelog
           base: main
           delete-branch: true
+          token: ${{ secrets.GH_TOKEN }}
