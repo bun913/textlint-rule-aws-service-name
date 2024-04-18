@@ -941,10 +941,6 @@ rules:
       - AWS Redshift
     options:
       wordBoundary: true
-  - expected: Redshift
-    patterns:
-      - Redshit
-      - RedShit
   - expected: Rekognition
     options:
       wordBoundary: true
@@ -1947,17 +1943,17 @@ rules:
       - Amazon Fargate
     options:
       wordBoundary: true
-  - expected: Fault Injection Simulator
+  - expected: Fault Injection Service
     options:
       wordBoundary: true
-  - expected: AWS Fault Injection Simulator
+  - expected: AWS Fault Injection Service
     patterns:
-      - Amazon Fault Injection Simulator
+      - Amazon Fault Injection Service
     options:
       wordBoundary: true
-  - expected: Fault Injection Simulator
+  - expected: Fault Injection Service
     patterns:
-      - FaultInjectionSimulator
+      - FaultInjectionService
     options:
       wordBoundary: true
   - expected: Firewall Manager
@@ -2868,3 +2864,14 @@ rules:
       - Code Whisperer
     options:
       wordBoundary: true
+  - expected: Redshift
+    patterns:
+      - Redshit
+      - RedShit
+  - expected: Fault Injection Service
+    patterns:
+      - Fault Injection Simulator
+      - FaultInjection Simulator
+      - Fault InjectionSimulator
+      - FaultInjectionSimulator
+    wordBoundary: true
