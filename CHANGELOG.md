@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.8.0...v1.9.0) (2024-04-18)
+
+
+### Features
+
+* add fault injection service ([d8ba2b7](https://github.com/bun913/textlint-rule-aws-service-name/commit/d8ba2b7693b9dca90441aef089d937bda9d078a0))
+
 # [1.8.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.7.0...v1.8.0) (2024-04-08)
 
 
