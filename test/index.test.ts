@@ -215,3 +215,32 @@ tester.run("Redshit is wrong", report, {
     },
   ],
 });
+tester.run("Fault Injection Simulator is now Fault Injection Service", report, {
+  valid: ["Fault Injection Service"],
+  invalid: [
+    {
+      text: "Fault Injection Simulator",
+      errors: [
+        {
+          message: "Fault Injection Simulator => Fault Injection Service",
+        },
+      ],
+    },
+    {
+      text: "FaultInjection Simulator",
+      errors: [
+        {
+          message: "FaultInjection Simulator => Fault Injection Service",
+        },
+      ],
+    },
+    {
+      text: "FaultInjection Simulator",
+      errors: [
+        {
+          message: "FaultInjection Simulator => Fault Injection Service",
+        },
+      ],
+    },
+  ],
+});
