@@ -1707,6 +1707,19 @@ rules:
       - Data Sync
     options:
       wordBoundary: true
+  - expected: Deadline Cloud
+    options:
+      wordBoundary: true
+  - expected: AWS Deadline Cloud
+    patterns:
+      - Amazon Deadline Cloud
+    options:
+      wordBoundary: true
+  - expected: Deadline Cloud
+    patterns:
+      - DeadlineCloud
+    options:
+      wordBoundary: true
   - expected: Deep Learning AMIs
     options:
       wordBoundary: true
