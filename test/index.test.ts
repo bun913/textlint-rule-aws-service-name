@@ -244,3 +244,25 @@ tester.run("Fault Injection Simulator is now Fault Injection Service", report, {
     },
   ],
 });
+
+tester.run("AWS Deadline Cloud", report, {
+  valid: ["AWS Deadline Cloud, Deadline Cloud"],
+  invalid: [
+    {
+      text: "Amazon Deadline Cloud",
+      errors: [
+        {
+          message: "Amazon Deadline Cloud => AWS Deadline Cloud",
+        },
+      ],
+    },
+    {
+      text: "DeadlineCloud",
+      errors: [
+        {
+          message: "DeadlineCloud => Deadline Cloud",
+        },
+      ],
+    },
+  ],
+});
