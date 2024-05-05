@@ -3,7 +3,7 @@
 
 ### Features
 
-* add dedline cloud ([0f98bed](https://github.com/bun913/textlint-rule-aws-service-name/commit/0f98bed7a78ea72fbed7362460c2d4436421593d))
+* add deadline cloud ([0f98bed](https://github.com/bun913/textlint-rule-aws-service-name/commit/0f98bed7a78ea72fbed7362460c2d4436421593d))
 
 # [1.9.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.8.0...v1.9.0) (2024-04-18)
 
