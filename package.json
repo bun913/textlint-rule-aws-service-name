@@ -29,7 +29,6 @@
   "main": "lib/index.js",
   "scripts": {
     "prepare": "husky install",
-    "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "commitmsg": "commitlint -e $GIT_PARAMS",
