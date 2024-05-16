@@ -28,7 +28,8 @@
   ],
   "main": "lib/index.js",
   "scripts": {
-    "postinstall": "husky install",
+    "prepare": "husky install",
+    "prepublishOnly": "pinst --disable",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "commitmsg": "commitlint -e $GIT_PARAMS",
@@ -38,7 +39,6 @@
     "createRule": "npx node lib/createRule.js",
     "prepublish": "yarn run --if-present build",
     "build": "textlint-scripts build",
-    "prepare": "yarn build",
     "watch": "textlint-scripts build --watch"
   },
   "devDependencies": {
