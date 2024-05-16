@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.10.0...v1.10.1) (2024-05-16)
+
+
+### Bug Fixes
+
+* husky setting ([4ef106b](https://github.com/bun913/textlint-rule-aws-service-name/commit/4ef106b8812926c67db78189ecf51d67e4807928))
+
 # [1.10.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.9.0...v1.10.0) (2024-05-05)
 
 
