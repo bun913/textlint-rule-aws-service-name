@@ -1237,6 +1237,19 @@ rules:
       - AppRunner
     options:
       wordBoundary: true
+  - expected: App Studio
+    options:
+      wordBoundary: true
+  - expected: AWS App Studio
+    patterns:
+      - Amazon App Studio
+    options:
+      wordBoundary: true
+  - expected: App Studio
+    patterns:
+      - AppStudio
+    options:
+      wordBoundary: true
   - expected: App2Container
     options:
       wordBoundary: true
@@ -1948,6 +1961,19 @@ rules:
       - Elemental Media Tailor
     options:
       wordBoundary: true
+  - expected: End User Messaging
+    options:
+      wordBoundary: true
+  - expected: AWS End User Messaging
+    patterns:
+      - Amazon End User Messaging
+    options:
+      wordBoundary: true
+  - expected: End User Messaging
+    patterns:
+      - EndUserMessaging
+    options:
+      wordBoundary: true
   - expected: Fargate
     options:
       wordBoundary: true
@@ -2014,6 +2040,19 @@ rules:
   - expected: Ground Station
     patterns:
       - GroundStation
+    options:
+      wordBoundary: true
+  - expected: HealthOmics
+    options:
+      wordBoundary: true
+  - expected: AWS HealthOmics
+    patterns:
+      - Amazon HealthOmics
+    options:
+      wordBoundary: true
+  - expected: HealthOmics
+    patterns:
+      - Health Omics
     options:
       wordBoundary: true
   - expected: IAM Identity Center
