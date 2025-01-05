@@ -856,6 +856,14 @@ rules:
       - AWS Omics
     options:
       wordBoundary: true
+  - expected: Nova
+    options:
+      wordBoundary: true
+  - expected: Amazon Nova
+    patterns:
+      - AWS Nova
+    options:
+      wordBoundary: true
   - expected: OpenSearch Service
     options:
       wordBoundary: true
@@ -2042,6 +2050,14 @@ rules:
       - GroundStation
     options:
       wordBoundary: true
+  - expected: Health
+    options:
+      wordBoundary: true
+  - expected: AWS Health
+    patterns:
+      - Amazon Health
+    options:
+      wordBoundary: true
   - expected: HealthOmics
     options:
       wordBoundary: true
@@ -2723,6 +2739,19 @@ rules:
   - expected: Trusted Advisor
     patterns:
       - TrustedAdvisor
+    options:
+      wordBoundary: true
+  - expected: User Notifications
+    options:
+      wordBoundary: true
+  - expected: AWS User Notifications
+    patterns:
+      - Amazon User Notifications
+    options:
+      wordBoundary: true
+  - expected: User Notifications
+    patterns:
+      - UserNotifications
     options:
       wordBoundary: true
   - expected: Verified Access

@@ -266,3 +266,17 @@ tester.run("AWS Deadline Cloud", report, {
     },
   ],
 });
+
+tester.run("AWS Nova", report, {
+  valid: ["Amazon Nova"],
+  invalid: [
+    {
+      text: "AWS Nova",
+      errors: [
+        {
+          message: "AWS Nova => Amazon Nova",
+        },
+      ],
+    },
+  ],
+});
