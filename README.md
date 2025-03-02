@@ -2,41 +2,39 @@
 
 [![codecov](https://codecov.io/gh/bun913/textlint-rule-aws-service-name/graph/badge.svg?token=DHEBLPSP4O)](https://codecov.io/gh/bun913/textlint-rule-aws-service-name)
 
-重要: **AWS公式のサービスではありません。1ユーザーの活動です。**
-
-Important: **This Project is UnOffical.**
+Important: **This is not an official AWS service. This is a personal project by a single user.**
 
 textlint rule for AWS product Names.
 
-AWSのサービス名やプロダクト名の表記揺れをチェックするためのtexlintのルールです。
+This is a textlint rule to check for inconsistencies in AWS service and product names.
 
-以下のように表記揺れを検出します。（画像はVSCodeの拡張機能を利用）
+It detects inconsistencies as shown below (image shows usage with VSCode extension):
 
 ![lintImage](https://user-images.githubusercontent.com/73948280/223648022-c5f1b015-3c1c-4456-8792-3f2c03c9bd67.png)
 
-このプロジェクトは以下のリポジトリの影響をモロに受けています。
+This project is heavily influenced by the following repository:
 
-2019年という早い段階から仕組みづくりをされている　@37108氏に強いリスペクトを表明いたします！
+I would like to express my deep respect to `@37108` who has been developing this mechanism since as early as 2019!
 
 https://github.com/37108/textlint-rule-aws-spellcheck
 
-## できること・できないこと
+## Features
 
-### できること
+### What it can do
 
-- 大文字・小文字の表記揺れの検出
+- Detect capitalization inconsistencies
     - `Ec2` -> `EC2`
-- 本来スペースが必要なサービスにスペースがないことを検出
+- Detect missing spaces in service names that require them
     - `SecurityHub` -> `Security Hub`
-- 本来スペースが不要なサービスにスペースがあることを検出
+- Detect unnecessary spaces in service names that should not have them
     - `Cloud Front` -> `CloudFront`
-- `Amazon` と `AWS` の接頭辞の間違い検出
+- Detect incorrect prefixes between `Amazon` and `AWS`
     - `AWS EC2` -> `Amazon EC2`
     - `Amazon Security Hub` -> `AWS Security Hub`
 
-## 開発者・コントリビュータの皆様へ
+## For Developers and Contributors
 
-こちらのファイルをご参照ください。
+Please refer to this file:
 
 [CONTRIBUTING.md](https://github.com/bun913/textlint-rule-aws-service-name/blob/main/CONTRIBUTING.md)
 
@@ -44,13 +42,15 @@ https://github.com/37108/textlint-rule-aws-spellcheck
 
 Install with [npm](https://www.npmjs.com/):
 
-    npm install textlint-rule-aws-service-name
+```
+npm install textlint-rule-aws-service-name
+```
 
 ## Usage
 
-### textlintrcを利用する場合
+### Using with textlintrc
 
-Installの後に`.textlintrc.json`に以下のように記述します。
+After installation, add the following to your `.textlintrc.json`:
 
 ```json
 {
@@ -60,30 +60,30 @@ Installの後に`.textlintrc.json`に以下のように記述します。
 }
 ```
 
-.textlinrc.ymlのようにyml（yaml）の場合は以下のように記載します。
+If you're using yml (yaml) format like `.textlinrc.yml`, write it as follows:
 
 ```yml
 rules:
   aws-service-name: true
 ```
 
-### CLIで使う場合
+### Using with CLI
 
-Installの後に以下のようにCLIでも実行できます。
+After installation, you can also run it via CLI as follows:
 
 ```
 textlint --rule aws-service-name README.md
 ```
 
-### VSCodeで利用する場合
+### Using with VSCode
 
-textlintrcを設定の上、以下記事を参考に[拡張機能](https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint)を導入してください。
+After setting up textlintrc, please install the [extension](https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint) by referring to the article below:
 
 https://qiita.com/takasp/items/22f7f72b691fda30aea2
 
-### 注意事項
+### Important Note
 
-以下textlint公式のGitHubにも記載がありますが、textlintのインストール場所とルールのインストール場所が異なる場合はエラーがでます。
+As mentioned in the official textlint GitHub, errors will occur if the installation locations of textlint and the rules differ:
 
 https://github.com/textlint/textlint/blob/master/docs/faq/failed-to-load-textlints-module.md
 
@@ -98,29 +98,32 @@ npm i textlint-rule-aws-service-name --save-dev
 npm i -g textlint
 npm i -g textlint-rule-aws-service-name
 ```
+
 ### Build
 
 Builds source codes for publish to the `lib` folder.
 You can write ES2015+ source codes in `src/` folder.
 
-    yarn build
+```
+yarn build
+```
 
 ### Tests
 
-The following is a list of test files to be placed in their respective directories.
+The following is a list of test files to be placed in their respective directories:
 
 - The test/ directory places the files for testing the texlint rules in src/index.ts. (*index.ts)
     - Test textlint rule by [textlint-tester](https://github.com/textlint/textlint-tester).
 - specs/ directory places the tests for the processing group to generate the yml files for textlint rules under src/. (*spec.ts)
 
-To test them, run the following command
+To test them, run the following command:
 
 ```bash
 yarn test
 # or npm run test
 ```
 
-You can also test each test file by running the following.
+You can also test each test file by running the following:
 
 ```bash
 # Run only the test files under specs/.
