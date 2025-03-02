@@ -996,6 +996,20 @@ rules:
       - Sage Maker
     options:
       wordBoundary: true
+  - expected: SageMaker AI
+    options:
+      wordBoundary: true
+  - expected: Amazon SageMaker AI
+    patterns:
+      - AWS SageMaker AI
+    options:
+      wordBoundary: true
+  - expected: SageMaker AI
+    patterns:
+      - SageMakerAI
+      - Sage Maker AI
+    options:
+      wordBoundary: true
   - expected: SageMaker Ground Truth
     options:
       wordBoundary: true

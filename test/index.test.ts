@@ -280,3 +280,17 @@ tester.run("AWS Nova", report, {
     },
   ],
 });
+
+tester.run("SageMaker AI", report, {
+  valid: ["SageMaker AI"],
+  invalid: [
+    {
+      text: "SageMakerAI",
+      errors: [
+        {
+          message: "SageMakerAI => SageMaker AI",
+        },
+      ],
+    },
+  ],
+});
