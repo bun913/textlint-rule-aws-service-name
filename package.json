@@ -33,6 +33,7 @@
     "postpack": "pinst --enable",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "test": "jest specs/ && textlint-scripts test",
+    "systemTest": "textlint --config test/files/textlintrc.json ./test/files/sample.md",
     "jest": "jest specs/",
     "testLint": "textlint-scripts test",
     "createRule": "npx node lib/createRule.js",
