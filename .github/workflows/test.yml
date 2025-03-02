@@ -26,9 +26,11 @@ jobs:
       - name: TextLint testing
         run: yarn testLint
       - name: System test
-        # TODO: To check if textlint is installed
-        # If not I will add textllint and use it to confirm if build materials work well
-        run: textlint --help
+        run: |
+          yarn add textlint textlint-rule-aws-service-name
+          # use build resources
+          cp ./lib/index.js ./node_modules/textlint-rule-aws-service-name/lib/index.js
+          yarn systemTest
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
