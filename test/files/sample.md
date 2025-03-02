@@ -28,5 +28,5 @@ AWS CloudFrontはNG。
 CloudFrontはOK。
 CLoudfrontはNG。
 Redshitはダメ絶対。
-Fault Injection Simulatorは古い。
+Fault Injection Simulator
 Amazon Deadline CloudはNG
