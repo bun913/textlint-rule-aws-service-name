@@ -30,7 +30,20 @@ jobs:
           yarn add textlint textlint-rule-aws-service-name
           # use build resources
           cp ./lib/index.js ./node_modules/textlint-rule-aws-service-name/lib/index.js
-          yarn systemTest
+          # Run the system test and save the output to a file
+          yarn systemTest > system_test_output.txt 2>&1 || true
+          # Check if the output contains the expected strings
+          if ! grep -q "error  SecurityHub => Security Hub" system_test_output.txt; then
+            echo "Error: Output does not contain 'error  SecurityHub => Security Hub'"
+            exit 1
+          fi
+          if ! grep -q "Try to run: \$ textlint --fix" system_test_output.txt; then
+            echo "Error: Output does not contain 'Try to run: $ textlint --fix'"
+            exit 1
+          fi
+          echo "System test passed! Output contains all expected strings."
+          # Show the actual output for reference
+          cat system_test_output.txt
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
