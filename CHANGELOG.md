@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.12.1...v1.13.0) (2025-03-02)
+
+
+### Features
+
+* update rule ([45da281](https://github.com/bun913/textlint-rule-aws-service-name/commit/45da28150a8430479d1b2c15cf1ffddb7bed5462))
+
 ## [1.12.1](https://github.com/bun913/textlint-rule-aws-service-name/compare/v1.12.0...v1.12.1) (2025-03-02)
 
 
