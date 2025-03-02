@@ -30,3 +30,4 @@ CLoudfrontはNG。
 Redshitはダメ絶対。
 Fault Injection Simulator
 Amazon Deadline CloudはNG
+Sage Maker AI is NG
