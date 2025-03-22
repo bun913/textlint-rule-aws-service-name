@@ -60,7 +60,7 @@ After installation, add the following to your `.textlintrc.json`:
 }
 ```
 
-If you're using yml (yaml) format like `.textlinrc.yml`, write it as follows:
+If you're using yml (yaml) format like `.textlintrc.yml`, write it as follows:
 
 ```yml
 rules:
