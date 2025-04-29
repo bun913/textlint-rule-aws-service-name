@@ -120,7 +120,6 @@ To test them, run the following command:
 
 ```bash
 yarn test
-# or npm run test
 ```
 
 You can also test each test file by running the following:
