@@ -23,7 +23,6 @@ jobs:
       - name: Release
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_NAME: ${{secrets.GIT_AUTHOR_NAME}}
           GIT_AUTHOR_EMAIL: ${{secrets.GIT_AUTHOR_EMAIL}}
           GIT_COMMITTER_NAME: ${{secrets.GIT_COMMITTER_NAME}}
@@ -37,4 +36,3 @@ jobs:
           branch: release-changelog
           base: main
           delete-branch: true
-          token: ${{ secrets.GH_TOKEN }}
