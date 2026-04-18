@@ -4,49 +4,21 @@ textlint-rule-aws-service-name はAWSサービス名のtypoを予防するため
 
 このパッケージの開発において、いくつか制約やルールを設けていますので、コントリビューターの皆様は事前にご確認下さい。
 
-## Conventional Commits
+## リリース
 
-このプロジェクトには[semantic-release/semantic-release](https://github.com/semantic-release/semantic-release)を導入して、各種リリース作業の効率化を図っています。
+リリースはタグプッシュをトリガーとして、GitHub Actions 上で npm trusted publishing (provenance) により自動公開されます。
 
-semantic-releaseの制約上、コミットメッセージには[Conventional Commits](https://www.conventionalcommits.org/ja/v1.0.0/)を利用する必要があります。
-
-このリポジトリには、`husky` と `commitlint` を導入して、コミットメッセージをConventional Commitsの形式に合うかチェックする仕組みを導入しています。
-
-コミットメッセージは次の規約に準拠します。
-
-[commitlint/@commitlint/config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)
-
-コミットメッセージのフォーマットは以下のように規定しています。
-
-```
-<type>[optional scope]: <subject>
-
-[optional body]
-
-[optional footer(s)]
+```bash
+# 新しいバージョンをリリースする場合 (例: 1.14.0)
+git tag v1.14.0
+git push origin v1.14.0
 ```
 
-type, subjectは必須です。
+タグプッシュ後、`.github/workflows/release.yml` が以下を自動で行います。
 
-### コミットメッセージ例
-
-新規機能追加に伴う変更
-
-```
-feat: 不要なスペースの混入を検知するルールクラス追加
-```
-
-コメントの追加やコードに影響を与えない変更など
-
-```
-chore: RuleFileクラスにdocstringを追加
-```
-
-バグ修正など
-
-```
-fx: アッパーキャメルケースのルールが機能しないバグの修正
-```
+- `package.json` / `package-lock.json` のバージョン更新 (PR が自動作成される)
+- npm への公開 (`npm publish --provenance`)
+- GitHub Release とリリースノートの生成
 
 ## Product Architecture
 

@@ -105,7 +105,7 @@ Builds source codes for publish to the `lib` folder.
 You can write ES2015+ source codes in `src/` folder.
 
 ```
-yarn build
+npm run build
 ```
 
 ### Tests
@@ -119,21 +119,19 @@ The following is a list of test files to be placed in their respective directori
 To test them, run the following command:
 
 ```bash
-yarn test
+npm test
 ```
 
 You can also test each test file by running the following:
 
 ```bash
 # Run only the test files under specs/.
-yarn jest
-# or npm run jest
+npm run jest
 ```
 
 ```bash
 # run only test files under test/.
-yarn testLint
-# or npm run testLint
+npm run testLint
 ```
 
 ## License
