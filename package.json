@@ -53,9 +53,5 @@
   },
   "engines": {
     "node": ">=24"
-  },
-  "overrides": {
-    "diff": "^9.0.0",
-    "serialize-javascript": "^7.0.5"
   }
 }
