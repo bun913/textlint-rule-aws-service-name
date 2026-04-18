@@ -2,38 +2,70 @@ name: Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
-permissions:
-  contents: write
-  issues: write
-  pull-requests: write
 jobs:
   release:
-    name: Release
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Get semantic version
+        id: semver
+        run: echo "version=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Build
-        uses: ./.github/actions/build
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-          GIT_AUTHOR_NAME: ${{secrets.GIT_AUTHOR_NAME}}
-          GIT_AUTHOR_EMAIL: ${{secrets.GIT_AUTHOR_EMAIL}}
-          GIT_COMMITTER_NAME: ${{secrets.GIT_COMMITTER_NAME}}
-          GIT_COMMITTER_EMAIL: ${{secrets.GIT_COMMITTER_EMAIL}}
-        run: npx semantic-release
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
         with:
-          title: 'Update Changelog by release operation'
-          commit-message: 'chore: update changelog'
-          branch: release-changelog
-          base: main
-          delete-branch: true
+          node-version-file: ".node-version"
+          registry-url: "https://registry.npmjs.org"
+
+      - uses: flatt-security/setup-takumi-guard-npm@v1
+        with:
+          bot-id: "BT01KN72JSWKBXV4PD0S3JTY1PSZ"
+
+      - name: Configure Git
+        run: |
+          git config user.name 'GitHub Action'
+          git config user.email 'action@github.com'
+
+      - name: Update package version
+        run: npm version ${{ steps.semver.outputs.version }} --no-git-tag-version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Upgrade npm
+        run: npm install -g npm@latest
+
+      - name: Build
+        run: npm run build
+
+      - name: Publish to npm
+        run: npm publish --provenance --access public --registry https://registry.npmjs.org
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: "Update package version to ${{ steps.semver.outputs.version }}"
+          body: "Automated PR to update package version"
+          branch: "update-version-${{ steps.semver.outputs.version }}"
+          base: "main"
+          commit-message: "chore: Update package version to ${{ steps.semver.outputs.version }}"
+          add-paths: |
+            package.json
+            package-lock.json
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.semver.outputs.version }}
+          name: Release v${{ steps.semver.outputs.version }}
+          generate_release_notes: true

@@ -3,14 +3,14 @@ description: Common Operation(build)
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v4
       with:
-        node-version: "20"
+        node-version-file: ".node-version"
 
     - name: Install dependencies
-      run: yarn install
+      run: npm ci
       shell: bash
 
     - name: build
-      run: yarn build
+      run: npm run build
       shell: bash

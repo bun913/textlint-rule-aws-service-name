@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -22,14 +22,14 @@ jobs:
         uses: ./.github/actions/build
 
       - name: Run createRule.js
-        run: yarn run createRule
+        run: npm run createRule
 
       - name: Check for changes in auto-create-regular-rules.yml
         id: check-diff
         run: echo "::set-output name=has_changes::$(git diff --name-only)"
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v7
         if: steps.check-diff.outputs.has_changes == 'dict/auto-create-regular-rules.yml'
         with:
           title: 'Update auto-create-regular-rules.yml'
