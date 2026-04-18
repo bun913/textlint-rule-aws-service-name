@@ -1,6 +1,6 @@
 {
   "name": "textlint-rule-aws-service-name",
-  "version": "1.13.2",
+  "version": "1.14.0",
   "description": "Rule for AWS Product Names",
   "author": "bun913",
   "license": "MIT",
