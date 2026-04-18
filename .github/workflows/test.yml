@@ -5,33 +5,45 @@ on: [push]
 jobs:
   canCreateRuleFile:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - uses: flatt-security/setup-takumi-guard-npm@v1
+        with:
+          bot-id: "BT01KN72JSWKBXV4PD0S3JTY1PSZ"
       - name: Build
         uses: ./.github/actions/build
-      - run: yarn createRule
+      - run: npm run createRule
 
   test:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - uses: flatt-security/setup-takumi-guard-npm@v1
+        with:
+          bot-id: "BT01KN72JSWKBXV4PD0S3JTY1PSZ"
       - name: Build
         uses: ./.github/actions/build
       - name: Jest testing
-        run:  yarn jest
+        run: npm run jest
       - name: TextLint testing
-        run: yarn testLint
+        run: npm run testLint
       - name: System test
         run: |
-          yarn add textlint textlint-rule-aws-service-name
+          npm install textlint textlint-rule-aws-service-name
           # use build resources
           cp ./lib/index.js ./node_modules/textlint-rule-aws-service-name/lib/index.js
           # Run the system test and save the output to a file
-          yarn systemTest > system_test_output.txt 2>&1 || true
+          npm run systemTest > system_test_output.txt 2>&1 || true
           # Check if the output contains the expected strings
           if ! grep -q "error  SecurityHub => Security Hub" system_test_output.txt; then
             echo "Error: Output does not contain 'error  SecurityHub => Security Hub'"
@@ -45,7 +57,7 @@ jobs:
           # Show the actual output for reference
           cat system_test_output.txt
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
