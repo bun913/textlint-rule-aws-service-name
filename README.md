@@ -1,5 +1,7 @@
 # textlint-rule-aws-service-name
 
+<a href="https://flatt.tech/oss/gmo/trampoline" target="_blank"><img src="https://flatt.tech/assets/images/badges/gmo-oss.svg" height="24px"/></a>
+
 [![codecov](https://codecov.io/gh/bun913/textlint-rule-aws-service-name/graph/badge.svg?token=DHEBLPSP4O)](https://codecov.io/gh/bun913/textlint-rule-aws-service-name)
 
 Important: **This is not an official AWS service. This is a personal project by a single user.**
